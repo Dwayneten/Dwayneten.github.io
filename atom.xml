@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-02-26T07:34:43.251Z</updated>
+  <updated>2015-02-26T07:45:01.229Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -19,14 +19,17 @@
     <link href="http://dwayneten.com/2015/02/26/New-Blog/"/>
     <id>http://dwayneten.com/2015/02/26/New-Blog/</id>
     <published>2015-02-26T07:28:17.000Z</published>
-    <updated>2015-02-26T07:34:26.141Z</updated>
-    <content type="html"><![CDATA[<h1 id="为什么">为什么</h1>
-<p>先后换过不少博客平台，终于受不了想自己搭建一个了。<br><a id="more"></a><br>原因</p>
+    <updated>2015-02-26T07:41:24.672Z</updated>
+    <content type="html"><![CDATA[<p>先后换过不少博客平台，终于受不了想自己搭建一个了。</p>
+<h2 id="为什么">为什么</h2>
+<h3 id="原因">原因</h3>
 <ol>
 <li>打开速度慢</li>
 <li>没有代码高亮</li>
-<li>可自定义程度太低</li>
+<li>可自定义程度太低<a id="more"></a>
+</li>
 </ol>
+<p>待更新..</p>
 ]]></content>
     <summary type="html">
     <![CDATA[搭建个人博客的记录]]>

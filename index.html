@@ -88,7 +88,142 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/02/26/New-Blog/" title="New Blog" itemprop="url">New Blog</a>
+      <a href="/2015/02/26/xiami/" title="测试虾米音乐" itemprop="url">测试虾米音乐</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-02-26T12:45:16.000Z" itemprop="datePublished"> Published Feb 26 2015</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <embed src="http://www.xiami.com/widget/0_26511/singlePlayer.swf" type="application/x-shockwave-flash" width="257" height="33" wmode="transparent">
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/音乐/">音乐</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/音乐/">音乐</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/02/26/xiami/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/02/26/POJ-3040/" title="POJ 3040 Allowance 题解" itemprop="url">POJ 3040 Allowance 题解</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-02-26T12:21:25.000Z" itemprop="datePublished"> Published Feb 26 2015</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>《挑战程序设计竞赛》练习题</p>
+<blockquote>
+<p>2.2 一直往前！贪心法</p>
+</blockquote>
+<ul>
+<li>贪心</li>
+</ul>
+<p><a href="http://poj.org/problem?id=3040" target="_blank" rel="external">POJ 3040 Allowance</a><br>有N种硬币，需要支付的工资为M，每次支付工资至少要给M元。然后给出N种硬币的面值和数量，问最多能支付多少次工资。</p>
+<hr>
+<p>比较容易想到贪心策略：<br>1.先由面值从大到小地选取硬币来凑成一次工资但不能超过要支付的工资（即选出的硬币面值总和≤M）。<br>2.若经过步骤1选完后仍不够M，则再从小到大地选硬币直至选出的硬币面值总和不小于M。<br>3.重复步骤12直至剩下的硬币不够支付一次工资。<br>当然如果有硬币面值本来就比M大的可以直接发掉。<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/02/26/POJ-3040/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/解题报告/">解题报告</a><a href="/tags/POJ/">POJ</a><a href="/tags/算法/">算法</a><a href="/tags/贪心/">贪心</a><a href="/tags/《挑战程序设计竞赛》/">《挑战程序设计竞赛》</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/02/26/POJ-3040/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/02/26/New-Blog/" title="Hello Blog" itemprop="url">Hello Blog</a>
   </h1>
   <p class="article-author">By
        
@@ -101,13 +236,20 @@
 </header>
     <div class="article-content">
         
-        <p>先后换过不少博客平台，终于受不了想自己搭建一个了。</p>
-<h2 id="为什么">为什么</h2>
+        <p>先后换过不少博客平台，后来受不了想自己搭建一个。</p>
 <h3 id="原因">原因</h3>
-<ol>
+<blockquote>
+<ul>
 <li>打开速度慢</li>
-<li>没有代码高亮</li>
-<li>可自定义程度太低
+<li>不支持代码块/代码高亮</li>
+<li>可自定义程度太低</li>
+<li>不支持 markdown</li>
+</ul>
+</blockquote>
+<p>这里记录一下吧。</p>
+<p>首先这个博客是托管在 GitHub 上由 Hexo 驱动的，主题是 Jacman，稍微地自定义了一下。<br>在 godaddy 注册了域名，用 DNSPOD 做 DNS 解析。<br>目前打算用于 post 一些解题报告，学习笔记之类的，或许有空时写点无关紧要的东西。</p>
+<p>下面是一些markdown的语法测试</p>
+
         
         
         <p class="article-more-link">
@@ -158,47 +300,41 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/02/25/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2015/02/23/vim-windows/" title="Windows下gvim的配置" itemprop="url">Windows下gvim的配置</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
 		
   <p class="article-time">
-    <time datetime="2015-02-25T12:23:08.375Z" itemprop="datePublished"> Published Feb 25 2015</time>
+    <time datetime="2015-02-23T12:45:16.000Z" itemprop="datePublished"> Published Feb 23 2015</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>之前都是在ubuntu下用vim，<br>前段时间笔记本不幸便当了，<br>家里台式机只有win7，于是准备搞个gvim凑合。<br>装好gvim后发现vimrc文件在gvim的上一层目录。<br>编译环境的话装个带MinGW的devc++，设置好环境变量就OK。<br>备份一下配置。<br>
         
         
         <p class="article-more-link">
+          
+            <a href="/2015/02/23/vim-windows/#more">Read More</a>
           
        </p>
     </div>
     <footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/随笔/">随笔</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/vim/">vim</a>
+  </div>
 
 </div>
 
@@ -208,7 +344,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/02/25/hello-world/#disqus_thread" class="comments-count-link">Comments</a>
+		<a href="/2015/02/23/vim-windows/#disqus_thread" class="comments-count-link">Comments</a>
 	
 </div>
 
@@ -235,7 +371,11 @@
 	<p class="asidetitle">Categories</p>
 		<ul>
 		
-			<li><a href="/categories/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>1</sup></a></li>
+		
+			<li><a href="/categories/随笔/" title="随笔">随笔<sup>2</sup></a></li>
+		
+			<li><a href="/categories/音乐/" title="音乐">音乐<sup>1</sup></a></li>
 		
 		</ul>
 </div>
@@ -245,6 +385,20 @@
 <div class="tagslist">
 	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
+		
+			<li><a href="/tags/vim/" title="vim">vim<sup>1</sup></a></li>
+		
+			<li><a href="/tags/音乐/" title="音乐">音乐<sup>1</sup></a></li>
+		
+			<li><a href="/tags/《挑战程序设计竞赛》/" title="《挑战程序设计竞赛》">《挑战程序设计竞赛》<sup>1</sup></a></li>
+		
+			<li><a href="/tags/贪心/" title="贪心">贪心<sup>1</sup></a></li>
+		
+			<li><a href="/tags/算法/" title="算法">算法<sup>1</sup></a></li>
+		
+			<li><a href="/tags/POJ/" title="POJ">POJ<sup>1</sup></a></li>
+		
+			<li><a href="/tags/解题报告/" title="解题报告">解题报告<sup>1</sup></a></li>
 		
 			<li><a href="/tags/日志/" title="日志">日志<sup>1</sup></a></li>
 		

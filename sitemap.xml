@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dwayneten.com/2015/02/23/vim-windows/</loc>
+    <lastmod>2015-02-26T12:53:44.345Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dwayneten.com/2015/02/26/xiami/</loc>
+    <lastmod>2015-02-26T12:48:08.357Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dwayneten.com/2015/02/26/POJ-3040/</loc>
+    <lastmod>2015-02-26T12:46:09.482Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dwayneten.com/2015/02/26/New-Blog/</loc>
-    <lastmod>2015-02-26T07:41:24.672Z</lastmod>
+    <lastmod>2015-02-26T12:42:22.750Z</lastmod>
   </url>
   
   <url>
@@ -19,11 +34,6 @@
   <url>
     <loc>http://dwayneten.com/about/index.html</loc>
     <lastmod>2015-02-26T07:20:17.048Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dwayneten.com/2015/02/25/hello-world/</loc>
-    <lastmod>2015-02-25T12:23:08.375Z</lastmod>
   </url>
   
 </urlset>

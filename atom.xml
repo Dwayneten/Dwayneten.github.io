@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-02-27T15:50:43.323Z</updated>
+  <updated>2015-02-27T15:59:11.878Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -176,11 +176,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[/[Python] - 字体批量安装工具]]></title>
-    <link href="http://dwayneten.com/2014/06/14/newtest/"/>
-    <id>http://dwayneten.com/2014/06/14/newtest/</id>
+    <title><![CDATA[Python - 字体批量安装工具]]></title>
+    <link href="http://dwayneten.com/2014/06/14/FontInstaller/"/>
+    <id>http://dwayneten.com/2014/06/14/FontInstaller/</id>
     <published>2014-06-14T04:30:28.000Z</published>
-    <updated>2015-02-27T15:50:32.033Z</updated>
+    <updated>2015-02-27T15:55:11.754Z</updated>
     <content type="html"><![CDATA[<p>做这个东西的想法是源于经理说过一个个解压装字体很麻烦<br>而且当时我也想装比较多的字体（笔记本上没什么字体）<br>于是就用Python边学边写了个 用时大概2-3天</p>
 <p>实现了几个功能：<br>从指定文件夹</p>
 <pre><code><span class="bullet">1. </span>解压所有zip压缩包到目标文件夹

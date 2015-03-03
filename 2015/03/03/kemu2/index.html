@@ -13,23 +13,23 @@
   </script>
   <meta charset="UTF-8">
   
-    <title>POJ 3040 Allowance 题解 | DwayneTen</title>
+    <title>考驾照 - 科目二过了 | DwayneTen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="DwayneTen">
     
-    <meta name="description" itemprop="description" content="POJ 3040 Allowance 解题报告，《挑战程序设计竞赛》练习题。">
+    <meta name="description" itemprop="description" content="考科目二的记录。">
     
     
-    <meta name="description" content="POJ 3040 Allowance 解题报告，《挑战程序设计竞赛》练习题。">
+    <meta name="description" content="考科目二的记录。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ 3040 Allowance 题解">
-<meta property="og:url" content="http://dwayneten.com/2015/02/26/POJ-3040/">
+<meta property="og:title" content="考驾照 - 科目二过了">
+<meta property="og:url" content="http://dwayneten.com/2015/03/03/kemu2/">
 <meta property="og:site_name" content="DwayneTen">
-<meta property="og:description" content="POJ 3040 Allowance 解题报告，《挑战程序设计竞赛》练习题。">
+<meta property="og:description" content="考科目二的记录。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ 3040 Allowance 题解">
-<meta name="twitter:description" content="POJ 3040 Allowance 解题报告，《挑战程序设计竞赛》练习题。">
+<meta name="twitter:title" content="考驾照 - 科目二过了">
+<meta name="twitter:description" content="考科目二的记录。">
 <meta name="twitter:creator" content="@Dwayneten">
 <link rel="publisher" href="107614829517460254115">
 
@@ -88,14 +88,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/02/26/POJ-3040/" title="POJ 3040 Allowance 题解" itemprop="url">POJ 3040 Allowance 题解</a>
+      <a href="/2015/03/03/kemu2/" title="考驾照 - 科目二过了" itemprop="url">考驾照 - 科目二过了</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
 		
   <p class="article-time">
-    <time datetime="2015-02-26T12:21:25.000Z" itemprop="datePublished"> Published Feb 26 2015</time>
+    <time datetime="2015-03-03T11:52:54.000Z" itemprop="datePublished"> Published Mar 3 2015</time>
     
   </p>
 </header>
@@ -108,18 +108,7 @@
 		
 		</div>
 		
-		<p>《挑战程序设计竞赛》练习题</p>
-<blockquote>
-<p>2.2 一直往前！贪心法</p>
-</blockquote>
-<ul>
-<li>贪心</li>
-</ul>
-<p><a href="http://poj.org/problem?id=3040" target="_blank" rel="external">POJ 3040 Allowance</a><br>有N种硬币，需要支付的工资为M，每次支付工资至少要给M元。然后给出N种硬币的面值和数量，问最多能支付多少次工资。</p>
-<hr>
-<p>比较容易想到贪心策略：<br>1.先由面值从大到小地选取硬币来凑成一次工资但不能超过要支付的工资（即选出的硬币面值总和≤M）。<br>2.若经过步骤1选完后仍不够M，则再从小到大地选硬币直至选出的硬币面值总和不小于M。<br>3.重复步骤12直至剩下的硬币不够支付一次工资。<br>当然如果有硬币面值本来就比M大的可以直接发掉。<br><a id="more"></a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/2/23 19:30:03</div><div class="line">    File Name     :POJ3040.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">struct</span> coin</div><div class="line">{</div><div class="line">	<span class="keyword">int</span> v, num;</div><div class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> coin& b) <span class="keyword">const</span></div><div class="line">	{</div><div class="line">		<span class="keyword">return</span> (<span class="keyword">this</span>-&gt;v &lt; b.v || (!(b.v &lt; <span class="keyword">this</span>-&gt;v) && (<span class="keyword">this</span>-&gt;num &lt; b.num)));</div><div class="line">	}</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">    freopen(<span class="string">"in.txt"</span>, <span class="string">"r"</span>, stdin);</div><div class="line">    <span class="comment">//freopen("out.txt", "w", stdout);</span></div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &n, &m);</div><div class="line">	coin c[<span class="number">24</span>];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">	{</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &c[i].v, &c[i].num);	</div><div class="line">	}</div><div class="line">	sort(c, c+n);</div><div class="line">	<span class="comment">/*</span></div><div class="line">	for (int i=0; i&lt;n; ++i)</div><div class="line">		printf("%d %d\n", c[i].v, c[i].num);</div><div class="line">	*/</div><div class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=n-<span class="number">1</span>; i+<span class="number">1</span>; --i)</div><div class="line">		<span class="keyword">if</span> (c[i].v &gt;= m)</div><div class="line">			ans += c[i].num, c[i].num = <span class="number">0</span>;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">	<span class="keyword">int</span> cur = <span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span> (<span class="keyword">true</span>)</div><div class="line">	{</div><div class="line">		cur = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=n-<span class="number">1</span>; i+<span class="number">1</span>; --i)</div><div class="line">		{</div><div class="line">			<span class="keyword">while</span> (c[i].num && cur + c[i].v &lt;= m)</div><div class="line">				c[i].num--, cur += c[i].v;</div><div class="line">		}</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">		{</div><div class="line">			<span class="keyword">while</span> (c[i].num && cur &lt; m)</div><div class="line">				c[i].num--, cur += c[i].v;</div><div class="line">		}</div><div class="line">		<span class="keyword">if</span> (cur &gt;= m)</div><div class="line">			ans++;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			<span class="keyword">break</span>;</div><div class="line">	}</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
+		<p>今天考科目二过啦o(*≧▽≦)ツ。<br>上午六点起床七点出发去金山，练了大概八圈左右就被叫上车去茂名了。<br>到考场时大概十一点，我被分在15号，也就是下午场的第二批，当时估计要五六点才能考。<br>于是一直在场外看，直到同批一起去被分在7号的小伙伴上场考了我们才准备要进去。<br>看着7号那个一次通过考完后进里面等..一直等到快下午四点..不过还是比预想的要早。<br><a id="more"></a><br>上车感觉座位已经合适了就没调，教练帮忙调了下后视镜就上一档开去倒车入库了（前面考那个下车连手刹都拉啧<br><code>倒车入库</code>没什么问题，两边均匀不前不后稳得很，主要是控好车速各种调整好再停。<br><code>侧方停车</code>比较简单，看好时间打方向盘就好了。<br><code>斜坡起步</code>跟<code>S弯</code>都没什么问题，但是最后的<code>直角转弯</code>竟然<strong>压角了</strong>！<br>其实在后视镜已经看到有点危险的了，但是调整的幅度不够没救回来。<br>眼看都要出来了竟然死在最后一项还是很简单的那项orz。。<br>当时心都凉了，还好有第二次机会。<br>第二次开脚都不敢怎么松，有点僵僵的，还好所有项目都无压力通过了。<br>到最后<code>直角转弯</code>的时候特意放很慢速度然后微微站起来看后视镜来预防压线233..<br>过完<code>直角转弯</code>还没提示，出到通道时才提示考试及格，不自觉地松了一口气。<br>然后挂二档一脚油超过前面两台车回起点，一个字<strong>爽</strong>233.<br>我考科目二时全程离合+刹车来控车速可能比较奇葩，好像其他人都是只用离合不用刹车的→_→<br>可以安心回学校了，准备暑假再考科目三。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -127,13 +116,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
+  <a class="article-category-link" href="/categories/随笔/">随笔</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/解题报告/">解题报告</a><a href="/tags/POJ/">POJ</a><a href="/tags/算法/">算法</a><a href="/tags/贪心/">贪心</a><a href="/tags/《挑战程序设计竞赛》/">《挑战程序设计竞赛》</a>
+  <span></span> <a href="/tags/日志/">日志</a>
   </div>
 
 </div>
@@ -142,7 +131,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://dwayneten.com/2015/02/26/POJ-3040/" data-title="POJ 3040 Allowance 题解 | DwayneTen" data-tsina="207028555" class="share clearfix">
+	  <div data-url="http://dwayneten.com/2015/03/03/kemu2/" data-title="考驾照 - 科目二过了 | DwayneTen" data-tsina="207028555" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -155,19 +144,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/02/26/xiami/" title="测试虾米音乐">
-  <strong>上一篇：</strong><br/>
-  <span>
-  测试虾米音乐</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/02/26/New-Blog/"  title="Hello Blog">
+<a href="/2015/03/01/CF519/"  title="Codeforces Round 294 (Div. 2)">
  <strong>下一篇：</strong><br/> 
- <span>Hello Blog
+ <span>Codeforces Round 294 (Div. 2)
 </span>
 </a>
 </div>

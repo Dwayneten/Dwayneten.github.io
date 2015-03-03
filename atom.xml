@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-03-02T11:27:27.283Z</updated>
+  <updated>2015-03-03T12:16:30.681Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[考驾照 - 科目二过了]]></title>
+    <link href="http://dwayneten.com/2015/03/03/kemu2/"/>
+    <id>http://dwayneten.com/2015/03/03/kemu2/</id>
+    <published>2015-03-03T11:52:54.000Z</published>
+    <updated>2015-03-03T12:15:33.866Z</updated>
+    <content type="html"><![CDATA[<p>今天考科目二过啦o(*≧▽≦)ツ。<br>上午六点起床七点出发去金山，练了大概八圈左右就被叫上车去茂名了。<br>到考场时大概十一点，我被分在15号，也就是下午场的第二批，当时估计要五六点才能考。<br>于是一直在场外看，直到同批一起去被分在7号的小伙伴上场考了我们才准备要进去。<br>看着7号那个一次通过考完后进里面等..一直等到快下午四点..不过还是比预想的要早。<br><a id="more"></a><br>上车感觉座位已经合适了就没调，教练帮忙调了下后视镜就上一档开去倒车入库了（前面考那个下车连手刹都拉啧<br><code>倒车入库</code>没什么问题，两边均匀不前不后稳得很，主要是控好车速各种调整好再停。<br><code>侧方停车</code>比较简单，看好时间打方向盘就好了。<br><code>斜坡起步</code>跟<code>S弯</code>都没什么问题，但是最后的<code>直角转弯</code>竟然<strong>压角了</strong>！<br>其实在后视镜已经看到有点危险的了，但是调整的幅度不够没救回来。<br>眼看都要出来了竟然死在最后一项还是很简单的那项orz。。<br>当时心都凉了，还好有第二次机会。<br>第二次开脚都不敢怎么松，有点僵僵的，还好所有项目都无压力通过了。<br>到最后<code>直角转弯</code>的时候特意放很慢速度然后微微站起来看后视镜来预防压线233..<br>过完<code>直角转弯</code>还没提示，出到通道时才提示考试及格，不自觉地松了一口气。<br>然后挂二档一脚油超过前面两台车回起点，一个字<strong>爽</strong>233.<br>我考科目二时全程离合+刹车来控车速可能比较奇葩，好像其他人都是只用离合不用刹车的→_→<br>可以安心回学校了，准备暑假再考科目三。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[考科目二的记录。]]>
+    
+    </summary>
+    
+      <category term="日志" scheme="http://dwayneten.com/tags/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Codeforces Round 294 (Div. 2)]]></title>
@@ -130,7 +149,7 @@
     <link href="http://dwayneten.com/2015/02/26/New-Blog/"/>
     <id>http://dwayneten.com/2015/02/26/New-Blog/</id>
     <published>2015-02-26T07:28:17.000Z</published>
-    <updated>2015-02-26T12:42:22.750Z</updated>
+    <updated>2015-03-03T12:15:55.544Z</updated>
     <content type="html"><![CDATA[<p>先后换过不少博客平台，后来受不了想自己搭建一个。</p>
 <h3 id="原因">原因</h3>
 <blockquote>
@@ -143,7 +162,7 @@
 </blockquote>
 <p>这里记录一下吧。</p>
 <p>首先这个博客是托管在 GitHub 上由 Hexo 驱动的，主题是 Jacman，稍微地自定义了一下。<br>在 godaddy 注册了域名，用 DNSPOD 做 DNS 解析。<br>目前打算用于 post 一些解题报告，学习笔记之类的，或许有空时写点无关紧要的东西。</p>
-<p>下面是一些markdown的语法测试</p>
+<p>下面是一些 markdown 的语法测试</p>
 <a id="more"></a>
 <h2 id="测试">测试</h2>
 <h3 id="LaTeX">LaTeX</h3>
@@ -210,12 +229,12 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Windows下gvim的配置]]></title>
+    <title><![CDATA[Windows 下 gvim 的配置]]></title>
     <link href="http://dwayneten.com/2015/02/23/vim-windows/"/>
     <id>http://dwayneten.com/2015/02/23/vim-windows/</id>
     <published>2015-02-23T12:45:16.000Z</published>
-    <updated>2015-02-26T12:53:44.345Z</updated>
-    <content type="html"><![CDATA[<p>之前都是在ubuntu下用vim，<br>前段时间笔记本不幸便当了，<br>家里台式机只有win7，于是准备搞个gvim凑合。<br>装好gvim后发现vimrc文件在gvim的上一层目录。<br>编译环境的话装个带MinGW的devc++，设置好环境变量就OK。<br>备份一下配置。<br><a id="more"></a></p>
+    <updated>2015-03-03T12:15:30.319Z</updated>
+    <content type="html"><![CDATA[<p>之前都是在 ubuntu 下用 vim，<br>前段时间笔记本不幸便当了，<br>家里台式机只有 win7，于是准备搞个 gvim 凑合。<br>装好 gvim 后发现 vimrc 文件在 gvim 的上一层目录。<br>编译环境的话装个带 MinGW 的 devc++，设置好环境变量就可以了。<br>备份一下配置。<br><a id="more"></a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">syntax on</div><div class="line">colorscheme desert</div><div class="line">set nu</div><div class="line">set tabstop=<span class="number">4</span></div><div class="line">set shiftwidth=<span class="number">4</span></div><div class="line">set mouse=a</div><div class="line">set cindent</div><div class="line">    </div><div class="line">map &lt;F6&gt; :call CR()&lt;CR&gt;</div><div class="line">func! CR()</div><div class="line">    exec <span class="string">"w"</span></div><div class="line">	exec <span class="string">"cd %:h"</span></div><div class="line">    exec <span class="string">"!g++ -O2 -g % -o %:r"</span></div><div class="line">	exec <span class="string">"!%:r.exe"</span></div><div class="line">endfunc</div><div class="line">    </div><div class="line">map &lt;C-A&gt; ggVG<span class="string">"+y</span></div><div class="line">     </div><div class="line">     </div><div class="line">"inoremap ( ()&lt;LEFT&gt;</div><div class="line"><span class="string">"inoremap [ []&lt;LEFT&gt;</span></div><div class="line">"inoremap { {}&lt;LEFT&gt;</div><div class="line"><span class="string">"inoremap "</span> <span class="string">""</span>&lt;LEFT&gt;</div><div class="line"><span class="string">"inoremap '</span> <span class="string">''</span>&lt;LEFT&gt;</div><div class="line">      </div><div class="line">     </div><div class="line">map   &lt;F2&gt; :call SetTitle()&lt;CR&gt;</div><div class="line">func SetTitle()</div><div class="line">    let l = <span class="number">0</span></div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'/*///////////////////////////////////////////////////////'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    Author        :Dwayne'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    Created Time  :'</span>.strftime(<span class="string">'%c'</span>))</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    File Name     :'</span>.expand(<span class="string">'%:t'</span>))</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'///////////////////////////////////////////////////////*/'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">''</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'#include &lt;cstdio&gt;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'#include &lt;cstring&gt;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">''</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'int n, m, k, tn, tcase = 0;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">''</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'int main()'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'{'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    freopen("</span><span class="transposed_variable">in.</span>txt<span class="string">", "</span>r<span class="string">", stdin);'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    //freopen("</span><span class="transposed_variable">out.</span>txt<span class="string">", "</span>w<span class="string">", stdout);'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    '</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    return 0;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'}'</span>)</div><div class="line">endfunc</div></pre></td></tr></table></figure>
 
 ]]></content>
@@ -235,14 +254,14 @@
     <link href="http://dwayneten.com/2014/06/14/FontInstaller/"/>
     <id>http://dwayneten.com/2014/06/14/FontInstaller/</id>
     <published>2014-06-14T04:30:28.000Z</published>
-    <updated>2015-03-02T11:27:04.316Z</updated>
-    <content type="html"><![CDATA[<p>做这个东西的想法是源于经理说过一个个解压装字体很麻烦<br>而且当时我也想装比较多的字体（笔记本上没什么字体）<br>于是就用Python边学边写了个 用时大概2-3天</p>
+    <updated>2015-03-03T12:16:21.187Z</updated>
+    <content type="html"><![CDATA[<p>做这个东西的想法是源于经理说过一个个解压装字体很麻烦<br>而且当时我也想装比较多的字体（笔记本上没什么字体）<br>于是就用 Python 边学边写了个 用时大概2-3天</p>
 <p>实现了几个功能：<br>从指定文件夹</p>
 <pre><code><span class="bullet">1. </span>解压所有zip压缩包到目标文件夹
 <span class="bullet">2. </span>提取所有ttf otf文件到目标文件夹
 <span class="bullet">3. </span>安装所有字体
 <span class="bullet">4. </span>删除所有非ttf otf和zip文件
-</code></pre><p>其实这些功能bat也能大致实现 只不过用起来没有那么友好和方便<br>这个就当尝试一下Python的Tkinter图形界面编程了</p>
+</code></pre><p>其实这些功能 bat 也能大致实现 只不过用起来没有那么友好和方便<br>这个就当尝试一下 Python 的 Tkinter 图形界面编程了</p>
 <p>GitHub:<a href="https://github.com/Dwayneten/FontInstaller" target="_blank" rel="external">https://github.com/Dwayneten/FontInstaller</a><br><a id="more"></a><br>如果将来有空改进的话大概会加上</p>
 <pre><code><span class="bullet">* </span>支持rar压缩包
 <span class="bullet">* </span>支持选择操作的文件类型

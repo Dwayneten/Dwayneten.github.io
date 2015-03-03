@@ -13,7 +13,7 @@
   </script>
   <meta charset="UTF-8">
   
-    <title>Windows下gvim的配置 | DwayneTen</title>
+    <title>Windows 下 gvim 的配置 | DwayneTen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="DwayneTen">
@@ -23,12 +23,12 @@
     
     <meta name="description" content="Windows下gvim的配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows下gvim的配置">
+<meta property="og:title" content="Windows 下 gvim 的配置">
 <meta property="og:url" content="http://dwayneten.com/2015/02/23/vim-windows/">
 <meta property="og:site_name" content="DwayneTen">
 <meta property="og:description" content="Windows下gvim的配置">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Windows下gvim的配置">
+<meta name="twitter:title" content="Windows 下 gvim 的配置">
 <meta name="twitter:description" content="Windows下gvim的配置">
 <meta name="twitter:creator" content="@Dwayneten">
 <link rel="publisher" href="107614829517460254115">
@@ -88,7 +88,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/02/23/vim-windows/" title="Windows下gvim的配置" itemprop="url">Windows下gvim的配置</a>
+      <a href="/2015/02/23/vim-windows/" title="Windows 下 gvim 的配置" itemprop="url">Windows 下 gvim 的配置</a>
   </h1>
   <p class="article-author">By
        
@@ -108,7 +108,7 @@
 		
 		</div>
 		
-		<p>之前都是在ubuntu下用vim，<br>前段时间笔记本不幸便当了，<br>家里台式机只有win7，于是准备搞个gvim凑合。<br>装好gvim后发现vimrc文件在gvim的上一层目录。<br>编译环境的话装个带MinGW的devc++，设置好环境变量就OK。<br>备份一下配置。<br><a id="more"></a></p>
+		<p>之前都是在 ubuntu 下用 vim，<br>前段时间笔记本不幸便当了，<br>家里台式机只有 win7，于是准备搞个 gvim 凑合。<br>装好 gvim 后发现 vimrc 文件在 gvim 的上一层目录。<br>编译环境的话装个带 MinGW 的 devc++，设置好环境变量就可以了。<br>备份一下配置。<br><a id="more"></a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">syntax on</div><div class="line">colorscheme desert</div><div class="line">set nu</div><div class="line">set tabstop=<span class="number">4</span></div><div class="line">set shiftwidth=<span class="number">4</span></div><div class="line">set mouse=a</div><div class="line">set cindent</div><div class="line">    </div><div class="line">map &lt;F6&gt; :call CR()&lt;CR&gt;</div><div class="line">func! CR()</div><div class="line">    exec <span class="string">"w"</span></div><div class="line">	exec <span class="string">"cd %:h"</span></div><div class="line">    exec <span class="string">"!g++ -O2 -g % -o %:r"</span></div><div class="line">	exec <span class="string">"!%:r.exe"</span></div><div class="line">endfunc</div><div class="line">    </div><div class="line">map &lt;C-A&gt; ggVG<span class="string">"+y</span></div><div class="line">     </div><div class="line">     </div><div class="line">"inoremap ( ()&lt;LEFT&gt;</div><div class="line"><span class="string">"inoremap [ []&lt;LEFT&gt;</span></div><div class="line">"inoremap { {}&lt;LEFT&gt;</div><div class="line"><span class="string">"inoremap "</span> <span class="string">""</span>&lt;LEFT&gt;</div><div class="line"><span class="string">"inoremap '</span> <span class="string">''</span>&lt;LEFT&gt;</div><div class="line">      </div><div class="line">     </div><div class="line">map   &lt;F2&gt; :call SetTitle()&lt;CR&gt;</div><div class="line">func SetTitle()</div><div class="line">    let l = <span class="number">0</span></div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'/*///////////////////////////////////////////////////////'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    Author        :Dwayne'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    Created Time  :'</span>.strftime(<span class="string">'%c'</span>))</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    File Name     :'</span>.expand(<span class="string">'%:t'</span>))</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'///////////////////////////////////////////////////////*/'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">''</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'#include &lt;cstdio&gt;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'#include &lt;cstring&gt;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">''</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'int n, m, k, tn, tcase = 0;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">''</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'int main()'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'{'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    freopen("</span><span class="transposed_variable">in.</span>txt<span class="string">", "</span>r<span class="string">", stdin);'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    //freopen("</span><span class="transposed_variable">out.</span>txt<span class="string">", "</span>w<span class="string">", stdout);'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    '</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'    return 0;'</span>)</div><div class="line">    let l = l + <span class="number">1</span> | call setline(l,<span class="string">'}'</span>)</div><div class="line">endfunc</div></pre></td></tr></table></figure>
 
   
@@ -133,7 +133,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://dwayneten.com/2015/02/23/vim-windows/" data-title="Windows下gvim的配置 | DwayneTen" data-tsina="207028555" class="share clearfix">
+	  <div data-url="http://dwayneten.com/2015/02/23/vim-windows/" data-title="Windows 下 gvim 的配置 | DwayneTen" data-tsina="207028555" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -196,7 +196,7 @@
 		
 			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>2</sup></a></li>
 		
-			<li><a href="/categories/随笔/" title="随笔">随笔<sup>2</sup></a></li>
+			<li><a href="/categories/随笔/" title="随笔">随笔<sup>3</sup></a></li>
 		
 			<li><a href="/categories/音乐/" title="音乐">音乐<sup>1</sup></a></li>
 		
@@ -213,6 +213,8 @@
 		
 			<li><a href="/tags/解题报告/" title="解题报告">解题报告<sup>2</sup></a></li>
 		
+			<li><a href="/tags/日志/" title="日志">日志<sup>2</sup></a></li>
+		
 			<li><a href="/tags/Codeforces/" title="Codeforces">Codeforces<sup>1</sup></a></li>
 		
 			<li><a href="/tags/音乐/" title="音乐">音乐<sup>1</sup></a></li>
@@ -224,8 +226,6 @@
 			<li><a href="/tags/POJ/" title="POJ">POJ<sup>1</sup></a></li>
 		
 			<li><a href="/tags/vim/" title="vim">vim<sup>1</sup></a></li>
-		
-			<li><a href="/tags/日志/" title="日志">日志<sup>1</sup></a></li>
 		
 			<li><a href="/tags/Python/" title="Python">Python<sup>1</sup></a></li>
 		

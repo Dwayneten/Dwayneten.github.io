@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-03-03T12:16:30.681Z</updated>
+  <updated>2015-03-04T12:20:01.784Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -85,24 +85,6 @@
       <category term="Codeforces" scheme="http://dwayneten.com/tags/Codeforces/"/>
     
       <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[测试虾米音乐]]></title>
-    <link href="http://dwayneten.com/2015/02/26/xiami/"/>
-    <id>http://dwayneten.com/2015/02/26/xiami/</id>
-    <published>2015-02-26T12:45:16.000Z</published>
-    <updated>2015-02-26T12:48:08.357Z</updated>
-    <content type="html"><![CDATA[<embed src="http://www.xiami.com/widget/0_26511/singlePlayer.swf" type="application/x-shockwave-flash" width="257" height="33" wmode="transparent">]]></content>
-    <summary type="html">
-    <![CDATA[测试虾米音乐]]>
-    
-    </summary>
-    
-      <category term="音乐" scheme="http://dwayneten.com/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-      <category term="音乐" scheme="http://dwayneten.com/categories/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   

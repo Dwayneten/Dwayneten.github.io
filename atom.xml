@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-03-07T15:40:58.882Z</updated>
+  <updated>2015-03-13T15:54:04.088Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[一个查询各大 OJ 上 AC 数的页面]]></title>
+    <link href="http://dwayneten.com/2015/03/13/zscacm/"/>
+    <id>http://dwayneten.com/2015/03/13/zscacm/</id>
+    <published>2015-03-13T15:21:43.000Z</published>
+    <updated>2015-03-13T15:53:07.192Z</updated>
+    <content type="html"><![CDATA[<p>传送门: <a href="zscacm.sinaapp.com">一个查询各大 OJ 上 AC 数的页面</a><br>后来加上了本校集训队的Status页，<br>待更新..</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[一个查询各大 OJ 上 AC 数的页面。]]>
+    
+    </summary>
+    
+      <category term="HTML/CSS" scheme="http://dwayneten.com/tags/HTML-CSS/"/>
+    
+      <category term="Python" scheme="http://dwayneten.com/tags/Python/"/>
+    
+      <category term="Web" scheme="http://dwayneten.com/tags/Web/"/>
+    
+      <category term="网站开发" scheme="http://dwayneten.com/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[考驾照 - 科目二过了]]></title>
@@ -236,7 +259,7 @@
     <link href="http://dwayneten.com/2014/06/14/FontInstaller/"/>
     <id>http://dwayneten.com/2014/06/14/FontInstaller/</id>
     <published>2014-06-14T04:30:28.000Z</published>
-    <updated>2015-03-07T15:40:31.096Z</updated>
+    <updated>2015-03-13T15:53:52.029Z</updated>
     <content type="html"><![CDATA[<p>做这个东西的想法是源于经理说过一个个解压装字体很麻烦<br>而且当时我也想装比较多的字体（笔记本上没什么字体）<br>于是就用 Python 边学边写了个 用时大概2-3天</p>
 <p>实现了几个功能：<br>从指定文件夹</p>
 <ol>
@@ -261,7 +284,7 @@
     
       <category term="Python" scheme="http://dwayneten.com/tags/Python/"/>
     
-      <category term="编程开发" scheme="http://dwayneten.com/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+      <category term="软件开发" scheme="http://dwayneten.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   

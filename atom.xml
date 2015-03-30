@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-03-19T15:57:35.704Z</updated>
+  <updated>2015-03-30T16:20:30.514Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,98 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[hihocoder 1074 字体设计]]></title>
+    <link href="http://dwayneten.com/2015/03/30/hiho1074/"/>
+    <id>http://dwayneten.com/2015/03/30/hiho1074/</id>
+    <published>2015-03-30T15:41:15.000Z</published>
+    <updated>2015-03-30T15:53:02.155Z</updated>
+    <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://hihocoder.com/problemset/problem/1074" target="_blank" rel="external">题目链接</a></h2>
+<blockquote>
+<h3 id="题意">题意</h3>
+</blockquote>
+<p>给出 <em>n</em> 个数 <em>a<sub>1</sub></em> ~ <em>a<sub>n</sub></em> ， 若存在某一连续的数列 <em>a<sub>i</sub></em> ~ <em>a<sub>j</sub></em> ( i &lt; j ) :</p>
+<ul>
+<li>对于任何 <em>k</em> ∈  ( <em>i</em> , <em>j</em> ) 都满足 <em>a<sub>i</sub></em> &lt; <em>a<sub>k</sub></em> &lt; <em>a<sub>j</sub></em><br> 或</li>
+<li>对于任何 <em>k</em> ∈  ( <em>i</em> , <em>j</em> ) 都满足 <em>a<sub>i</sub></em> &gt; <em>a<sub>k</sub></em> &gt; <em>a<sub>j</sub></em> </li>
+</ul>
+<p>则可以只保留 <em>a<sub>i</sub></em> 和 <em>a<sub>j</sub></em> ， 去掉 <em>a<sub>i</sub></em> 和 <em>a<sub>j</sub></em> 之间其它数。<br>求最少保留多少数和保留的数在原数列的下标(从 1 开始)。</p>
+<blockquote>
+<h3 id="思路">思路</h3>
+</blockquote>
+<p>在贪心策略下， 去掉区间 [ i, j ) 中最大数和最小数之间的数是必然最优的选择。<br>因此保留区间 [ i, j ) 中的 <em>a<sub>max</sub></em> 和 <em>a<sub>min</sub></em> ， 且可以把区间 [ i, j ) 分割成 [ i, <em>a<sub>max</sub></em> ) + [ <em>a<sub>max</sub></em> , j ) 或者 [ i, <em>a<sub>min</sub></em> ) + [ <em>a<sub>min</sub></em> , j ).<br>对分割后的区间也可以继续执行贪心策略。<br>注意到原数列首尾元素必须保留， 分割后的区间首尾元素必有其一被保留。<br>求解大区间和小区间的操作一致， 可以写成递归的形式。</p>
+<blockquote>
+<h3 id="题外话">题外话</h3>
+</blockquote>
+<p><code>min_element</code> 和 <code>max_element</code> 的 <code>Comp</code> 函数调用方式有有别于 <code>sort</code> 的 <code>Comp</code> 函数调用方式的地方。</p>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// min_element</span></div><div class="line"><span class="keyword">if</span> (comp(*first,*smallest))</div><div class="line">      smallest=first;</div><div class="line">      </div><div class="line"><span class="comment">// max_element</span></div><div class="line"><span class="keyword">if</span> (comp(*largest,*first))</div><div class="line">      largest=first;</div></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="代码实现">代码实现</h3>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight C++"><figcaption><span>hihocoder 1074 字体设计</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/3/30 18:10:26</div><div class="line">    File Name     :c.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> a[<span class="number">100024</span>], ans[<span class="number">100024</span>], cnt;</div><div class="line"><span class="keyword">int</span> maxin, minin;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> cmp_max(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</div><div class="line">{</div><div class="line">    <span class="comment">// 题目说 ai 互不相同， 但是这里少个等号就会WA， 原因不明</span></div><div class="line">	<span class="keyword">return</span> x &lt;= y;</div><div class="line">}</div><div class="line"><span class="keyword">bool</span> cmp_min(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</div><div class="line">{</div><div class="line">	<span class="keyword">return</span> x &lt; y;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">void</span> run(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</div><div class="line">{</div><div class="line">	<span class="keyword">if</span> (!ans[l])</div><div class="line">		ans[l] = <span class="number">1</span>, cnt++;</div><div class="line">	<span class="keyword">if</span> (!ans[r])</div><div class="line">		ans[r] = <span class="number">1</span>, cnt++;</div><div class="line"></div><div class="line">	maxin = distance(a, max_element(a+l, a+r+<span class="number">1</span>, cmp_max));</div><div class="line">	minin = distance(a, min_element(a+l, a+r+<span class="number">1</span>, cmp_min));</div><div class="line">	</div><div class="line">	<span class="keyword">if</span> (maxin != l && maxin != r)</div><div class="line">	{</div><div class="line">		run(l, maxin);</div><div class="line">		run(maxin, r);</div><div class="line">		<span class="keyword">return</span> ;</div><div class="line">	}</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (minin != l && minin != r)</div><div class="line">	{</div><div class="line">		run(l, minin);</div><div class="line">		run(minin, r);</div><div class="line">		<span class="keyword">return</span> ;</div><div class="line">	}</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"></div><div class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n) != EOF)</div><div class="line">	{</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &a[i]), ans[i] = <span class="number">0</span>;</div><div class="line"></div><div class="line">		cnt = <span class="number">0</span>;</div><div class="line">		run(<span class="number">0</span>, n-<span class="number">1</span>);</div><div class="line"></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, cnt);</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">			<span class="keyword">if</span> (ans[i])</div><div class="line">				<span class="built_in">printf</span>(i == n-<span class="number">1</span> ? <span class="string">"%d\n"</span> : <span class="string">"%d "</span>, i+<span class="number">1</span>);</div><div class="line">	}</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[hihocoder 1074 字体设计 Solution]]>
+    
+    </summary>
+    
+      <category term="贪心" scheme="http://dwayneten.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+      <category term="递归" scheme="http://dwayneten.com/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[CF 501C Misha and Forest]]></title>
+    <link href="http://dwayneten.com/2015/03/30/CF501C/"/>
+    <id>http://dwayneten.com/2015/03/30/CF501C/</id>
+    <published>2015-03-30T15:26:31.000Z</published>
+    <updated>2015-03-30T15:53:50.754Z</updated>
+    <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://codeforces.com/contest/501/problem/C" target="_blank" rel="external">题目链接</a></h2>
+<blockquote>
+<h3 id="题意">题意</h3>
+</blockquote>
+<p>给出节点的数目 <em>n</em> ， 接下来有 <em>n</em> 行， 第 <em>i</em> 行 代表第 <em>i</em> 个节点。<br>每行包括一个 <em>d<sub>i</sub></em> 和 <em>s<sub>i</sub></em> ， <em>d<sub>i</sub></em> 表示该节点与多少个节点相邻， <em>s<sub>i</sub></em> 代表所有与其相邻的节点编号相异或的值 。保证这些点组成森林。<br>要求的是这个森林里面有多少条边， 和每条边的 <em>u</em> 和 <em>v</em>， 以任意顺序输出。</p>
+<blockquote>
+<h3 id="思路">思路</h3>
+</blockquote>
+<p>一开始想的是建图， 根据异或的值来判断哪个节点和哪个节点之间有边， 但发现从这个角度无从下手去判断。<br>继而尝试从异或这个点下手。<br>我们知道异或有几个比较有用的性质：</p>
+<ul>
+<li>x ^ 0 = 0</li>
+<li>x ^ x = 0 (偶数个相同的数相异或都等于零)</li>
+<li>a ^ b = b ^ c<br>继而有</li>
+<li>a ^ b = (a ^ b ^ c) ^ c</li>
+</ul>
+<p>然后注意到 <em>s<sub>i</sub></em> 其实“储存”了所有与第 <em>i</em> 个节点相邻的节点的编号。<br>但是怎么把它们提取出来呢？<br>回想题目， 既然给出的数据组成的是森林， 那么就一定有叶子节点。 叶子节点相比其他节点的特点就是只有一个节点与其相邻， 也就是 <em>d<sub>i</sub></em> = 1 。<br>显然， 既然相邻的节点只有一个， 我们马上就可以求出其相邻节点的编号 —— 就是 <em>s<sub>i</sub></em> 。<br>现在我们已经可以求出所有叶子节点和它父亲节点的编号， 但是这还不够， 题目要求的是整个森林的所有边。<br>我们要下一步操作是把森林中的所有的叶子和对应的边去掉来得到一个新的森林， 并且这个森林也一定存在着叶子。<br>为了实现这个操作， 利用到了上面提及的异或的性质。 我们在找到叶子节点 <em>i</em> 的父亲节点 <em>j</em> 之后， 使 <em>d<sub>j</sub></em> -= 1 并且 <em>s<sub>j</sub></em> ^= i 来将叶子节点 <em>i</em> 从森林中除去。当然， 在期间要记录一下它们之间的边作为答案。<br>可以用一个队列来存目前森林的叶子节点集合， 不断更新森林直到该队列为空时也就把所有边求出来了。</p>
+<blockquote>
+<h3 id="代码实现">代码实现</h3>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight C++"><figcaption><span>CF 501C Misha and Forest</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;map&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cmath&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;queue&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;utility&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn,  tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> d[<span class="number">65540</span>];</div><div class="line"><span class="keyword">int</span> sum[<span class="number">65540</span>];</div><div class="line"><span class="stl_container"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;</span> q;</div><div class="line"><span class="stl_container"><span class="built_in">queue</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;</span> &gt;ans;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"></div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n);</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">    {</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &d[i], &sum[i]);</div><div class="line">        <span class="keyword">if</span> (d[i] == <span class="number">1</span>)</div><div class="line">            q.push(i);</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="keyword">while</span>(!q.empty())</div><div class="line">    {</div><div class="line">        <span class="keyword">int</span> from = q.front();</div><div class="line">        q.pop();</div><div class="line">        <span class="comment">// 每棵树最后一个节点</span></div><div class="line">        <span class="keyword">if</span> (!d[from])</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">int</span> to = sum[from];</div><div class="line">        ans.push(make_pair(from, to));</div><div class="line">        sum[to] ^= from;</div><div class="line">        d[to]--;</div><div class="line">        <span class="keyword">if</span> (d[to] == <span class="number">1</span>)</div><div class="line">            q.push(to);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans.size());</div><div class="line">    <span class="keyword">while</span>(!ans.empty())</div><div class="line">    {</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, ans.front().first, ans.front().second);</div><div class="line">        ans.pop();</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[CF 501C Misha and Forest Solution]]>
+    
+    </summary>
+    
+      <category term="图论" scheme="http://dwayneten.com/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+      <category term="构造" scheme="http://dwayneten.com/tags/%E6%9E%84%E9%80%A0/"/>
+    
+      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="异或" scheme="http://dwayneten.com/tags/%E5%BC%82%E6%88%96/"/>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[查询在各大 OJ 的 AC 数]]></title>

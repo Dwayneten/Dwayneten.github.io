@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-04-08T17:00:19.497Z</updated>
+  <updated>2015-04-15T04:44:02.370Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,116 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CSU 1555 Inversion Sequence]]></title>
+    <link href="http://dwayneten.com/2015/04/15/CSU1555/"/>
+    <id>http://dwayneten.com/2015/04/15/CSU1555/</id>
+    <published>2015-04-15T04:42:56.000Z</published>
+    <updated>2015-04-15T04:43:50.605Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<h4 id="题意">题意</h4>
+</blockquote>
+<p>原序列由 1 ~ <em>n</em> 组成<br>给出根据原序列得出的包含 <em>n</em> 个数字的序列， 第 <em>i</em> 个数字代表原序列中的 <em>i</em> 前有多少个比 <em>i</em> 大的数， 求原序列。<br>若无合法的原序列， 输出 No solution 。</p>
+<blockquote>
+<h4 id="思路">思路</h4>
+</blockquote>
+<p>不难想到采取预留空位的策略。<br>以下面的数据为例：</p>
+<blockquote>
+<p>输入<br>5<br>1 2 0 1 0<br>输出<br>3 1 5 2 4</p>
+</blockquote>
+<ol>
+<li>既然 1 前面有 1 个比 1 大的数， 那么就把 1 安置在第 2 位， 前面留一个空位。</li>
+<li>因为 2 的前面有 2 个比 2 大的数， 那么就在其前面预留 2 个空位， 又因为第二位已经被 1 占用了， 所以把第 1 、 3 位留作空位， 把 2 安置在第 4 位。</li>
+<li>因为 3 的前面有 0 个比 3 大的数， 所以不必预留空位， 将其直接放在第一个空闲的位置上， 即第 1 位。</li>
+<li>因为给 4 预留 1 个空位， 经过上面三个操作后， 第 1、 2 、 4 位都被占用了， 所以将第 3 位作为预留空位， 将 4 放在第 5 位。</li>
+<li>与 3 类似， 将 5 放在第一个可用位置上， 即第 3 位。</li>
+</ol>
+<p>策略有了， 但是上面的每步操作如果直接暴力的话是 O(n) 的时间复杂度， 需要优化成 O(logn) 才行， 可以用线段树实现。</p>
+<blockquote>
+<h4 id="代码实现">代码实现</h4>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;map&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cmath&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;queue&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;utility&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn,  tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> d[<span class="number">65540</span>];</div><div class="line"><span class="keyword">int</span> sum[<span class="number">65540</span>];</div><div class="line"><span class="stl_container"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;</span> q;</div><div class="line"><span class="stl_container"><span class="built_in">queue</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;</span> &gt;ans;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"></div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n);</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">    {</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &d[i], &sum[i]);</div><div class="line">        <span class="keyword">if</span> (d[i] == <span class="number">1</span>)</div><div class="line">            q.push(i);</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="keyword">while</span>(!q.empty())</div><div class="line">    {</div><div class="line">        <span class="keyword">int</span> from = q.front();</div><div class="line">        q.pop();</div><div class="line">        <span class="comment">// 每棵树最后一个节点</span></div><div class="line">        <span class="keyword">if</span> (!d[from])</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">int</span> to = sum[from];</div><div class="line">        ans.push(make_pair(from, to));</div><div class="line">        sum[to] ^= from;</div><div class="line">        d[to]--;</div><div class="line">        <span class="keyword">if</span> (d[to] == <span class="number">1</span>)</div><div class="line">            q.push(to);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans.size());</div><div class="line">    <span class="keyword">while</span>(!ans.empty())</div><div class="line">    {</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, ans.front().first, ans.front().second);</div><div class="line">        ans.pop();</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[附加一段文章摘要，字数最好在140字以内。]]>
+    
+    </summary>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="线段树" scheme="http://dwayneten.com/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+      <category term="CSU" scheme="http://dwayneten.com/tags/CSU/"/>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[CSU 1541 There is No Alternative]]></title>
+    <link href="http://dwayneten.com/2015/04/15/CSU1541/"/>
+    <id>http://dwayneten.com/2015/04/15/CSU1541/</id>
+    <published>2015-04-15T04:41:05.000Z</published>
+    <updated>2015-04-15T04:42:37.445Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<h4 id="题意">题意</h4>
+</blockquote>
+<p>求最小生成树不可替代的边的数目和这些不可替代的边的花费总和。</p>
+<blockquote>
+<h4 id="思路">思路</h4>
+</blockquote>
+<p>原先是想 DFS 找环， 加一些判断去掉某些边， 发现实现不了亦有可能是错误的。<br>其实只需先把最小生成树的总权值求出来， 然后对于每一条在最小生成树上的边， 求在去掉这条边的情况下， 原图再找最小生成树的总权值， 比较一下两个值， 若相等， 则这条边必然可以被其他边所替代， 反之若不等， 那么这条边就是我们要求的不可替代的边之一。</p>
+<blockquote>
+<h4 id="代码实现">代码实现</h4>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> p[<span class="number">512</span>], skip[<span class="number">50024</span>], ans[<span class="number">50024</span>];</div><div class="line"><span class="keyword">int</span> small, first, num, sum, cnt;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> edge</div><div class="line">{</div><div class="line">	<span class="keyword">int</span> from, to, c;</div><div class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> edge a) <span class="keyword">const</span></div><div class="line">	{</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>-&gt;c &lt; a.c;</div><div class="line">	}</div><div class="line">}e[<span class="number">50024</span>];</div><div class="line"></div><div class="line"><span class="keyword">int</span> find(<span class="keyword">int</span> x)</div><div class="line">{</div><div class="line">	<span class="keyword">return</span> x == p[x] ? x : p[x] = find(p[x]);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> Kruskal()</div><div class="line">{</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i)</div><div class="line">		p[i] = i;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">	{</div><div class="line">		<span class="keyword">if</span> (skip[i])</div><div class="line">			<span class="keyword">continue</span>;</div><div class="line">		<span class="keyword">int</span> x, y;</div><div class="line">		x = find(e[i].from), y = find(e[i].to);</div><div class="line">		<span class="keyword">if</span> (x != y)</div><div class="line">		{</div><div class="line">			p[x] = y;</div><div class="line">			ret += e[i].c;</div><div class="line">			<span class="keyword">if</span> (first)</div><div class="line">				ans[num++] = i;</div><div class="line">		}</div><div class="line">	}</div><div class="line">	<span class="keyword">return</span> ret;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef OFFLINE</span></div><div class="line">	freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, stdin);</div><div class="line">	<span class="comment">//freopen("data.out", "w", stdout);</span></div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">	</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &n, &m);</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &e[i].from, &e[i].to, &e[i].c);</div><div class="line"></div><div class="line">	sort(e, e+m);</div><div class="line">	first = <span class="number">1</span>;</div><div class="line">	small = Kruskal();</div><div class="line">	first = <span class="number">0</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;num; ++i)</div><div class="line">	{</div><div class="line">		skip[ans[i]] = <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (small != Kruskal())</div><div class="line">			cnt++, sum += e[ans[i]].c;</div><div class="line">		skip[ans[i]] = <span class="number">0</span>;</div><div class="line">	}</div><div class="line">	</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, cnt, sum);</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[CSU 1541 There is No Alternative。]]>
+    
+    </summary>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="最小生成树" scheme="http://dwayneten.com/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
+    
+      <category term="CSU" scheme="http://dwayneten.com/tags/CSU/"/>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[考驾照 - 科目三]]></title>
+    <link href="http://dwayneten.com/2015/04/14/kemusan/"/>
+    <id>http://dwayneten.com/2015/04/14/kemusan/</id>
+    <published>2015-04-14T15:33:19.000Z</published>
+    <updated>2015-04-15T04:40:37.156Z</updated>
+    <content type="html"><![CDATA[<p>13 日 17:00 左右时教练突然打电话过来叫我赶回家 14 日早上去考科目三也是醉了..<br>查了下还有两班车一班 17:20 的估计来不及了， 还好有班 18:50 的， 遂出发取钱打车去汽车客运站， 吃了桶泡面当晚餐， 车没晚点。</p>
+<a id="more"></a>
+<p>00:02 到高州大转盘附近， 然后就在东方大道开了半小时左右回家睡觉。<br>回家吃了两个包洗个澡都差不多两点了， 手机又没电， 还好借了我姐移动电源不然估计都起不来。</p>
+<p>05:30 起床， 07：00 出发去茂名， 09:00 开始考， 几分钟就考完了 lol..<br>大概就是打灯起步、变道、增档， 四档 30+ 时速开一会儿就让靠边停车了， 一次过 233.</p>
+<p>然而到茂名交委发现最早一班回中山的车也要 12:30 还是去沙溪的.. 只好在车站坐了差不多三小时 orz<br>工作日路上没什么车， 17:00 左右就到了。<br>这趟车费考试费和杂七杂八的花了差不多 700 块， 心痛。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[考驾照 - 科目三。]]>
+    
+    </summary>
+    
+      <category term="日志" scheme="http://dwayneten.com/tags/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[考驾照 - 长途]]></title>

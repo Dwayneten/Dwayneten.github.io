@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-04-17T10:34:55.845Z</updated>
+  <updated>2015-04-18T00:55:56.007Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -15,11 +15,254 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[CSU 1542 Flipping Parentheses]]></title>
+    <link href="http://dwayneten.com/2015/04/17/CSU1542/"/>
+    <id>http://dwayneten.com/2015/04/17/CSU1542/</id>
+    <published>2015-04-17T15:41:51.000Z</published>
+    <updated>2015-04-18T00:55:48.521Z</updated>
+    <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1542" target="_blank" rel="external">题目链接</a></h2>
+<blockquote>
+<h3 id="题意">题意</h3>
+</blockquote>
+<p>给出长度为 <em>n</em> 且匹配正确的括号序列和 <em>m</em> 个操作。<br>每次操作将对应位置上的括号取反， 即<code>(</code>变为<code>)</code>， <code>)</code>变为<code>(</code>。<br>然后要求输出每次操作后对哪个位置上的括号取反可以使整个括号序列再次符合匹配。<br>若有多个满足要求的位置， 输出最靠左端的位置。</p>
+<blockquote>
+<h3 id="样例输入">样例输入</h3>
+</blockquote>
+<p>6 3<br>( ( ( ) ) )<br>4<br>3<br>1</p>
+<blockquote>
+<h3 id="样例输出">样例输出</h3>
+</blockquote>
+<p>2<br>2<br>1</p>
+<blockquote>
+<h3 id="思路">思路</h3>
+</blockquote>
+<p>首先定义 a[i] 为 [1 - i] 里左括号减去右括号的值， 可以发现一个匹配正确的括号系列总是满足:</p>
+<ul>
+<li>a 数组中没有负数</li>
+<li>a 数组以 0 结束</li>
+</ul>
+<a id="more"></a>
+<p>用样例举例:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>(</td>
+<td>(</td>
+<td>(</td>
+<td>)</td>
+<td>)</td>
+<td>)</td>
+</tr>
+<tr>
+<td>a[i]</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>第一个操作修改第 4 个括号后:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>(</td>
+<td>(</td>
+<td>(</td>
+<td><strong>(</strong></td>
+<td>)</td>
+<td>)</td>
+</tr>
+<tr>
+<td>a[i]</td>
+<td><strong><em>1</em></strong></td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>可以看出， 若第 x 个括号是<code>)</code>, 将其修改成<code>(</code>后， [a[x], a[n]] 都加上了 2.<br>要使其恢复匹配即是要找一个最靠左端的 y ， y 满足 [a[y], a[n]] &gt;= 2.<br>所以要从尾端往前找， 找到第一个不满足 a[i] &gt;= 2 的即跳出， 所求的 y 就是 i + 1.<br>在这个例子， 第一个不满足的是 a[1] = 1， 所求的 y 是 1 + 1 = 2.</p>
+<p>所以将第 2 个括号取反:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>(</td>
+<td><strong>)</strong></td>
+<td>(</td>
+<td>(</td>
+<td>)</td>
+<td>)</td>
+</tr>
+<tr>
+<td>a[i]</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>整个括号序列又符合匹配了。</p>
+<p>第二个操作修改第 3 个括号后:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>(</td>
+<td>)</td>
+<td><strong>)</strong></td>
+<td>(</td>
+<td>)</td>
+<td>)</td>
+</tr>
+<tr>
+<td>a[i]</td>
+<td>1</td>
+<td>0</td>
+<td>-1</td>
+<td>0</td>
+<td>-1</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>d[i]</td>
+<td>1</td>
+<td><strong><em>-2</em></strong></td>
+<td>-4</td>
+<td>-4</td>
+<td>-6</td>
+<td>-8</td>
+</tr>
+</tbody>
+</table>
+<p>相应地可以看出， 若第 x 个括号是<code>(</code>， 将其修改成<code>)</code>后， a[a[x], a[n]] 都减去了 2.<br>对于这种情况显然地，找到最左端的<code>)</code>并将其修改成<code>(</code>就可以使括号序列重新满足匹配。<br>为此引入一个 d 数组， d[i] = a[i] - i, 那么我们要找的就是 $$min(\ i\ |\ d[i] &lt; 0 )$$</p>
+<p>所以将第 2 个括号取反:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>(</td>
+<td><strong>(</strong></td>
+<td>)</td>
+<td>(</td>
+<td>)</td>
+<td>)</td>
+</tr>
+<tr>
+<td>a[i]</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>d[i]</td>
+<td>1</td>
+<td>0</td>
+<td>-2</td>
+<td>-2</td>
+<td>-4</td>
+<td>-6</td>
+</tr>
+</tbody>
+</table>
+<p>至此， 两种修改都有了对应的求解策略， 需要更新维护的是区间 a[i] 的最小值用来找出不满足 a[i] &gt;= 2 的位置和区间 d[i] 的最小值用来找出最靠左端的<code>)</code>。<br>还有修改括号后的 a 数组和 d 数组的区间修改。<br>这种操作当然用线段树实现啦。</p>
+<blockquote>
+<h3 id="代码实现">代码实现</h3>
+</blockquote>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> mydebugn</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> tn, n, m, tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">300024</span>;</div><div class="line"><span class="keyword">char</span> paren[maxn &lt;&lt; <span class="number">2</span>];</div><div class="line"><span class="keyword">int</span> num[maxn &lt;&lt; <span class="number">2</span>], lazy[maxn &lt;&lt; <span class="number">2</span>], d[maxn &lt;&lt; <span class="number">2</span>], q, cur, ans;</div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> lson l, mid, rt &lt;&lt; 1</span></div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> rson mid + 1, r, rt &lt;&lt; 1 | 1</span></div><div class="line"></div><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; T min(T a, T b)</div><div class="line">{</div><div class="line">    <span class="keyword">return</span> a &lt; b ? a : b;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">void</span> pushup(<span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    num[rt] = min(num[rt &lt;&lt; <span class="number">1</span>], num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</div><div class="line">    d[rt] = min(d[rt &lt;&lt; <span class="number">1</span>], d[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> pushdown(<span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    lazy[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</div><div class="line">    lazy[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</div><div class="line">    d[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</div><div class="line">    d[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</div><div class="line">    num[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</div><div class="line">    num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</div><div class="line"></div><div class="line">    lazy[rt] = <span class="number">0</span>;</div><div class="line">}</div><div class="line"><span class="keyword">void</span> build(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">    {</div><div class="line">        cur += paren[l] == <span class="string">'('</span> ? <span class="number">1</span> : -<span class="number">1</span>;</div><div class="line">        num[rt] = cur;</div><div class="line">        d[rt] = num[rt] - l;</div><div class="line"><span class="preprocessor">#ifdef mydebug</span></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[rt]);</div><div class="line">        <span class="keyword">if</span> (r == n)</div><div class="line">            <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    build(lson);</div><div class="line">    build(rson);</div><div class="line">    pushup(rt);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> update(<span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> x, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (L &lt;= l && R &gt;= r)</div><div class="line">    {</div><div class="line">        lazy[rt] += x;</div><div class="line">        d[rt] += x;</div><div class="line">        num[rt] += x;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (L &lt;= mid)</div><div class="line">        update(L, R, x, lson);</div><div class="line">    update(L, R, x, rson);</div><div class="line">    pushup(rt);</div><div class="line">}</div><div class="line"><span class="keyword">int</span> query1(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">        <span class="keyword">return</span> l;</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (d[rt &lt;&lt; <span class="number">1</span>] &lt; <span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> query1(lson);</div><div class="line">    <span class="keyword">return</span> query1(rson);</div><div class="line">}</div><div class="line"><span class="keyword">int</span> query2(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">        <span class="keyword">return</span> l+<span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] &lt; <span class="number">2</span>)</div><div class="line">        <span class="keyword">return</span> query2(rson);</div><div class="line">    <span class="keyword">return</span> query2(lson);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> showd(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">    {</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, d[rt]);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    showd(lson);</div><div class="line">    showd(rson);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> shownum(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">    {</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[rt]);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    shownum(lson);</div><div class="line">    shownum(rson);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> change(<span class="keyword">int</span> in)</div><div class="line">{</div><div class="line">    paren[in] = paren[in] == <span class="string">'('</span> ? <span class="string">')'</span> : <span class="string">'('</span>;</div><div class="line">    update(in, n, paren[in] == <span class="string">')'</span> ? -<span class="number">2</span> : <span class="number">2</span>, <span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line"><span class="preprocessor">#ifdef mydebug</span></div><div class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line">    <span class="built_in">puts</span>(paren+<span class="number">1</span>);</div><div class="line">    <span class="built_in">puts</span>(<span class="string">"num:"</span>);</div><div class="line">    shownum(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">    <span class="built_in">puts</span>(<span class="string">"\nd:"</span>);</div><div class="line">    showd(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">}</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef OFFLINE</span></div><div class="line">    freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, stdin);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line"></div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %s"</span>, &n, &m, paren+<span class="number">1</span>);</div><div class="line">    build(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">    <span class="keyword">while</span>(m--)</div><div class="line">    {</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &q);</div><div class="line">        change(q);</div><div class="line">        <span class="keyword">if</span> (paren[q] == <span class="string">')'</span>)</div><div class="line">            ans = query1(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            ans = query2(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">        change(ans);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[附加一段文章摘要，字数最好在140字以内。]]>
+    
+    </summary>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="线段树" scheme="http://dwayneten.com/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+      <category term="构造" scheme="http://dwayneten.com/tags/%E6%9E%84%E9%80%A0/"/>
+    
+      <category term="CSU" scheme="http://dwayneten.com/tags/CSU/"/>
+    
+      <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[CSU 1554 SG Value]]></title>
     <link href="http://dwayneten.com/2015/04/17/CSU1554/"/>
     <id>http://dwayneten.com/2015/04/17/CSU1554/</id>
     <published>2015-04-17T10:09:13.000Z</published>
-    <updated>2015-04-17T10:34:48.077Z</updated>
+    <updated>2015-04-18T00:52:11.010Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1554" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -37,7 +280,7 @@
 <h3 id="代码实现">代码实现</h3>
 </blockquote>
 <a id="more"></a>
-<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/4/17 8:20:06</div><div class="line">    File Name     :CSU1554.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;set&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line">LL ans;</div><div class="line"><span class="stl_container"><span class="built_in">multiset</span>&lt;LL&gt;</span>s;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"></div><div class="line">	<span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n))</div><div class="line">	{</div><div class="line">		s.clear();</div><div class="line">		ans = <span class="number">1</span>;</div><div class="line">		LL t;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">		{</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &t);</div><div class="line">			<span class="keyword">if</span> (t == <span class="number">1</span>)</div><div class="line">			{</div><div class="line">				<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &t);</div><div class="line">				<span class="keyword">if</span> (t &lt;= ans)</div><div class="line">				{</div><div class="line">					ans += t;</div><div class="line">					<span class="keyword">if</span> (s.size())</div><div class="line">					{</div><div class="line">						<span class="stl_container"><span class="built_in">multiset</span>&lt;LL&gt;</span>::iterator it = s.begin();</div><div class="line">						<span class="keyword">while</span>(*it &lt;= ans && s.size())</div><div class="line">						{</div><div class="line">							ans += *it;</div><div class="line">							s.erase(it);</div><div class="line">							it = s.begin();</div><div class="line">						}</div><div class="line">					}</div><div class="line">				}</div><div class="line">				<span class="keyword">else</span></div><div class="line">					s.insert(t);</div><div class="line">			}</div><div class="line">			<span class="keyword">else</span></div><div class="line">				<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</div><div class="line">		}</div><div class="line">	}</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/4/17 8:20:06</div><div class="line">    File Name     :CSU1554.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;set&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line">LL ans;</div><div class="line"><span class="stl_container"><span class="built_in">multiset</span>&lt;LL&gt;</span>s;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"></div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n))</div><div class="line">    {</div><div class="line">        s.clear();</div><div class="line">        ans = <span class="number">1</span>;</div><div class="line">        LL t;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">        {</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &t);</div><div class="line">            <span class="keyword">if</span> (t == <span class="number">1</span>)</div><div class="line">            {</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &t);</div><div class="line">                <span class="keyword">if</span> (t &lt;= ans)</div><div class="line">                {</div><div class="line">                    ans += t;</div><div class="line">                    <span class="keyword">if</span> (s.size())</div><div class="line">                    {</div><div class="line">                        <span class="stl_container"><span class="built_in">multiset</span>&lt;LL&gt;</span>::iterator it = s.begin();</div><div class="line">                        <span class="keyword">while</span>(*it &lt;= ans && s.size())</div><div class="line">                        {</div><div class="line">                            ans += *it;</div><div class="line">                            s.erase(it);</div><div class="line">                            it = s.begin();</div><div class="line">                        }</div><div class="line">                    }</div><div class="line">                }</div><div class="line">                <span class="keyword">else</span></div><div class="line">                    s.insert(t);</div><div class="line">            }</div><div class="line">            <span class="keyword">else</span></div><div class="line">                <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
 ]]></content>
     <summary type="html">
@@ -112,7 +355,7 @@
     <link href="http://dwayneten.com/2015/04/15/CSU1541/"/>
     <id>http://dwayneten.com/2015/04/15/CSU1541/</id>
     <published>2015-04-15T04:41:05.000Z</published>
-    <updated>2015-04-17T10:34:01.427Z</updated>
+    <updated>2015-04-18T00:52:09.989Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1541" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -126,7 +369,7 @@
 <h3 id="代码实现">代码实现</h3>
 </blockquote>
 <a id="more"></a>
-<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> p[<span class="number">512</span>], skip[<span class="number">50024</span>], ans[<span class="number">50024</span>];</div><div class="line"><span class="keyword">int</span> small, first, num, sum, cnt;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> edge</div><div class="line">{</div><div class="line">	<span class="keyword">int</span> from, to, c;</div><div class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> edge a) <span class="keyword">const</span></div><div class="line">	{</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>-&gt;c &lt; a.c;</div><div class="line">	}</div><div class="line">}e[<span class="number">50024</span>];</div><div class="line"></div><div class="line"><span class="keyword">int</span> find(<span class="keyword">int</span> x)</div><div class="line">{</div><div class="line">	<span class="keyword">return</span> x == p[x] ? x : p[x] = find(p[x]);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> Kruskal()</div><div class="line">{</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i)</div><div class="line">		p[i] = i;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> ret = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">	{</div><div class="line">		<span class="keyword">if</span> (skip[i])</div><div class="line">			<span class="keyword">continue</span>;</div><div class="line">		<span class="keyword">int</span> x, y;</div><div class="line">		x = find(e[i].from), y = find(e[i].to);</div><div class="line">		<span class="keyword">if</span> (x != y)</div><div class="line">		{</div><div class="line">			p[x] = y;</div><div class="line">			ret += e[i].c;</div><div class="line">			<span class="keyword">if</span> (first)</div><div class="line">				ans[num++] = i;</div><div class="line">		}</div><div class="line">	}</div><div class="line">	<span class="keyword">return</span> ret;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef OFFLINE</span></div><div class="line">	freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, stdin);</div><div class="line">	<span class="comment">//freopen("data.out", "w", stdout);</span></div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">	</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &n, &m);</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &e[i].from, &e[i].to, &e[i].c);</div><div class="line"></div><div class="line">	sort(e, e+m);</div><div class="line">	first = <span class="number">1</span>;</div><div class="line">	small = Kruskal();</div><div class="line">	first = <span class="number">0</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;num; ++i)</div><div class="line">	{</div><div class="line">		skip[ans[i]] = <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (small != Kruskal())</div><div class="line">			cnt++, sum += e[ans[i]].c;</div><div class="line">		skip[ans[i]] = <span class="number">0</span>;</div><div class="line">	}</div><div class="line">	</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, cnt, sum);</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> p[<span class="number">512</span>], skip[<span class="number">50024</span>], ans[<span class="number">50024</span>];</div><div class="line"><span class="keyword">int</span> small, first, num, sum, cnt;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> edge</div><div class="line">{</div><div class="line">    <span class="keyword">int</span> from, to, c;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> edge a) <span class="keyword">const</span></div><div class="line">    {</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>-&gt;c &lt; a.c;</div><div class="line">    }</div><div class="line">}e[<span class="number">50024</span>];</div><div class="line"></div><div class="line"><span class="keyword">int</span> find(<span class="keyword">int</span> x)</div><div class="line">{</div><div class="line">    <span class="keyword">return</span> x == p[x] ? x : p[x] = find(p[x]);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> Kruskal()</div><div class="line">{</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i)</div><div class="line">        p[i] = i;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">    {</div><div class="line">        <span class="keyword">if</span> (skip[i])</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">int</span> x, y;</div><div class="line">        x = find(e[i].from), y = find(e[i].to);</div><div class="line">        <span class="keyword">if</span> (x != y)</div><div class="line">        {</div><div class="line">            p[x] = y;</div><div class="line">            ret += e[i].c;</div><div class="line">            <span class="keyword">if</span> (first)</div><div class="line">                ans[num++] = i;</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> ret;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef OFFLINE</span></div><div class="line">    freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, stdin);</div><div class="line">    <span class="comment">//freopen("data.out", "w", stdout);</span></div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">    </div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &n, &m);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &e[i].from, &e[i].to, &e[i].c);</div><div class="line"></div><div class="line">    sort(e, e+m);</div><div class="line">    first = <span class="number">1</span>;</div><div class="line">    small = Kruskal();</div><div class="line">    first = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;num; ++i)</div><div class="line">    {</div><div class="line">        skip[ans[i]] = <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (small != Kruskal())</div><div class="line">            cnt++, sum += e[ans[i]].c;</div><div class="line">        skip[ans[i]] = <span class="number">0</span>;</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, cnt, sum);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
 ]]></content>
     <summary type="html">

@@ -13,23 +13,23 @@
   </script>
   <meta charset="UTF-8">
   
-    <title>查询在各大 OJ 的 AC 数 | DwayneTen</title>
+    <title>五种 GCC 内置的位运算函数 | DwayneTen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="DwayneTen">
     
-    <meta name="description" itemprop="description" content="一个查询各大 OJ 上 AC 数的页面。">
+    <meta name="description" itemprop="description" content="五种 GCC 内置的位运算函数。">
     
     
-    <meta name="description" content="一个查询各大 OJ 上 AC 数的页面。">
+    <meta name="description" content="五种 GCC 内置的位运算函数。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="查询在各大 OJ 的 AC 数">
-<meta property="og:url" content="http://dwayneten.com/2015/03/13/zscacm/">
+<meta property="og:title" content="五种 GCC 内置的位运算函数">
+<meta property="og:url" content="http://dwayneten.com/2015/04/29/gccbuiltin/">
 <meta property="og:site_name" content="DwayneTen">
-<meta property="og:description" content="一个查询各大 OJ 上 AC 数的页面。">
+<meta property="og:description" content="五种 GCC 内置的位运算函数。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查询在各大 OJ 的 AC 数">
-<meta name="twitter:description" content="一个查询各大 OJ 上 AC 数的页面。">
+<meta name="twitter:title" content="五种 GCC 内置的位运算函数">
+<meta name="twitter:description" content="五种 GCC 内置的位运算函数。">
 <meta name="twitter:creator" content="@Dwayneten">
 <link rel="publisher" href="107614829517460254115">
 
@@ -90,14 +90,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/03/13/zscacm/" title="查询在各大 OJ 的 AC 数" itemprop="url">查询在各大 OJ 的 AC 数</a>
+      <a href="/2015/04/29/gccbuiltin/" title="五种 GCC 内置的位运算函数" itemprop="url">五种 GCC 内置的位运算函数</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
 		
   <p class="article-time">
-    <time datetime="2015-03-13T15:21:43.000Z" itemprop="datePublished"> Published Mar 13 2015</time>
+    <time datetime="2015-04-29T01:40:15.000Z" itemprop="datePublished"> Published Apr 29 2015</time>
     
   </p>
 </header>
@@ -106,24 +106,38 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#传送门"><span class="toc-number">1.</span> <span class="toc-text">传送门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能"><span class="toc-number"></span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#起因"><span class="toc-number"></span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-number"></span> <span class="toc-text">实现</span></a>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原型"><span class="toc-number">1.</span> <span class="toc-text">原型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例"><span class="toc-number">2.</span> <span class="toc-text">样例</span></a></li></ol>
 		
 		</div>
 		
 		<blockquote>
-<h3 id="传送门">传送门</h3>
+<h3 id="原型">原型</h3>
 </blockquote>
-<p><a href="http://zscacm.sinaapp.com" target="_blank" rel="external">一个查询在各大 OJ 上 AC 数的页面</a></p>
-<h2 id="功能">功能</h2>
-<p>支持 <a href="http://poj.org" target="_blank" rel="external">POJ</a>, <a href="http://acm.hdu.edu.cn" target="_blank" rel="external">HDU</a>, <a href="http://210.38.224.114" target="_blank" rel="external">ZSCOJ</a> (我校 OJ )的 AC 数查询和 <a href="http://bestcoder.hdu.edu.cn/" target="_blank" rel="external">Codeforces</a>, <a href="http://bestcoder.hdu.edu.cn/" target="_blank" rel="external">Bestcoder</a> 的 Rating 查询。<br>其他 OJ 暂不支持，主要是因为个人使用不怎么用到 XD</p>
-<h2 id="起因">起因</h2>
-<p>某天老师给我发了这个 <a href="http://neuacm.sinaapp.com/index.php" target="_blank" rel="external">neuacm 刷题榜</a>，<br>在上面那个网页查询似乎要增加到表格中去，感觉可以自己搞个来方便查询。<br><a id="more"></a></p>
-<h2 id="实现">实现</h2>
-<p>想了下实现方法，应该可以直接到各 OJ 的用户资料页去抓取 AC 数，想起之前看过 <a href="https://github.com/EndlessCheng" target="_blank" rel="external">EndlessCheng</a> 的 <a href="https://github.com/EndlessCheng/AC-Manager" target="_blank" rel="external">AC-Manager</a>，实现起来应该比较简单。</p>
-<p>于是开始做，在 SAE 新建了个应用，开发语言选的<code>Python</code>（其实只是没试过玩一下）。<br>前端框架直接套的<code>purecss</code>，只划了两个页面，放了几个输入框用于接收账户名。</p>
-<p>把 <a href="https://github.com/EndlessCheng/AC-Manager" target="_blank" rel="external">AC-Manager</a> 的<code>getnum.py</code>改了下，加上了获取 <a href="http://bestcoder.hdu.edu.cn/" target="_blank" rel="external">Codeforces</a> 和 <a href="http://bestcoder.hdu.edu.cn/" target="_blank" rel="external">Bestcoder</a> 上用户 Rating 的函数，然后新建了个<code>.py</code>文件用于处理 POST 过来的<code>username</code>并调用<code>getnum.py</code>里的相关函数获取 AC 数，最后给模板传递参数并返回渲染。</p>
-<p>后来应老师要求加了个校内集训队成员的刷题数榜单，入口没有放在页面上 →_→..<br>由于每查询一个账号在某个 OJ 上的 AC 数就要抓取一次页面，所以使得获取所有人 AC 数的速度很慢也经常会出现超时的情况。计划在有空的时候改成数据库 + 按需更新的形式来代替实时查询。</p>
-<p>在之后和 Endless 交流时获悉爬虫有更好的实现形式（BeautifulSoup），有空再去研究下。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_ffs (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中最后一位 1 是从后向前第几位， 比如 120 (01111000) 返回 4。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_clz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中前导 0 的个数， 比如 120 (01111000) 返回 25。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_ctz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中后导 0 的个数， 比如 120 (01111000) 返回 3。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_popcount (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中 1 的个数， 比如 120 (01111000) 返回 4。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_parity (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 的奇偶校验位 (x 二进制表示中 1 的个数模 2)， 比如 120 (01111000) 返回 0。</p>
+<p>若需使用对应的 usigned long 和 usigned long long 版本， 则要在函数名后加 l 或者 ll.<br>如 __builtin_ffsll()</p>
+<blockquote>
+<h3 id="样例">样例</h3>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> tmp = <span class="number">1</span> &lt;&lt; <span class="number">4</span>;</div><div class="line"><span class="comment">// 00010000</span></div><div class="line">--tmp;</div><div class="line"><span class="comment">// 00001111</span></div><div class="line">tmp &lt;&lt;= <span class="number">3</span>;</div><div class="line"><span class="comment">// 01111000</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ffs(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_clz(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ctz(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_popcount(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_parity(tmp));</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">4</div><div class="line">25</div><div class="line">3</div><div class="line">4</div><div class="line">0</div></pre></td></tr></table></figure>
+
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -131,13 +145,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/网站开发/">网站开发</a>
+  <a class="article-category-link" href="/categories/软件开发/">软件开发</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/HTML-CSS/">HTML/CSS</a><a href="/tags/Python/">Python</a><a href="/tags/Web/">Web</a>
+  <span></span> <a href="/tags/GCC/">GCC</a><a href="/tags/位运算/">位运算</a>
   </div>
 
 </div>
@@ -146,7 +160,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://dwayneten.com/2015/03/13/zscacm/" data-title="查询在各大 OJ 的 AC 数 | DwayneTen" data-tsina="207028555" class="share clearfix">
+	  <div data-url="http://dwayneten.com/2015/04/29/gccbuiltin/" data-title="五种 GCC 内置的位运算函数 | DwayneTen" data-tsina="207028555" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -159,19 +173,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/03/30/CF501C/" title="CF 501C Misha and Forest">
-  <strong>上一篇：</strong><br/>
-  <span>
-  CF 501C Misha and Forest</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/03/03/kemu2/"  title="考驾照 - 科目二">
+<a href="/2015/04/17/CSU1542/"  title="CSU 1542 Flipping Parentheses">
  <strong>下一篇：</strong><br/> 
- <span>考驾照 - 科目二
+ <span>CSU 1542 Flipping Parentheses
 </span>
 </a>
 </div>
@@ -180,7 +186,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/03/13/zscacm/" data-title="查询在各大 OJ 的 AC 数" data-url="http://dwayneten.com/2015/03/13/zscacm/"></div>
+	<div class="ds-thread" data-thread-key="2015/04/29/gccbuiltin/" data-title="五种 GCC 内置的位运算函数" data-url="http://dwayneten.com/2015/04/29/gccbuiltin/"></div>
 </section>
 
 
@@ -196,7 +202,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#传送门"><span class="toc-number">1.</span> <span class="toc-text">传送门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能"><span class="toc-number"></span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#起因"><span class="toc-number"></span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-number"></span> <span class="toc-text">实现</span></a>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原型"><span class="toc-number">1.</span> <span class="toc-text">原型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例"><span class="toc-number">2.</span> <span class="toc-text">样例</span></a></li></ol>
  
   </div>
 

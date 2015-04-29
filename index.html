@@ -90,6 +90,96 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/04/29/gccbuiltin/" title="五种 GCC 内置的位运算函数" itemprop="url">五种 GCC 内置的位运算函数</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-04-29T01:40:15.000Z" itemprop="datePublished"> Published Apr 29 2015</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <blockquote>
+<h3 id="原型">原型</h3>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_ffs (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中最后一位 1 是从后向前第几位， 比如 120 (01111000) 返回 4。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_clz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中前导 0 的个数， 比如 120 (01111000) 返回 25。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_ctz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中后导 0 的个数， 比如 120 (01111000) 返回 3。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_popcount (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中 1 的个数， 比如 120 (01111000) 返回 4。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_parity (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 的奇偶校验位 (x 二进制表示中 1 的个数模 2)， 比如 120 (01111000) 返回 0。</p>
+<p>若需使用对应的 usigned long 和 usigned long long 版本， 则要在函数名后加 l 或者 ll.<br>如 __builtin_ffsll()</p>
+<blockquote>
+<h3 id="样例">样例</h3>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> tmp = <span class="number">1</span> &lt;&lt; <span class="number">4</span>;</div><div class="line"><span class="comment">// 00010000</span></div><div class="line">--tmp;</div><div class="line"><span class="comment">// 00001111</span></div><div class="line">tmp &lt;&lt;= <span class="number">3</span>;</div><div class="line"><span class="comment">// 01111000</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ffs(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_clz(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ctz(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_popcount(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_parity(tmp));</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">4</div><div class="line">25</div><div class="line">3</div><div class="line">4</div><div class="line">0</div></pre></td></tr></table></figure>
+
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/软件开发/">软件开发</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/GCC/">GCC</a><a href="/tags/位运算/">位运算</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="http://dwayneten.com/2015/04/29/gccbuiltin/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/04/29/gccbuiltin/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/04/17/CSU1542/" title="CSU 1542 Flipping Parentheses" itemprop="url">CSU 1542 Flipping Parentheses</a>
   </h1>
   <p class="article-author">By
@@ -782,70 +872,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/03/03/kemu2/" title="考驾照 - 科目二" itemprop="url">考驾照 - 科目二</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-03-03T11:52:54.000Z" itemprop="datePublished"> Published Mar 3 2015</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>今天考科目二过啦。<br>上午六点起床七点出发去金山，练了大概八圈左右就被叫上车去茂名了。<br>到考场时大概十一点，我被分在15号，也就是下午场的第二批，当时估计要五六点才能考。<br>于是一直在场外看，直到同批一起去被分在7号的小伙伴上场考了我们才准备要进去。<br>看着7号那个一次通过考完后进里面等..一直等到快下午四点..不过还是比预想的要早。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/03/03/kemu2/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/随笔/">随笔</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/日志/">日志</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="http://dwayneten.com/2015/03/03/kemu2/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/03/03/kemu2/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -867,7 +893,7 @@
 		
 			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>8</sup></a></li>
 		
-			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>1</sup></a></li>
+			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>2</sup></a></li>
 		
 			<li><a href="/categories/随笔/" title="随笔">随笔<sup>5</sup></a></li>
 		
@@ -880,9 +906,9 @@
 	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
-			<li><a href="/tags/算法/" title="算法">算法<sup>6</sup></a></li>
-		
 			<li><a href="/tags/解题报告/" title="解题报告">解题报告<sup>6</sup></a></li>
+		
+			<li><a href="/tags/算法/" title="算法">算法<sup>6</sup></a></li>
 		
 			<li><a href="/tags/CSU/" title="CSU">CSU<sup>4</sup></a></li>
 		
@@ -890,31 +916,35 @@
 		
 			<li><a href="/tags/构造/" title="构造">构造<sup>3</sup></a></li>
 		
-			<li><a href="/tags/贪心/" title="贪心">贪心<sup>2</sup></a></li>
-		
 			<li><a href="/tags/线段树/" title="线段树">线段树<sup>2</sup></a></li>
 		
 			<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
 		
-			<li><a href="/tags/《挑战程序设计竞赛》/" title="《挑战程序设计竞赛》">《挑战程序设计竞赛》<sup>1</sup></a></li>
+			<li><a href="/tags/贪心/" title="贪心">贪心<sup>2</sup></a></li>
 		
-			<li><a href="/tags/POJ/" title="POJ">POJ<sup>1</sup></a></li>
+			<li><a href="/tags/位运算/" title="位运算">位运算<sup>1</sup></a></li>
 		
 			<li><a href="/tags/递归/" title="递归">递归<sup>1</sup></a></li>
 		
-			<li><a href="/tags/vim/" title="vim">vim<sup>1</sup></a></li>
-		
 			<li><a href="/tags/Codeforces/" title="Codeforces">Codeforces<sup>1</sup></a></li>
-		
-			<li><a href="/tags/HTML-CSS/" title="HTML/CSS">HTML/CSS<sup>1</sup></a></li>
 		
 			<li><a href="/tags/异或/" title="异或">异或<sup>1</sup></a></li>
 		
-			<li><a href="/tags/Web/" title="Web">Web<sup>1</sup></a></li>
+			<li><a href="/tags/图论/" title="图论">图论<sup>1</sup></a></li>
+		
+			<li><a href="/tags/POJ/" title="POJ">POJ<sup>1</sup></a></li>
+		
+			<li><a href="/tags/《挑战程序设计竞赛》/" title="《挑战程序设计竞赛》">《挑战程序设计竞赛》<sup>1</sup></a></li>
+		
+			<li><a href="/tags/vim/" title="vim">vim<sup>1</sup></a></li>
+		
+			<li><a href="/tags/HTML-CSS/" title="HTML/CSS">HTML/CSS<sup>1</sup></a></li>
 		
 			<li><a href="/tags/最小生成树/" title="最小生成树">最小生成树<sup>1</sup></a></li>
 		
-			<li><a href="/tags/图论/" title="图论">图论<sup>1</sup></a></li>
+			<li><a href="/tags/Web/" title="Web">Web<sup>1</sup></a></li>
+		
+			<li><a href="/tags/GCC/" title="GCC">GCC<sup>1</sup></a></li>
 		
 		</ul>
 </div>

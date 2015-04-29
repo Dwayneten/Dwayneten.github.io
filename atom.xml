@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-04-18T00:55:56.007Z</updated>
+  <updated>2015-04-29T01:59:13.221Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,54 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[五种 GCC 内置的位运算函数]]></title>
+    <link href="http://dwayneten.com/2015/04/29/gccbuiltin/"/>
+    <id>http://dwayneten.com/2015/04/29/gccbuiltin/</id>
+    <published>2015-04-29T01:40:15.000Z</published>
+    <updated>2015-04-29T01:58:59.045Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<h3 id="原型">原型</h3>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_ffs (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中最后一位 1 是从后向前第几位， 比如 120 (01111000) 返回 4。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_clz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中前导 0 的个数， 比如 120 (01111000) 返回 25。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_ctz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中后导 0 的个数， 比如 120 (01111000) 返回 3。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_popcount (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 二进制表示中 1 的个数， 比如 120 (01111000) 返回 4。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> __builtin_parity (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</div></pre></td></tr></table></figure>
+
+<p>返回 x 的奇偶校验位 (x 二进制表示中 1 的个数模 2)， 比如 120 (01111000) 返回 0。</p>
+<p>若需使用对应的 usigned long 和 usigned long long 版本， 则要在函数名后加 l 或者 ll.<br>如 __builtin_ffsll()</p>
+<blockquote>
+<h3 id="样例">样例</h3>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> tmp = <span class="number">1</span> &lt;&lt; <span class="number">4</span>;</div><div class="line"><span class="comment">// 00010000</span></div><div class="line">--tmp;</div><div class="line"><span class="comment">// 00001111</span></div><div class="line">tmp &lt;&lt;= <span class="number">3</span>;</div><div class="line"><span class="comment">// 01111000</span></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ffs(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_clz(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ctz(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_popcount(tmp));</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_parity(tmp));</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">4</div><div class="line">25</div><div class="line">3</div><div class="line">4</div><div class="line">0</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[五种 GCC 内置的位运算函数。]]>
+    
+    </summary>
+    
+      <category term="GCC" scheme="http://dwayneten.com/tags/GCC/"/>
+    
+      <category term="位运算" scheme="http://dwayneten.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+      <category term="软件开发" scheme="http://dwayneten.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[CSU 1542 Flipping Parentheses]]></title>

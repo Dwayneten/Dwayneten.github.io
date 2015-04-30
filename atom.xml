@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-04-30T03:16:27.472Z</updated>
+  <updated>2015-04-30T03:24:13.344Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://dwayneten.com/2015/04/30/SOJ11347/"/>
     <id>http://dwayneten.com/2015/04/30/SOJ11347/</id>
     <published>2015-04-30T03:08:40.000Z</published>
-    <updated>2015-04-30T03:16:10.423Z</updated>
+    <updated>2015-04-30T03:22:01.008Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://soj.sysu.edu.cn/11347" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -54,10 +54,6 @@
     <![CDATA[SOJ 11347 Unknown Switches， 利用状态压缩和位运算解决。]]>
     
     </summary>
-    
-      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="位运算" scheme="http://dwayneten.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
@@ -122,7 +118,7 @@
     <link href="http://dwayneten.com/2015/04/17/CSU1542/"/>
     <id>http://dwayneten.com/2015/04/17/CSU1542/</id>
     <published>2015-04-17T15:41:51.000Z</published>
-    <updated>2015-04-30T03:16:16.808Z</updated>
+    <updated>2015-04-30T03:22:06.115Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1542" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -348,10 +344,6 @@
     
     </summary>
     
-      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="线段树" scheme="http://dwayneten.com/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
       <category term="构造" scheme="http://dwayneten.com/tags/%E6%9E%84%E9%80%A0/"/>
@@ -367,7 +359,7 @@
     <link href="http://dwayneten.com/2015/04/17/CSU1554/"/>
     <id>http://dwayneten.com/2015/04/17/CSU1554/</id>
     <published>2015-04-17T10:09:13.000Z</published>
-    <updated>2015-04-18T00:52:11.010Z</updated>
+    <updated>2015-04-30T03:22:10.004Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1554" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -393,10 +385,6 @@
     
     </summary>
     
-      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="构造" scheme="http://dwayneten.com/tags/%E6%9E%84%E9%80%A0/"/>
     
       <category term="CSU" scheme="http://dwayneten.com/tags/CSU/"/>
@@ -410,7 +398,7 @@
     <link href="http://dwayneten.com/2015/04/15/CSU1555/"/>
     <id>http://dwayneten.com/2015/04/15/CSU1555/</id>
     <published>2015-04-15T04:42:56.000Z</published>
-    <updated>2015-04-17T10:33:42.009Z</updated>
+    <updated>2015-04-30T03:22:16.539Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1555" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -443,10 +431,6 @@
     
     </summary>
     
-      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="线段树" scheme="http://dwayneten.com/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
       <category term="CSU" scheme="http://dwayneten.com/tags/CSU/"/>
@@ -460,7 +444,7 @@
     <link href="http://dwayneten.com/2015/04/15/CSU1541/"/>
     <id>http://dwayneten.com/2015/04/15/CSU1541/</id>
     <published>2015-04-15T04:41:05.000Z</published>
-    <updated>2015-04-18T00:52:09.989Z</updated>
+    <updated>2015-04-30T03:22:12.708Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1541" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -481,10 +465,6 @@
     <![CDATA[CSU 1541 There is No Alternative。]]>
     
     </summary>
-    
-      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="最小生成树" scheme="http://dwayneten.com/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/"/>
     
@@ -542,7 +522,7 @@
     <link href="http://dwayneten.com/2015/03/30/hiho1074/"/>
     <id>http://dwayneten.com/2015/03/30/hiho1074/</id>
     <published>2015-03-30T15:41:15.000Z</published>
-    <updated>2015-03-30T15:53:02.155Z</updated>
+    <updated>2015-04-30T03:23:44.580Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://hihocoder.com/problemset/problem/1074" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -579,6 +559,8 @@
     
       <category term="递归" scheme="http://dwayneten.com/tags/%E9%80%92%E5%BD%92/"/>
     
+      <category term="hihocoder" scheme="http://dwayneten.com/tags/hihocoder/"/>
+    
       <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
   </entry>
@@ -588,7 +570,7 @@
     <link href="http://dwayneten.com/2015/03/30/CF501C/"/>
     <id>http://dwayneten.com/2015/03/30/CF501C/</id>
     <published>2015-03-30T15:26:31.000Z</published>
-    <updated>2015-03-30T15:53:50.754Z</updated>
+    <updated>2015-04-30T03:21:50.574Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://codeforces.com/contest/501/problem/C" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -620,8 +602,6 @@
       <category term="图论" scheme="http://dwayneten.com/tags/%E5%9B%BE%E8%AE%BA/"/>
     
       <category term="构造" scheme="http://dwayneten.com/tags/%E6%9E%84%E9%80%A0/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="异或" scheme="http://dwayneten.com/tags/%E5%BC%82%E6%88%96/"/>
     
@@ -689,7 +669,7 @@
     <link href="http://dwayneten.com/2015/03/01/CF519/"/>
     <id>http://dwayneten.com/2015/03/01/CF519/</id>
     <published>2015-03-01T12:46:17.000Z</published>
-    <updated>2015-03-01T13:23:40.606Z</updated>
+    <updated>2015-04-30T03:22:30.819Z</updated>
     <content type="html"><![CDATA[<p>感觉这套 div2 的题比往常简单。<br>很久没打 CF 了，刚好这场开始时间比较早，就打了这场。<br>赛时只出了 ABC, hack+1。<br><a id="more"></a><br><a href="http://codeforces.com/problemset/problem/519/A" target="_blank" rel="external">519A - A and B and Chess</a></p>
 <blockquote>
 <p>A 题很水，不同字母代表的分数不同，比较两个阵型的总分大小。</p>
@@ -729,10 +709,6 @@
     
     </summary>
     
-      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="Codeforces" scheme="http://dwayneten.com/tags/Codeforces/"/>
     
       <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
@@ -744,7 +720,7 @@
     <link href="http://dwayneten.com/2015/02/26/POJ-3040/"/>
     <id>http://dwayneten.com/2015/02/26/POJ-3040/</id>
     <published>2015-02-26T12:21:25.000Z</published>
-    <updated>2015-02-26T12:46:09.482Z</updated>
+    <updated>2015-04-30T03:23:24.748Z</updated>
     <content type="html"><![CDATA[<p>《挑战程序设计竞赛》练习题</p>
 <blockquote>
 <p>2.2 一直往前！贪心法</p>
@@ -763,11 +739,7 @@
     
     </summary>
     
-      <category term="解题报告" scheme="http://dwayneten.com/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
       <category term="POJ" scheme="http://dwayneten.com/tags/POJ/"/>
-    
-      <category term="算法" scheme="http://dwayneten.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="贪心" scheme="http://dwayneten.com/tags/%E8%B4%AA%E5%BF%83/"/>
     

@@ -90,6 +90,92 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/04/30/SOJ11347/" title="SOJ 11347 Unknown Switches" itemprop="url">SOJ 11347 Unknown Switches</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-04-30T03:08:40.000Z" itemprop="datePublished"> Published Apr 30 2015</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="题目链接"><a href="http://soj.sysu.edu.cn/11347" target="_blank" rel="external">题目链接</a></h2>
+<blockquote>
+<h3 id="题意">题意</h3>
+</blockquote>
+<p>共有 <em>N</em> 个开关和 <em>M</em> 盏灯， 每盏灯仅由一个开关控制， 而一个开关可能控制对应的多盏灯。 然后给出 <em>Q</em> 次操作， 每次包含开关和灯的状态。<br>左边的 0 表示保持开关现状不变， 1 表示改变开关状态；<br>右边的 0 表示该位置的灯处在关闭状态， 1 表示处在打开状态。<br>要求输出每盏灯是由第几个开关控制的， 若不能确定则以 ‘?’ 代替。</p>
+<blockquote>
+<h3 id="样例输入">样例输入</h3>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">3 10 3</div><div class="line">000 0000000000</div><div class="line">110 0000001111</div><div class="line">101 1111111100</div><div class="line">2 2 0</div><div class="line">1 1 0</div><div class="line">2 1 1</div><div class="line">01 1</div><div class="line">11 11 10</div><div class="line">10000000000 10000000000</div><div class="line">11000000000 01000000000</div><div class="line">01100000000 00100000000</div><div class="line">00110000000 00010000000</div><div class="line">00011000000 00001000000</div><div class="line">00001100000 00000100000</div><div class="line">00000110000 00000010000</div><div class="line">00000011000 00000001000</div><div class="line">00000001100 00000000100</div><div class="line">00000000110 00000000010</div><div class="line">0 0 0</div></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="样例输出">样例输出</h3>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">2222221100</span></div><div class="line">??</div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">0123456789</span><span class="literal">A</span></div></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="思路">思路</h3>
+</blockquote>
+<p>状态用一个<code>long long</code>型来保存。<br>对于每个 case 维护一个当前处于打开状态的开关集合。<br>对于每盏灯维护一个能与之匹配的开关集合， 初始化时将这个集合初始化成开关全集。<br>对于每次操作， 遍历每盏灯：<br>若当时这盏灯处于打开状态， 那么可以排除掉目前处于关闭状态的开关；<br>若当时这盏灯处于关闭状态，<br>则可以排除掉目前处于打开状态的开关。<br>处理完所有操作后， 遍历所有灯根据能与之匹配的开关集合处理答案即可。</p>
+<blockquote>
+<h3 id="代码实现">代码实现</h3>
+</blockquote>
+
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/04/30/SOJ11347/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/解题报告/">解题报告</a><a href="/tags/算法/">算法</a><a href="/tags/位运算/">位运算</a><a href="/tags/状态压缩/">状态压缩</a><a href="/tags/SOJ/">SOJ</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="http://dwayneten.com/2015/04/30/SOJ11347/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/04/30/SOJ11347/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/04/29/gccbuiltin/" title="五种 GCC 内置的位运算函数" itemprop="url">五种 GCC 内置的位运算函数</a>
   </h1>
   <p class="article-author">By
@@ -234,7 +320,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/解题报告/">解题报告</a><a href="/tags/线段树/">线段树</a><a href="/tags/构造/">构造</a><a href="/tags/CSU/">CSU</a>
+  <span></span> <a href="/tags/解题报告/">解题报告</a><a href="/tags/算法/">算法</a><a href="/tags/线段树/">线段树</a><a href="/tags/构造/">构造</a><a href="/tags/CSU/">CSU</a>
   </div>
 
 </div>
@@ -801,77 +887,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/03/13/zscacm/" title="查询在各大 OJ 的 AC 数" itemprop="url">查询在各大 OJ 的 AC 数</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-03-13T15:21:43.000Z" itemprop="datePublished"> Published Mar 13 2015</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <blockquote>
-<h3 id="传送门">传送门</h3>
-</blockquote>
-<p><a href="http://zscacm.sinaapp.com" target="_blank" rel="external">一个查询在各大 OJ 上 AC 数的页面</a></p>
-<h2 id="功能">功能</h2>
-<p>支持 <a href="http://poj.org" target="_blank" rel="external">POJ</a>, <a href="http://acm.hdu.edu.cn" target="_blank" rel="external">HDU</a>, <a href="http://210.38.224.114" target="_blank" rel="external">ZSCOJ</a> (我校 OJ )的 AC 数查询和 <a href="http://bestcoder.hdu.edu.cn/" target="_blank" rel="external">Codeforces</a>, <a href="http://bestcoder.hdu.edu.cn/" target="_blank" rel="external">Bestcoder</a> 的 Rating 查询。<br>其他 OJ 暂不支持，主要是因为个人使用不怎么用到 XD</p>
-<h2 id="起因">起因</h2>
-<p>某天老师给我发了这个 <a href="http://neuacm.sinaapp.com/index.php" target="_blank" rel="external">neuacm 刷题榜</a>，<br>在上面那个网页查询似乎要增加到表格中去，感觉可以自己搞个来方便查询。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2015/03/13/zscacm/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/网站开发/">网站开发</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/HTML-CSS/">HTML/CSS</a><a href="/tags/Python/">Python</a><a href="/tags/Web/">Web</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="http://dwayneten.com/2015/03/13/zscacm/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/03/13/zscacm/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -891,7 +906,7 @@
 		
 			<li><a href="/categories/网站开发/" title="网站开发">网站开发<sup>1</sup></a></li>
 		
-			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>8</sup></a></li>
+			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>9</sup></a></li>
 		
 			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>2</sup></a></li>
 		
@@ -906,9 +921,9 @@
 	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
-			<li><a href="/tags/解题报告/" title="解题报告">解题报告<sup>6</sup></a></li>
+			<li><a href="/tags/算法/" title="算法">算法<sup>8</sup></a></li>
 		
-			<li><a href="/tags/算法/" title="算法">算法<sup>6</sup></a></li>
+			<li><a href="/tags/解题报告/" title="解题报告">解题报告<sup>7</sup></a></li>
 		
 			<li><a href="/tags/CSU/" title="CSU">CSU<sup>4</sup></a></li>
 		
@@ -918,15 +933,19 @@
 		
 			<li><a href="/tags/线段树/" title="线段树">线段树<sup>2</sup></a></li>
 		
-			<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
+			<li><a href="/tags/位运算/" title="位运算">位运算<sup>2</sup></a></li>
 		
 			<li><a href="/tags/贪心/" title="贪心">贪心<sup>2</sup></a></li>
 		
-			<li><a href="/tags/位运算/" title="位运算">位运算<sup>1</sup></a></li>
+			<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
 		
-			<li><a href="/tags/递归/" title="递归">递归<sup>1</sup></a></li>
+			<li><a href="/tags/GCC/" title="GCC">GCC<sup>1</sup></a></li>
 		
 			<li><a href="/tags/Codeforces/" title="Codeforces">Codeforces<sup>1</sup></a></li>
+		
+			<li><a href="/tags/状态压缩/" title="状态压缩">状态压缩<sup>1</sup></a></li>
+		
+			<li><a href="/tags/递归/" title="递归">递归<sup>1</sup></a></li>
 		
 			<li><a href="/tags/异或/" title="异或">异或<sup>1</sup></a></li>
 		
@@ -941,10 +960,6 @@
 			<li><a href="/tags/HTML-CSS/" title="HTML/CSS">HTML/CSS<sup>1</sup></a></li>
 		
 			<li><a href="/tags/最小生成树/" title="最小生成树">最小生成树<sup>1</sup></a></li>
-		
-			<li><a href="/tags/Web/" title="Web">Web<sup>1</sup></a></li>
-		
-			<li><a href="/tags/GCC/" title="GCC">GCC<sup>1</sup></a></li>
 		
 		</ul>
 </div>

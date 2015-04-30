@@ -13,23 +13,23 @@
   </script>
   <meta charset="UTF-8">
   
-    <title>CSU 1541 There is No Alternative | DwayneTen</title>
+    <title>SOJ 11347 Unknown Switches | DwayneTen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="DwayneTen">
     
-    <meta name="description" itemprop="description" content="CSU 1541 There is No Alternative。">
+    <meta name="description" itemprop="description" content="SOJ 11347 Unknown Switches， 利用状态压缩和位运算解决。">
     
     
-    <meta name="description" content="CSU 1541 There is No Alternative。">
+    <meta name="description" content="SOJ 11347 Unknown Switches， 利用状态压缩和位运算解决。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSU 1541 There is No Alternative">
-<meta property="og:url" content="http://dwayneten.com/2015/04/15/CSU1541/">
+<meta property="og:title" content="SOJ 11347 Unknown Switches">
+<meta property="og:url" content="http://dwayneten.com/2015/04/30/SOJ11347/">
 <meta property="og:site_name" content="DwayneTen">
-<meta property="og:description" content="CSU 1541 There is No Alternative。">
+<meta property="og:description" content="SOJ 11347 Unknown Switches， 利用状态压缩和位运算解决。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSU 1541 There is No Alternative">
-<meta name="twitter:description" content="CSU 1541 There is No Alternative。">
+<meta name="twitter:title" content="SOJ 11347 Unknown Switches">
+<meta name="twitter:description" content="SOJ 11347 Unknown Switches， 利用状态压缩和位运算解决。">
 <meta name="twitter:creator" content="@Dwayneten">
 <link rel="publisher" href="107614829517460254115">
 
@@ -90,14 +90,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/04/15/CSU1541/" title="CSU 1541 There is No Alternative" itemprop="url">CSU 1541 There is No Alternative</a>
+      <a href="/2015/04/30/SOJ11347/" title="SOJ 11347 Unknown Switches" itemprop="url">SOJ 11347 Unknown Switches</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
 		
   <p class="article-time">
-    <time datetime="2015-04-15T04:41:05.000Z" itemprop="datePublished"> Published Apr 15 2015</time>
+    <time datetime="2015-04-30T03:08:40.000Z" itemprop="datePublished"> Published Apr 30 2015</time>
     
   </p>
 </header>
@@ -106,25 +106,39 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.3.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输入"><span class="toc-number">1.2.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输出"><span class="toc-number">1.3.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.4.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.5.</span> <span class="toc-text">代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结"><span class="toc-number">1.6.</span> <span class="toc-text">小结</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1541" target="_blank" rel="external">题目链接</a></h2>
+		<h2 id="题目链接"><a href="http://soj.sysu.edu.cn/11347" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
 </blockquote>
-<p>求最小生成树不可替代的边的数目和这些不可替代的边的花费总和。</p>
+<p>共有 <em>N</em> 个开关和 <em>M</em> 盏灯， 每盏灯仅由一个开关控制， 而一个开关可能控制对应的多盏灯。 然后给出 <em>Q</em> 次操作， 每次包含开关和灯的状态。<br>左边的 0 表示保持开关现状不变， 1 表示改变开关状态；<br>右边的 0 表示该位置的灯处在关闭状态， 1 表示处在打开状态。<br>要求输出每盏灯是由第几个开关控制的， 若不能确定则以 ‘?’ 代替。</p>
+<blockquote>
+<h3 id="样例输入">样例输入</h3>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">3 10 3</div><div class="line">000 0000000000</div><div class="line">110 0000001111</div><div class="line">101 1111111100</div><div class="line">2 2 0</div><div class="line">1 1 0</div><div class="line">2 1 1</div><div class="line">01 1</div><div class="line">11 11 10</div><div class="line">10000000000 10000000000</div><div class="line">11000000000 01000000000</div><div class="line">01100000000 00100000000</div><div class="line">00110000000 00010000000</div><div class="line">00011000000 00001000000</div><div class="line">00001100000 00000100000</div><div class="line">00000110000 00000010000</div><div class="line">00000011000 00000001000</div><div class="line">00000001100 00000000100</div><div class="line">00000000110 00000000010</div><div class="line">0 0 0</div></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="样例输出">样例输出</h3>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">2222221100</span></div><div class="line">??</div><div class="line"><span class="number">0</span></div><div class="line"><span class="number">1</span></div><div class="line"><span class="number">0123456789</span><span class="literal">A</span></div></pre></td></tr></table></figure>
+
 <blockquote>
 <h3 id="思路">思路</h3>
 </blockquote>
-<p>原先是想 DFS 找环， 加一些判断去掉某些边， 发现实现不了亦有可能是错误的。<br>其实只需先把最小生成树的总权值求出来， 然后对于每一条在最小生成树上的边， 求在去掉这条边的情况下， 原图再找最小生成树的总权值， 比较一下两个值， 若相等， 则这条边必然可以被其他边所替代， 反之若不等， 那么这条边就是我们要求的不可替代的边之一。</p>
+<p>状态用一个<code>long long</code>型来保存。<br>对于每个 case 维护一个当前处于打开状态的开关集合。<br>对于每盏灯维护一个能与之匹配的开关集合， 初始化时将这个集合初始化成开关全集。<br>对于每次操作， 遍历每盏灯：<br>若当时这盏灯处于打开状态， 那么可以排除掉目前处于关闭状态的开关；<br>若当时这盏灯处于关闭状态，<br>则可以排除掉目前处于打开状态的开关。<br>处理完所有操作后， 遍历所有灯根据能与之匹配的开关集合处理答案即可。</p>
 <blockquote>
 <h3 id="代码实现">代码实现</h3>
 </blockquote>
 <a id="more"></a>
-<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> p[<span class="number">512</span>], skip[<span class="number">50024</span>], ans[<span class="number">50024</span>];</div><div class="line"><span class="keyword">int</span> small, first, num, sum, cnt;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> edge</div><div class="line">{</div><div class="line">    <span class="keyword">int</span> from, to, c;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> edge a) <span class="keyword">const</span></div><div class="line">    {</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>-&gt;c &lt; a.c;</div><div class="line">    }</div><div class="line">}e[<span class="number">50024</span>];</div><div class="line"></div><div class="line"><span class="keyword">int</span> find(<span class="keyword">int</span> x)</div><div class="line">{</div><div class="line">    <span class="keyword">return</span> x == p[x] ? x : p[x] = find(p[x]);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> Kruskal()</div><div class="line">{</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; ++i)</div><div class="line">        p[i] = i;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> ret = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">    {</div><div class="line">        <span class="keyword">if</span> (skip[i])</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">int</span> x, y;</div><div class="line">        x = find(e[i].from), y = find(e[i].to);</div><div class="line">        <span class="keyword">if</span> (x != y)</div><div class="line">        {</div><div class="line">            p[x] = y;</div><div class="line">            ret += e[i].c;</div><div class="line">            <span class="keyword">if</span> (first)</div><div class="line">                ans[num++] = i;</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> ret;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef OFFLINE</span></div><div class="line">    freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, stdin);</div><div class="line">    <span class="comment">//freopen("data.out", "w", stdout);</span></div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">    </div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &n, &m);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &e[i].from, &e[i].to, &e[i].c);</div><div class="line"></div><div class="line">    sort(e, e+m);</div><div class="line">    first = <span class="number">1</span>;</div><div class="line">    small = Kruskal();</div><div class="line">    first = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;num; ++i)</div><div class="line">    {</div><div class="line">        skip[ans[i]] = <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (small != Kruskal())</div><div class="line">            cnt++, sum += e[ans[i]].c;</div><div class="line">        skip[ans[i]] = <span class="number">0</span>;</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, cnt, sum);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Problem#: 11347</span></div><div class="line"><span class="comment">// Submission#: 3709475</span></div><div class="line"><span class="comment">// The source code is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</span></div><div class="line"><span class="comment">// URI: http://creativecommons.org/licenses/by-nc-sa/3.0/</span></div><div class="line"><span class="comment">// All Copyright reserved by Informatic Lab of Sun Yat-sen University</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef OFFLINE</span></div><div class="line">    freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, stdin);</div><div class="line">    <span class="comment">//freopen("data.out", "w", stdout);</span></div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">    ios_base::sync_with_stdio(<span class="keyword">false</span>); </div><div class="line">    <span class="keyword">for</span> (;<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k, n || m || k;)</div><div class="line">    {</div><div class="line">        <span class="built_in">string</span> a, b;</div><div class="line">        <span class="stl_container"><span class="built_in">vector</span>&lt;LL&gt;</span> can(m, (<span class="number">1L</span>L &lt;&lt; n) - <span class="number">1</span>);</div><div class="line">        LL state = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;k; ++i)</div><div class="line">        {</div><div class="line">            <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; ++j)</div><div class="line">                <span class="keyword">if</span> (a[j] == <span class="string">'1'</span>)</div><div class="line">                    state ^= (<span class="number">1L</span>L &lt;&lt; j);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;m; ++j)</div><div class="line">                <span class="keyword">if</span> (b[j] == <span class="string">'1'</span>)</div><div class="line">                    can[j] &= state;</div><div class="line">                <span class="keyword">else</span></div><div class="line">                    can[j] &= ~state;</div><div class="line">        }</div><div class="line">        <span class="built_in">string</span> ans(m, <span class="string">'?'</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; ++i)</div><div class="line">        {</div><div class="line">            <span class="keyword">if</span> (__builtin_popcountll(can[i]) &gt; <span class="number">1</span>)</div><div class="line">                <span class="keyword">continue</span>;</div><div class="line">            LL shift = __builtin_ctzll(can[i]);</div><div class="line">            <span class="keyword">if</span> (shift &gt; <span class="number">9</span>)</div><div class="line">                ans[i] = shift - <span class="number">10</span> + <span class="string">'A'</span>;</div><div class="line">            <span class="keyword">else</span></div><div class="line">                ans[i] = shift + <span class="string">'0'</span>;</div><div class="line">        }</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; endl;</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
 
+<blockquote>
+<h3 id="小结">小结</h3>
+</blockquote>
+<p>在这题里， 对于 STL 里的容器使用如 <code>string ans(m, &#39;?&#39;);</code> 的方式初始化比较方便。<br>除了利用各种位运算符外， 还可以利用 GNU 内置的 <code>__builtin_popcountll()</code> 等位运算函数来方便地处理状态压缩的数据。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -138,7 +152,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/解题报告/">解题报告</a><a href="/tags/算法/">算法</a><a href="/tags/最小生成树/">最小生成树</a><a href="/tags/CSU/">CSU</a>
+  <span></span> <a href="/tags/解题报告/">解题报告</a><a href="/tags/算法/">算法</a><a href="/tags/位运算/">位运算</a><a href="/tags/状态压缩/">状态压缩</a><a href="/tags/SOJ/">SOJ</a>
   </div>
 
 </div>
@@ -147,7 +161,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://dwayneten.com/2015/04/15/CSU1541/" data-title="CSU 1541 There is No Alternative | DwayneTen" data-tsina="207028555" class="share clearfix">
+	  <div data-url="http://dwayneten.com/2015/04/30/SOJ11347/" data-title="SOJ 11347 Unknown Switches | DwayneTen" data-tsina="207028555" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -160,19 +174,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/04/15/CSU1555/" title="CSU 1555 Inversion Sequence">
-  <strong>上一篇：</strong><br/>
-  <span>
-  CSU 1555 Inversion Sequence</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/04/14/kemusan/"  title="考驾照 - 科目三">
+<a href="/2015/04/29/gccbuiltin/"  title="五种 GCC 内置的位运算函数">
  <strong>下一篇：</strong><br/> 
- <span>考驾照 - 科目三
+ <span>五种 GCC 内置的位运算函数
 </span>
 </a>
 </div>
@@ -181,7 +187,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/04/15/CSU1541/" data-title="CSU 1541 There is No Alternative" data-url="http://dwayneten.com/2015/04/15/CSU1541/"></div>
+	<div class="ds-thread" data-thread-key="2015/04/30/SOJ11347/" data-title="SOJ 11347 Unknown Switches" data-url="http://dwayneten.com/2015/04/30/SOJ11347/"></div>
 </section>
 
 
@@ -197,7 +203,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.3.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输入"><span class="toc-number">1.2.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输出"><span class="toc-number">1.3.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.4.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.5.</span> <span class="toc-text">代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结"><span class="toc-number">1.6.</span> <span class="toc-text">小结</span></a></li></ol></li></ol>
  
   </div>
 

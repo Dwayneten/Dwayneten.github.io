@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dwayneten.com/about/index.html</loc>
+    <lastmod>2015-05-01T09:55:41.240Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dwayneten.com/2015/04/17/CSU1542/</loc>
+    <lastmod>2015-04-30T03:27:54.538Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dwayneten.com/2015/03/30/hiho1074/</loc>
     <lastmod>2015-04-30T03:23:44.580Z</lastmod>
   </url>
@@ -29,11 +39,6 @@
   <url>
     <loc>http://dwayneten.com/2015/04/17/CSU1554/</loc>
     <lastmod>2015-04-30T03:22:10.004Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dwayneten.com/2015/04/17/CSU1542/</loc>
-    <lastmod>2015-04-30T03:22:06.115Z</lastmod>
   </url>
   
   <url>
@@ -94,11 +99,6 @@
   <url>
     <loc>http://dwayneten.com/categories/index.html</loc>
     <lastmod>2015-02-26T07:22:08.647Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dwayneten.com/about/index.html</loc>
-    <lastmod>2015-02-26T07:20:17.048Z</lastmod>
   </url>
   
 </urlset>

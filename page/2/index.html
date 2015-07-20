@@ -90,6 +90,89 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/03/30/CF501C/" title="CF 501C Misha and Forest" itemprop="url">CF 501C Misha and Forest</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-03-30T15:26:31.000Z" itemprop="datePublished"> Published Mar 30 2015</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="题目链接"><a href="http://codeforces.com/contest/501/problem/C" target="_blank" rel="external">题目链接</a></h2>
+<blockquote>
+<h3 id="题意">题意</h3>
+</blockquote>
+<p>给出节点的数目 <em>n</em> ， 接下来有 <em>n</em> 行， 第 <em>i</em> 行 代表第 <em>i</em> 个节点。<br>每行包括一个 <em>d<sub>i</sub></em> 和 <em>s<sub>i</sub></em> ， <em>d<sub>i</sub></em> 表示该节点与多少个节点相邻， <em>s<sub>i</sub></em> 代表所有与其相邻的节点编号相异或的值 。保证这些点组成森林。<br>要求的是这个森林里面有多少条边， 和每条边的 <em>u</em> 和 <em>v</em>， 以任意顺序输出。</p>
+<blockquote>
+<h3 id="思路">思路</h3>
+</blockquote>
+<p>一开始想的是建图， 根据异或的值来判断哪个节点和哪个节点之间有边， 但发现从这个角度无从下手去判断。<br>继而尝试从异或这个点下手。<br>我们知道异或有几个比较有用的性质：</p>
+<ul>
+<li>x ^ 0 = 0</li>
+<li>x ^ x = 0 (偶数个相同的数相异或都等于零)</li>
+<li>a ^ b = b ^ c<br>继而有</li>
+<li>a ^ b = (a ^ b ^ c) ^ c</li>
+</ul>
+<p>然后注意到 <em>s<sub>i</sub></em> 其实“储存”了所有与第 <em>i</em> 个节点相邻的节点的编号。<br>但是怎么把它们提取出来呢？<br>回想题目， 既然给出的数据组成的是森林， 那么就一定有叶子节点。 叶子节点相比其他节点的特点就是只有一个节点与其相邻， 也就是 <em>d<sub>i</sub></em> = 1 。<br>显然， 既然相邻的节点只有一个， 我们马上就可以求出其相邻节点的编号 —— 就是 <em>s<sub>i</sub></em> 。<br>现在我们已经可以求出所有叶子节点和它父亲节点的编号， 但是这还不够， 题目要求的是整个森林的所有边。<br>我们要下一步操作是把森林中的所有的叶子和对应的边去掉来得到一个新的森林， 并且这个森林也一定存在着叶子。<br>为了实现这个操作， 利用到了上面提及的异或的性质。 我们在找到叶子节点 <em>i</em> 的父亲节点 <em>j</em> 之后， 使 <em>d<sub>j</sub></em> -= 1 并且 <em>s<sub>j</sub></em> ^= i 来将叶子节点 <em>i</em> 从森林中除去。当然， 在期间要记录一下它们之间的边作为答案。<br>可以用一个队列来存目前森林的叶子节点集合， 不断更新森林直到该队列为空时也就把所有边求出来了。</p>
+<blockquote>
+<h3 id="代码实现">代码实现</h3>
+</blockquote>
+
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/03/30/CF501C/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/图论/">图论</a><a href="/tags/构造/">构造</a><a href="/tags/异或/">异或</a><a href="/tags/Codeforces/">Codeforces</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="http://dwayneten.com/2015/03/30/CF501C/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/03/30/CF501C/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/03/13/zscacm/" title="查询在各大 OJ 的 AC 数" itemprop="url">查询在各大 OJ 的 AC 数</a>
   </h1>
   <p class="article-author">By
@@ -587,6 +670,8 @@
 	<p class="asidetitle">Categories</p>
 		<ul>
 		
+			<li><a href="/categories/example/" title="example">example<sup>1</sup></a></li>
+		
 			<li><a href="/categories/网站开发/" title="网站开发">网站开发<sup>1</sup></a></li>
 		
 			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>9</sup></a></li>
@@ -604,45 +689,45 @@
 	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
-			<li><a href="/tags/CSU/" title="CSU">CSU<sup>4</sup></a></li>
-		
 			<li><a href="/tags/日志/" title="日志">日志<sup>4</sup></a></li>
 		
-			<li><a href="/tags/构造/" title="构造">构造<sup>3</sup></a></li>
+			<li><a href="/tags/CSU/" title="CSU">CSU<sup>4</sup></a></li>
 		
-			<li><a href="/tags/贪心/" title="贪心">贪心<sup>2</sup></a></li>
+			<li><a href="/tags/Codeforces/" title="Codeforces">Codeforces<sup>3</sup></a></li>
+		
+			<li><a href="/tags/位运算/" title="位运算">位运算<sup>3</sup></a></li>
+		
+			<li><a href="/tags/贪心/" title="贪心">贪心<sup>3</sup></a></li>
+		
+			<li><a href="/tags/构造/" title="构造">构造<sup>3</sup></a></li>
 		
 			<li><a href="/tags/线段树/" title="线段树">线段树<sup>2</sup></a></li>
 		
 			<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
 		
-			<li><a href="/tags/位运算/" title="位运算">位运算<sup>2</sup></a></li>
-		
-			<li><a href="/tags/状态压缩/" title="状态压缩">状态压缩<sup>1</sup></a></li>
-		
-			<li><a href="/tags/SOJ/" title="SOJ">SOJ<sup>1</sup></a></li>
+			<li><a href="/tags/Web/" title="Web">Web<sup>1</sup></a></li>
 		
 			<li><a href="/tags/《挑战程序设计竞赛》/" title="《挑战程序设计竞赛》">《挑战程序设计竞赛》<sup>1</sup></a></li>
 		
 			<li><a href="/tags/GCC/" title="GCC">GCC<sup>1</sup></a></li>
 		
-			<li><a href="/tags/POJ/" title="POJ">POJ<sup>1</sup></a></li>
-		
 			<li><a href="/tags/递归/" title="递归">递归<sup>1</sup></a></li>
 		
+			<li><a href="/tags/最小生成树/" title="最小生成树">最小生成树<sup>1</sup></a></li>
+		
 			<li><a href="/tags/hihocoder/" title="hihocoder">hihocoder<sup>1</sup></a></li>
+		
+			<li><a href="/tags/状态压缩/" title="状态压缩">状态压缩<sup>1</sup></a></li>
+		
+			<li><a href="/tags/SOJ/" title="SOJ">SOJ<sup>1</sup></a></li>
 		
 			<li><a href="/tags/vim/" title="vim">vim<sup>1</sup></a></li>
 		
 			<li><a href="/tags/HTML-CSS/" title="HTML/CSS">HTML/CSS<sup>1</sup></a></li>
 		
-			<li><a href="/tags/最小生成树/" title="最小生成树">最小生成树<sup>1</sup></a></li>
-		
-			<li><a href="/tags/Codeforces/" title="Codeforces">Codeforces<sup>1</sup></a></li>
-		
 			<li><a href="/tags/异或/" title="异或">异或<sup>1</sup></a></li>
 		
-			<li><a href="/tags/Web/" title="Web">Web<sup>1</sup></a></li>
+			<li><a href="/tags/图论/" title="图论">图论<sup>1</sup></a></li>
 		
 		</ul>
 </div>

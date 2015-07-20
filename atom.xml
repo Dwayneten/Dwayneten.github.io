@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-05-01T09:56:24.242Z</updated>
+  <updated>2015-07-20T21:42:36.644Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,65 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CF 558C Amr and Chemistry]]></title>
+    <link href="http://dwayneten.com/2015/07/21/CF558C/"/>
+    <id>http://dwayneten.com/2015/07/21/CF558C/</id>
+    <published>2015-07-20T21:39:08.000Z</published>
+    <updated>2015-07-20T21:42:02.230Z</updated>
+    <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://codeforces.com/contest/558/problem/C" target="_blank" rel="external">题目链接</a></h2>
+<blockquote>
+<h3 id="题意">题意</h3>
+</blockquote>
+<p>给出 <em>N</em> 个数， 可以重复执行以下两种操作:</p>
+<ol>
+<li>使某个数变为原来的两倍。</li>
+<li>使某个数变为原来的一半（向下取整）。</li>
+</ol>
+<p>问若要使所有数变为同一个数最少需要执行几次变换。</p>
+<blockquote>
+<h3 id="样例输入">样例输入</h3>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">3</div><div class="line">4 8 2</div><div class="line">3</div><div class="line">3 5 6</div></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="样例输出">样例输出</h3>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2</div><div class="line">5</div></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="思路">思路</h3>
+</blockquote>
+<p>这是一道比较有意思的题， 很容易可以想到是对这些数的二进制表示进行匹配。</p>
+<p>一开始的思路是找出这些数二进制表示下的最长公共前缀， 然后再考虑对齐这样的做法， 但发现这样做不能得到最优答案， 因为右移时可以去掉最低位的 1 或 0， 而左移时会产生 0. 使得未进行位移时所求的最长公共前缀有可能不是最优方案的最长公共前缀。</p>
+<p>赛时没有做出来， 赛后出题者给出的<a href="http://ideone.com/9wXvKz" target="_blank" rel="external">标程</a>是对每个数进行 BFS 求出可以得到的数， 再从中找出最优方案。</p>
+<p>后来发现更简单的做法， 在读入每个数时把右移可以得到的数和步数记录下来， 得到一个只使用右移操作的答案， 然后再根据之前记录下来的可以得到某个数的个数来更新答案（这个数若大于 n / 2 则说明有一部分右移操作是多余的，  可以用左移操作来代替）。详情看代码。</p>
+<blockquote>
+<h3 id="代码实现">代码实现</h3>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;bits/stdc++.h&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> LL long long</span></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> num[<span class="number">100024</span>], step[<span class="number">100024</span>], ret, tmp, ans;</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">    <span class="comment">//freopen("in.txt", "r", stdin);</span></div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i, k = <span class="number">0</span>)</div><div class="line">		<span class="keyword">for</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &m); m; m &gt;&gt;= <span class="number">1</span>, ++k)</div><div class="line">			num[m]++, step[m] += k;</div><div class="line">	<span class="keyword">for</span> (ret=<span class="number">1e5</span>; ret &gt; <span class="number">1</span> && num[ret] != n; --ret);</div><div class="line">	<span class="keyword">for</span> (ans = step[ret]; ret &lt;&lt; <span class="number">1</span> &lt;= <span class="number">1e5</span>; ret &lt;&lt;= <span class="number">1</span>)</div><div class="line">	{</div><div class="line">		tmp = num[ret &lt;&lt; <span class="number">1</span>];</div><div class="line">		<span class="keyword">if</span> (n &gt;= tmp &lt;&lt; <span class="number">1</span>)</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		ans -= tmp &lt;&lt; <span class="number">1</span>;</div><div class="line">		ans += n;</div><div class="line">	}</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="小结">小结</h3>
+</blockquote>
+<p>暴力和贪心的姿势很重要 233。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[CF 558C Amr and Chemistry Solution 解题报告]]>
+    
+    </summary>
+    
+      <category term="Codeforces" scheme="http://dwayneten.com/tags/Codeforces/"/>
+    
+      <category term="位运算" scheme="http://dwayneten.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+      <category term="贪心" scheme="http://dwayneten.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+      <category term="example" scheme="http://dwayneten.com/categories/example/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[SOJ 11347 Unknown Switches]]></title>
@@ -572,7 +631,7 @@
     <link href="http://dwayneten.com/2015/03/30/CF501C/"/>
     <id>http://dwayneten.com/2015/03/30/CF501C/</id>
     <published>2015-03-30T15:26:31.000Z</published>
-    <updated>2015-04-30T03:21:50.574Z</updated>
+    <updated>2015-07-20T21:42:03.766Z</updated>
     <content type="html"><![CDATA[<h2 id="题目链接"><a href="http://codeforces.com/contest/501/problem/C" target="_blank" rel="external">题目链接</a></h2>
 <blockquote>
 <h3 id="题意">题意</h3>
@@ -597,7 +656,7 @@
 
 ]]></content>
     <summary type="html">
-    <![CDATA[CF 501C Misha and Forest Solution]]>
+    <![CDATA[CF 501C Misha and Forest Solution 解题报告]]>
     
     </summary>
     
@@ -606,6 +665,8 @@
       <category term="构造" scheme="http://dwayneten.com/tags/%E6%9E%84%E9%80%A0/"/>
     
       <category term="异或" scheme="http://dwayneten.com/tags/%E5%BC%82%E6%88%96/"/>
+    
+      <category term="Codeforces" scheme="http://dwayneten.com/tags/Codeforces/"/>
     
       <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     

@@ -128,7 +128,7 @@
 </blockquote>
 <p>这是一道比较有意思的题， 很容易可以想到是对这些数的二进制表示进行匹配。</p>
 <p>一开始的思路是找出这些数二进制表示下的最长公共前缀， 然后再考虑对齐这样的做法， 但发现这样做不能得到最优答案， 因为右移时可以去掉最低位的 1 或 0， 而左移时会产生 0. 使得未进行位移时所求的最长公共前缀有可能不是最优方案的最长公共前缀。</p>
-<p>赛时没有做出来， 赛后出题者给出的<a href="http://ideone.com/9wXvKz" target="_blank" rel="external">标程</a>是对每个数进行 BFS 求出可以得到的数， 再从中找出最优方案。</p>
+<p>赛时没有做出来， 赛后出题者给出的 <a href="http://ideone.com/9wXvKz" target="_blank" rel="external"><em>标程</em></a> 是对每个数进行 BFS 求出可以得到的数， 再从中找出最优方案。</p>
 <p>后来发现更简单的做法， 在读入每个数时把右移可以得到的数和步数记录下来， 得到一个只使用右移操作的答案， 然后再根据之前记录下来的可以得到某个数的个数来更新答案（这个数若大于 n / 2 则说明有一部分右移操作是多余的，  可以用左移操作来代替）。详情看代码。</p>
 <blockquote>
 <h3 id="代码实现">代码实现</h3>
@@ -147,7 +147,7 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/example/">example</a>
+  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
 </div>
 
 
@@ -917,11 +917,9 @@
 	<p class="asidetitle">Categories</p>
 		<ul>
 		
-			<li><a href="/categories/example/" title="example">example<sup>1</sup></a></li>
-		
 			<li><a href="/categories/网站开发/" title="网站开发">网站开发<sup>1</sup></a></li>
 		
-			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>9</sup></a></li>
+			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>10</sup></a></li>
 		
 			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>2</sup></a></li>
 		
@@ -952,9 +950,13 @@
 		
 			<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
 		
-			<li><a href="/tags/Web/" title="Web">Web<sup>1</sup></a></li>
-		
 			<li><a href="/tags/《挑战程序设计竞赛》/" title="《挑战程序设计竞赛》">《挑战程序设计竞赛》<sup>1</sup></a></li>
+		
+			<li><a href="/tags/POJ/" title="POJ">POJ<sup>1</sup></a></li>
+		
+			<li><a href="/tags/状态压缩/" title="状态压缩">状态压缩<sup>1</sup></a></li>
+		
+			<li><a href="/tags/SOJ/" title="SOJ">SOJ<sup>1</sup></a></li>
 		
 			<li><a href="/tags/GCC/" title="GCC">GCC<sup>1</sup></a></li>
 		
@@ -964,17 +966,13 @@
 		
 			<li><a href="/tags/hihocoder/" title="hihocoder">hihocoder<sup>1</sup></a></li>
 		
-			<li><a href="/tags/状态压缩/" title="状态压缩">状态压缩<sup>1</sup></a></li>
-		
-			<li><a href="/tags/SOJ/" title="SOJ">SOJ<sup>1</sup></a></li>
-		
 			<li><a href="/tags/vim/" title="vim">vim<sup>1</sup></a></li>
 		
 			<li><a href="/tags/HTML-CSS/" title="HTML/CSS">HTML/CSS<sup>1</sup></a></li>
 		
 			<li><a href="/tags/异或/" title="异或">异或<sup>1</sup></a></li>
 		
-			<li><a href="/tags/图论/" title="图论">图论<sup>1</sup></a></li>
+			<li><a href="/tags/Web/" title="Web">Web<sup>1</sup></a></li>
 		
 		</ul>
 </div>

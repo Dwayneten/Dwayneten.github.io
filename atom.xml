@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-07-20T21:56:07.094Z</updated>
+  <updated>2015-10-09T15:34:43.117Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,35 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[3ds MAX 建模渲染的宿舍图]]></title>
+    <link href="http://dwayneten.com/2015/10/09/dorm_3dsMax/"/>
+    <id>http://dwayneten.com/2015/10/09/dorm_3dsMax/</id>
+    <published>2015-10-09T14:59:20.000Z</published>
+    <updated>2015-10-09T15:33:20.505Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<h3 id="缘起">缘起</h3>
+</blockquote>
+<p>其实一开始的想法只是单纯地想整理和布置一下宿舍， 然而买的墙纸和木板啥的到了之后就刮台风， 下大雨在宿舍出不了门好无聊_(:3」∠)_于是就开始下载了个 3ds max 来折腾， 因为似乎挺好玩的样子xD。</p>
+<a id="more"></a>
+<blockquote>
+<h3 id="效果图">效果图</h3>
+</blockquote>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish01.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish02.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish03.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish04.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish05.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish06.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormreal01.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormreal02.jpg" class="img-shadow"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[3ds MAX 建模渲染的宿舍图]]>
+    
+    </summary>
+    
+      <category term="3ds MAX" scheme="http://dwayneten.com/tags/3ds-MAX/"/>
+    
+      <category term="设计" scheme="http://dwayneten.com/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+      <category term="设计" scheme="http://dwayneten.com/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[CF 558C Amr and Chemistry]]></title>
@@ -536,49 +565,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[考驾照 - 科目三]]></title>
-    <link href="http://dwayneten.com/2015/04/14/kemusan/"/>
-    <id>http://dwayneten.com/2015/04/14/kemusan/</id>
-    <published>2015-04-14T15:33:19.000Z</published>
-    <updated>2015-04-15T04:40:37.156Z</updated>
-    <content type="html"><![CDATA[<p>13 日 17:00 左右时教练突然打电话过来叫我赶回家 14 日早上去考科目三也是醉了..<br>查了下还有两班车一班 17:20 的估计来不及了， 还好有班 18:50 的， 遂出发取钱打车去汽车客运站， 吃了桶泡面当晚餐， 车没晚点。</p>
-<a id="more"></a>
-<p>00:02 到高州大转盘附近， 然后就在东方大道开了半小时左右回家睡觉。<br>回家吃了两个包洗个澡都差不多两点了， 手机又没电， 还好借了我姐移动电源不然估计都起不来。</p>
-<p>05:30 起床， 07：00 出发去茂名， 09:00 开始考， 几分钟就考完了 lol..<br>大概就是打灯起步、变道、增档， 四档 30+ 时速开一会儿就让靠边停车了， 一次过 233.</p>
-<p>然而到茂名交委发现最早一班回中山的车也要 12:30 还是去沙溪的.. 只好在车站坐了差不多三小时 orz<br>工作日路上没什么车， 17:00 左右就到了。<br>这趟车费考试费和杂七杂八的花了差不多 700 块， 心痛。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[考驾照 - 科目三。]]>
-    
-    </summary>
-    
-      <category term="日志" scheme="http://dwayneten.com/tags/%E6%97%A5%E5%BF%97/"/>
-    
-      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[考驾照 - 长途]]></title>
-    <link href="http://dwayneten.com/2015/04/09/kemuchangtu/"/>
-    <id>http://dwayneten.com/2015/04/09/kemuchangtu/</id>
-    <published>2015-04-08T16:27:06.000Z</published>
-    <updated>2015-04-08T16:51:40.297Z</updated>
-    <content type="html"><![CDATA[<p>之前教练打电话过来叫我清明假回去考长途， 要不然到时候科目三改成电子监考可能就比较难考了。<br>遂翘了 3 号的课回家， 还好回去得早点， 据说当晚都塞得不成样子了。<br><a id="more"></a><br>在家躺了一晚然后七点到驾校集合， 一台车包括教练七个人， 直接从驾校开始由学员开到阳江闸坡。<br>每人开 40 公里， 我是第四个， 教练讲解了下如何起步和增减档， 变换道、等红灯之类的操作。 除了途中经过市集的十字路口时车流比较混乱塞了一下之外， 基本保持 60 - 70 时速开满 40 公里就靠边停车换人。<br>到闸坡后在那个似乎叫训练中心的地方等拍照确认试遇见了之前一起考科目二的妹子。 后来和他们去海边转了一圈， 之前去过了， 感觉也没什么好玩的。<br>晚上在宾馆看电视， 翡翠台放的《岁月神偷》有点虐。</p>
-<p>本来打算 5 号就回学校的， 包车的人说只有六个人所以不发车， 6 号早上的位置又被订光了， 只有下午的车。 后来坐了近 12 个小时才回到学校orz.</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[考长途的记录。]]>
-    
-    </summary>
-    
-      <category term="日志" scheme="http://dwayneten.com/tags/%E6%97%A5%E5%BF%97/"/>
-    
-      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[hihocoder 1074 字体设计]]></title>
     <link href="http://dwayneten.com/2015/03/30/hiho1074/"/>
     <id>http://dwayneten.com/2015/03/30/hiho1074/</id>
@@ -705,25 +691,6 @@
       <category term="Web" scheme="http://dwayneten.com/tags/Web/"/>
     
       <category term="网站开发" scheme="http://dwayneten.com/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[考驾照 - 科目二]]></title>
-    <link href="http://dwayneten.com/2015/03/03/kemu2/"/>
-    <id>http://dwayneten.com/2015/03/03/kemu2/</id>
-    <published>2015-03-03T11:52:54.000Z</published>
-    <updated>2015-04-08T16:33:40.690Z</updated>
-    <content type="html"><![CDATA[<p>今天考科目二过啦。<br>上午六点起床七点出发去金山，练了大概八圈左右就被叫上车去茂名了。<br>到考场时大概十一点，我被分在15号，也就是下午场的第二批，当时估计要五六点才能考。<br>于是一直在场外看，直到同批一起去被分在7号的小伙伴上场考了我们才准备要进去。<br>看着7号那个一次通过考完后进里面等..一直等到快下午四点..不过还是比预想的要早。<br><a id="more"></a><br>上车感觉座位已经合适了就没调，教练帮忙调了下后视镜就上一档开去倒车入库了（前面考那个下车连手刹都拉啧<br><code>倒车入库</code>没什么问题，两边均匀不前不后稳得很，主要是控好车速各种调整好再停。<br><code>侧方停车</code>比较简单，看好时间打方向盘就好了。<br><code>斜坡起步</code>跟<code>S弯</code>都没什么问题，但是最后的<code>直角转弯</code>竟然<strong>压角了</strong>！<br>其实在后视镜已经看到有点危险的了，但是调整的幅度不够没救回来。<br>眼看都要出来了竟然死在最后一项还是很简单的那项orz。。<br>当时心都凉了，还好有第二次机会。<br>第二次开脚都不敢怎么松，有点僵僵的，还好所有项目都无压力通过了。<br>到最后<code>直角转弯</code>的时候特意放很慢速度然后微微站起来看后视镜来预防压线233..<br>过完<code>直角转弯</code>还没提示，出到通道时才提示考试及格，不自觉地松了一口气。<br>然后挂二档一脚油超过前面两台车回起点，一个字<strong>爽</strong>233.<br>我考科目二时全程离合+刹车来控车速可能比较奇葩，好像其他人都是只用离合不用刹车的→_→<br>可以安心回学校了，准备暑假再考科目三。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[考科目二的记录。]]>
-    
-    </summary>
-    
-      <category term="日志" scheme="http://dwayneten.com/tags/%E6%97%A5%E5%BF%97/"/>
-    
-      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

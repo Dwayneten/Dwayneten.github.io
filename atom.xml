@@ -4,7 +4,7 @@
   <subtitle><![CDATA[凤凰院天真 - 重遇再散也够绝，但嫌路太短。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-10-09T15:34:43.117Z</updated>
+  <updated>2015-10-10T04:29:11.626Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -15,20 +15,69 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[浏览器常用网站 A to Z]]></title>
+    <link href="http://dwayneten.com/2015/10/10/atoz/"/>
+    <id>http://dwayneten.com/2015/10/10/atoz/</id>
+    <published>2015-10-10T04:25:35.000Z</published>
+    <updated>2015-10-10T04:26:53.294Z</updated>
+    <content type="html"><![CDATA[<p>在别人家博客看到， 然后自己试了下。</p>
+<ul>
+<li><a href="http://www.acfun.tv" target="_blank" rel="external">Acfun</a></li>
+<li><a href="http://bilibili.tv/" target="_blank" rel="external">Blibili</a></li>
+<li><a href="http://www.codeforces.com/" target="_blank" rel="external">Codeforces</a></li>
+<li><a href="http://www.dwayneten.com" target="_blank" rel="external">Dwayneten’s Blog</a></li>
+<li><a href="https://en.mail.qq.com/" target="_blank" rel="external">English qq mail</a></li>
+<li><a href="http://flickr.com/" target="_blank" rel="external">Flickr</a></li>
+<li><a href="https://github.com/" target="_blank" rel="external">Github</a></li>
+<li><a href="http://hankcs.com/" target="_blank" rel="external">Hankcs’s Blog</a></li>
+<li><a href="http://ideone.com/" target="_blank" rel="external">Ideone</a></li>
+<li><a href="http://ja.curecos.com/" target="_blank" rel="external">Japan Cure</a></li>
+<li><a href="http://www.komica.org" target="_blank" rel="external">Komica</a></li>
+<li><a href="http://live.bilibili.com/" target="_blank" rel="external">Live.Bilibili</a></li>
+<li><a href="http://music.163.com/" target="_blank" rel="external">Music.163</a></li>
+<li><a href="http://www.nicovideo.jp/" target="_blank" rel="external">Niconico</a></li>
+<li><a href="https://oj.leetcode.com/" target="_blank" rel="external">Oj.leetcode</a></li>
+<li><a href="http://pan.baidu.com/" target="_blank" rel="external">Pan.baidu</a></li>
+<li><a href="http://qzone.qq.com/" target="_blank" rel="external">Qzone</a></li>
+<li><a href="http://rescuetime.com" target="_blank" rel="external">Rescuetime</a></li>
+<li><a href="http://sae.sina.com.cn" target="_blank" rel="external">SAE</a></li>
+<li><a href="https://www.taobao.com/" target="_blank" rel="external">Taobao</a></li>
+<li><a href="http://user.qzone.qq.com" target="_blank" rel="external">User.qzone</a></li>
+<li><a href="http://v2ex.com/" target="_blank" rel="external">V2EX</a></li>
+<li><a href="http://weibo.com/" target="_blank" rel="external">Weibo</a></li>
+<li><a href="http://xcoder.in/" target="_blank" rel="external">XadillaX’s Blog</a></li>
+<li><a href="http://www.youtube.com/" target="_blank" rel="external">Youtube</a></li>
+<li><a href="http://www.zhihu.com/" target="_blank" rel="external">Zhihu</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[以 A - Z 开头的常用网站]]>
+    
+    </summary>
+    
+      <category term="网站" scheme="http://dwayneten.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[3ds MAX 建模渲染的宿舍图]]></title>
     <link href="http://dwayneten.com/2015/10/09/dorm_3dsMax/"/>
     <id>http://dwayneten.com/2015/10/09/dorm_3dsMax/</id>
     <published>2015-10-09T14:59:20.000Z</published>
-    <updated>2015-10-09T15:33:20.505Z</updated>
-    <content type="html"><![CDATA[<blockquote>
+    <updated>2015-10-09T15:58:18.288Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish04.jpg" class="img-shadow"></p>
+<blockquote>
 <h3 id="缘起">缘起</h3>
 </blockquote>
 <p>其实一开始的想法只是单纯地想整理和布置一下宿舍， 然而买的墙纸和木板啥的到了之后就刮台风， 下大雨在宿舍出不了门好无聊_(:3」∠)_于是就开始下载了个 3ds max 来折腾， 因为似乎挺好玩的样子xD。</p>
-<a id="more"></a>
 <blockquote>
 <h3 id="效果图">效果图</h3>
+<a id="more"></a>
 </blockquote>
-<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish01.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish02.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish03.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish04.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish05.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish06.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormreal01.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormreal02.jpg" class="img-shadow"></p>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish01.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish02.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish03.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish05.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormfinish06.jpg" class="img-shadow"></p>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormreal01.jpg" class="img-shadow"><br><img src="http://7vzsbj.com1.z0.glb.clouddn.com/dormreal02.jpg" class="img-shadow"></p>
 ]]></content>
     <summary type="html">
     <![CDATA[3ds MAX 建模渲染的宿舍图]]>

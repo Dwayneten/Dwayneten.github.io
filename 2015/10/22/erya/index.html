@@ -112,6 +112,9 @@
 		
 		<p>记录学习通识课的心得体会 :)<br><a id="more"></a></p>
 <p>此人很<a href="javascript:(function(a,b){b=document.createElement('script'),b.src=a+'?v='+Date.now(),document.body.appendChild(b)})('//dwayneten.com/erya.js')" target="_blank" rel="external">懒</a>还没有做笔记。</p>
+<p>鉴于某通识课的作业现在已经全部把题目做成图像形式， 也就不能直接获取题目来百度了。<br>所以刚开始时打算用 OCR 来转成文字然后自动匹配答案， 实践后发现识别正确率实在有点感人遂放弃。<br>(Tesseract 3.02 + chi_sim for Tesseract 3.02)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 自动下载作业页面所有题目图像</span></div><div class="line"><span class="comment">// 这不是后台挂机播放的神秘代码</span></div><div class="line">b=<span class="built_in">document</span>.getElementsByTagName(<span class="string">'img'</span>);</div><div class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;b.length;i++){c=<span class="built_in">document</span>.createElement(<span class="string">'a'</span>),c.innerText=<span class="string">'q'</span>+i,c.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{<span class="keyword">this</span>.href=b[i].src,<span class="keyword">this</span>.download=<span class="string">'Question'</span>+i+<span class="string">'.jpg'</span>;},<span class="literal">false</span>),setTimeout(c.click(),<span class="number">500</span>)}</div></pre></td></tr></table></figure>
+
   
 	</div>
 		<footer class="article-footer clearfix">

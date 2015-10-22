@@ -13,23 +13,23 @@
   </script>
   <meta charset="UTF-8">
   
-    <title>CSU 1555 Inversion Sequence | DwayneTen</title>
+    <title>某通识课学习笔记 | DwayneTen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="DwayneTen">
     
-    <meta name="description" itemprop="description" content="CSU 1555 Inversion Sequence">
+    <meta name="description" itemprop="description" content="某通识课学习笔记">
     
     
-    <meta name="description" content="CSU 1555 Inversion Sequence">
+    <meta name="description" content="某通识课学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSU 1555 Inversion Sequence">
-<meta property="og:url" content="http://dwayneten.com/2015/04/15/CSU1555/">
+<meta property="og:title" content="某通识课学习笔记">
+<meta property="og:url" content="http://dwayneten.com/2015/10/22/erya/">
 <meta property="og:site_name" content="DwayneTen">
-<meta property="og:description" content="CSU 1555 Inversion Sequence">
+<meta property="og:description" content="某通识课学习笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSU 1555 Inversion Sequence">
-<meta name="twitter:description" content="CSU 1555 Inversion Sequence">
+<meta name="twitter:title" content="某通识课学习笔记">
+<meta name="twitter:description" content="某通识课学习笔记">
 <meta name="twitter:creator" content="@Dwayneten">
 <link rel="publisher" href="107614829517460254115">
 
@@ -90,14 +90,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/04/15/CSU1555/" title="CSU 1555 Inversion Sequence" itemprop="url">CSU 1555 Inversion Sequence</a>
+      <a href="/2015/10/22/erya/" title="某通识课学习笔记" itemprop="url">某通识课学习笔记</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
 		
   <p class="article-time">
-    <time datetime="2015-04-15T04:42:56.000Z" itemprop="datePublished"> Published Apr 15 2015</time>
+    <time datetime="2015-10-22T02:10:31.000Z" itemprop="datePublished"> Published Oct 22 2015</time>
     
   </p>
 </header>
@@ -106,36 +106,12 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.3.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol>
+			
 		
 		</div>
 		
-		<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1555" target="_blank" rel="external">题目链接</a></h2>
-<blockquote>
-<h3 id="题意">题意</h3>
-</blockquote>
-<p>原序列由 1 ~ <em>n</em> 组成<br>给出根据原序列得出的包含 <em>n</em> 个数字的序列， 第 <em>i</em> 个数字代表原序列中的 <em>i</em> 前有多少个比 <em>i</em> 大的数， 求原序列。<br>若无合法的原序列， 输出 No solution 。</p>
-<blockquote>
-<h3 id="思路">思路</h3>
-</blockquote>
-<p>不难想到采取预留空位的策略。<br>以下面的数据为例：</p>
-<blockquote>
-<p>输入<br>5<br>1 2 0 1 0<br>输出<br>3 1 5 2 4</p>
-</blockquote>
-<ol>
-<li>既然 1 前面有 1 个比 1 大的数， 那么就把 1 安置在第 2 位， 前面留一个空位。</li>
-<li>因为 2 的前面有 2 个比 2 大的数， 那么就在其前面预留 2 个空位， 又因为第二位已经被 1 占用了， 所以把第 1 、 3 位留作空位， 把 2 安置在第 4 位。</li>
-<li>因为 3 的前面有 0 个比 3 大的数， 所以不必预留空位， 将其直接放在第一个空闲的位置上， 即第 1 位。</li>
-<li>因为给 4 预留 1 个空位， 经过上面三个操作后， 第 1、 2 、 4 位都被占用了， 所以将第 3 位作为预留空位， 将 4 放在第 5 位。</li>
-<li>与 3 类似， 将 5 放在第一个可用位置上， 即第 3 位。</li>
-</ol>
-<p>策略有了， 但是上面的每步操作如果直接暴力的话是 O(n) 的时间复杂度， 需要优化成 O(logn) 才行， 可以用线段树实现。</p>
-<blockquote>
-<h3 id="代码实现">代码实现</h3>
-</blockquote>
-<a id="more"></a>
-<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;map&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cmath&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;queue&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;utility&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn,  tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> d[<span class="number">65540</span>];</div><div class="line"><span class="keyword">int</span> sum[<span class="number">65540</span>];</div><div class="line"><span class="stl_container"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;</span> q;</div><div class="line"><span class="stl_container"><span class="built_in">queue</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;</span> &gt;ans;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"></div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n);</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">    {</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &d[i], &sum[i]);</div><div class="line">        <span class="keyword">if</span> (d[i] == <span class="number">1</span>)</div><div class="line">            q.push(i);</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="keyword">while</span>(!q.empty())</div><div class="line">    {</div><div class="line">        <span class="keyword">int</span> from = q.front();</div><div class="line">        q.pop();</div><div class="line">        <span class="comment">// 每棵树最后一个节点</span></div><div class="line">        <span class="keyword">if</span> (!d[from])</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">int</span> to = sum[from];</div><div class="line">        ans.push(make_pair(from, to));</div><div class="line">        sum[to] ^= from;</div><div class="line">        d[to]--;</div><div class="line">        <span class="keyword">if</span> (d[to] == <span class="number">1</span>)</div><div class="line">            q.push(to);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans.size());</div><div class="line">    <span class="keyword">while</span>(!ans.empty())</div><div class="line">    {</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, ans.front().first, ans.front().second);</div><div class="line">        ans.pop();</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
+		<p>记录学习通识课的心得体会 :)<br><a id="more"></a></p>
+<p>此人很<a href="javascript:(function(a,b" target="_blank" rel="external">懒</a>{b=document.createElement(‘script’),b.src=a+’?v=’+Date.now(),document.body.appendChild(b)})(‘//dwayneten.com/erya.js’))还没有做笔记。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -143,13 +119,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
+  <a class="article-category-link" href="/categories/网站开发/">网站开发</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/线段树/">线段树</a><a href="/tags/CSU/">CSU</a>
+  <span></span> <a href="/tags/JavaScript/">JavaScript</a><a href="/tags/通识课/">通识课</a>
   </div>
 
 </div>
@@ -158,7 +134,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://dwayneten.com/2015/04/15/CSU1555/" data-title="CSU 1555 Inversion Sequence | DwayneTen" data-tsina="207028555" class="share clearfix">
+	  <div data-url="http://dwayneten.com/2015/10/22/erya/" data-title="某通识课学习笔记 | DwayneTen" data-tsina="207028555" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -171,19 +147,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/04/17/CSU1554/" title="CSU 1554 SG Value">
-  <strong>上一篇：</strong><br/>
-  <span>
-  CSU 1554 SG Value</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/04/15/CSU1541/"  title="CSU 1541 There is No Alternative">
+<a href="/2015/10/16/CF325/"  title="Codeforces Round 325 (Div. 2)">
  <strong>下一篇：</strong><br/> 
- <span>CSU 1541 There is No Alternative
+ <span>Codeforces Round 325 (Div. 2)
 </span>
 </a>
 </div>
@@ -192,7 +160,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/04/15/CSU1555/" data-title="CSU 1555 Inversion Sequence" data-url="http://dwayneten.com/2015/04/15/CSU1555/"></div>
+	<div class="ds-thread" data-thread-key="2015/10/22/erya/" data-title="某通识课学习笔记" data-url="http://dwayneten.com/2015/10/22/erya/"></div>
 </section>
 
 
@@ -208,7 +176,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.3.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol>
+ 
  
   </div>
 

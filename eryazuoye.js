@@ -13,7 +13,8 @@ var judAns = 0;
 function getQuestionList() {
     questionList = [];
     if (judAns == 1) {
-        ddList = frDOc.getElementsByClassName("noans");
+        ddList = [];
+        ddList = frDoc.getElementsByClassName("noans");
     }
     for (i=0; i<ddList.length; i++) {
         if (ddList[i].children[0].nodeName == "UL") {

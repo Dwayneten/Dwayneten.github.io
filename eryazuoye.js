@@ -148,7 +148,7 @@ aMatch.addEventListener("click", function(){
         case "影响学习的非认知因素":
             targetJson = xinli3Json;
             break;
-        case "逻辑和批判性思维（六）"
+        case "逻辑和批判性思维（六）":
             targetJson = luoji1Json;
             break;
         default:

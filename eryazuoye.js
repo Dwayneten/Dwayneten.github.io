@@ -12,9 +12,31 @@ var ddList = frDoc.getElementsByTagName('dd');
 var judAns = 0;
 function getQuestionList() {
     questionList = [];
+    // fetch from unsubmit homework
     if (judAns == 1) {
         ddList = [];
-        ddList = frDoc.getElementsByClassName("noans");
+        ddList = frDoc.getElementsByClassName("noansdd");
+        imgList = [];
+        imgList = frDoc.getElementsByClassName("noansimg");
+        for (i=0; i<ddList.length; i++) {
+            if (ddList[i].children[0].nodeName == "UL") {
+                for (j=0; j<4; j++) {
+                    if (ddList[i].children[0].children[j].children[0].checked == true) {
+                        questionList.push(new Question(imgList[i].src.split('=')[1], j + 1));
+                        break;
+                    }
+                }
+            } else if (ddList[i].children[0].nodeName == "LABEL") {
+                if ddList[i].children[0].children[0].checked == true) {
+                    questionList.push(new Question(imgList[i].src.split('=')[1], 1));
+                } else {
+                    questionList.push(new Question(imgList[i].src.split('=')[1], 2));
+                }
+            } else {
+                alert('ddList[' + i + '].children[0].nodeName do not match.')
+                break;
+            }
+        }
     }
     for (i=0; i<ddList.length; i++) {
         if (ddList[i].children[0].nodeName == "UL") {
@@ -121,7 +143,8 @@ aMatch.addEventListener("click", function(){
         }
         // Can not match
         if (curAns == 0) {
-            ddList[i].className += "noans";
+            ddList[i].className += "noansdd";
+            imgList[i].className += "noansimg";
             imgList[i].parentNode.appendChild(pMiss.cloneNode(true));
             continue ;
         }

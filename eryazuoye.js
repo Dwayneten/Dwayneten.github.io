@@ -37,7 +37,9 @@ function getQuestionList() {
                 break;
             }
         }
+        return;
     }
+    // fetch from submited homework
     for (i=0; i<ddList.length; i++) {
         if (ddList[i].children[0].nodeName == "UL") {
             for (j=0; j<4; j++) {

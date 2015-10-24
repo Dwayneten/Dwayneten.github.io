@@ -27,7 +27,7 @@ function getQuestionList() {
                     }
                 }
             } else if (ddList[i].children[0].nodeName == "LABEL") {
-                if ddList[i].children[0].children[0].checked == true) {
+                if (ddList[i].children[0].children[0].checked == true) {
                     questionList.push(new Question(imgList[i].src.split('=')[1], 1));
                 } else {
                     questionList.push(new Question(imgList[i].src.split('=')[1], 2));

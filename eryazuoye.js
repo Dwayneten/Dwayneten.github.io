@@ -102,9 +102,10 @@ function loadStyleString(css) {
     head.appendChild(style);
 }
 var cssLayout = '.mybox{width: 240px;min-height: 100px;border: 1px solid #ccc;box-shadow: 0 0 8px 1px #999;position: fixed;z-index: 10;margin: 0;left: 10px;background-color: #fcfcfc;font-family: "Microsoft Jhenghei","Hiragino Sans GB","Helvetica Neue","Helvetica","WenQuanYi Micro Hei","Microsoft YaHei",Arial,sans-serif;font-size: 1.2em;}#tipbox{bottom: 10px}#jsonbox{top: 10px}.btn{margin: 20px;background-color: #289fff;text-decoration: none;display: inline-block;width: 80px;line-height: 30px;text-align: center;color: #fff;}.btn:hover{text-decoration: none;color: #fff;text-shadow: #86ffff 0 0 5px;line-height: 30px;}.centerText{text-align: center;}';
-var xinli1Json = '[{"id":"192547","ans":2},{"id":"192559","ans":3},{"id":"192551","ans":4},{"id":"192545","ans":4},{"id":"192575","ans":3},{"id":"192543","ans":3},{"id":"192573","ans":2},{"id":"192553","ans":1},{"id":"192541","ans":1},{"id":"192549","ans":2},{"id":"192539","ans":1},{"id":"192557","ans":1},{"id":"192531","ans":1},{"id":"192535","ans":1},{"id":"192561","ans":1},{"id":"192565","ans":1},{"id":"192577","ans":1},{"id":"192563","ans":1},{"id":"192555","ans":1},{"id":"192569","ans":1},{"id":"192571","ans":3},{"id":"192567","ans":2},{"id":"192533","ans":1},{"id":"192537","ans":1}]'
+var xinli1Json = '[{"id":"192547","ans":2},{"id":"192559","ans":3},{"id":"192551","ans":4},{"id":"192545","ans":4},{"id":"192575","ans":3},{"id":"192543","ans":3},{"id":"192573","ans":2},{"id":"192553","ans":1},{"id":"192541","ans":1},{"id":"192549","ans":2},{"id":"192539","ans":1},{"id":"192557","ans":1},{"id":"192531","ans":1},{"id":"192535","ans":1},{"id":"192561","ans":1},{"id":"192565","ans":1},{"id":"192577","ans":1},{"id":"192563","ans":1},{"id":"192555","ans":1},{"id":"192569","ans":1},{"id":"192571","ans":3},{"id":"192567","ans":2},{"id":"192533","ans":1},{"id":"192537","ans":1}]';
 var xinli2Json = '[{"id":"192669","ans":4},{"id":"192667","ans":3},{"id":"192665","ans":3},{"id":"192701","ans":2},{"id":"192663","ans":2},{"id":"192673","ans":1},{"id":"192689","ans":1},{"id":"192697","ans":1},{"id":"192675","ans":2},{"id":"192687","ans":1},{"id":"192683","ans":1},{"id":"192671","ans":2},{"id":"192679","ans":1},{"id":"192699","ans":1},{"id":"192693","ans":2},{"id":"192677","ans":1},{"id":"192685","ans":2},{"id":"192691","ans":2}]'
-var xinli3Json = '[{"id":"192825","ans":2},{"id":"192823","ans":1},{"id":"192819","ans":2},{"id":"192821","ans":1},{"id":"192829","ans":1},{"id":"192827","ans":2},{"id":"192831","ans":1},{"id":"192817","ans":1},{"id":"192815","ans":1}]'
+var xinli3Json = '[{"id":"192825","ans":2},{"id":"192823","ans":1},{"id":"192819","ans":2},{"id":"192821","ans":1},{"id":"192829","ans":1},{"id":"192827","ans":2},{"id":"192831","ans":1},{"id":"192817","ans":1},{"id":"192815","ans":1}]';
+var luoji1Json = '[{"id":"147739","ans":4},{"id":"147725","ans":1},{"id":"147729","ans":1},{"id":"147709","ans":4},{"id":"147731","ans":3},{"id":"147713","ans":1},{"id":"147693","ans":2},{"id":"147697","ans":3},{"id":"147691","ans":4},{"id":"147751","ans":2},{"id":"147705","ans":2},{"id":"147703","ans":1},{"id":"147745","ans":1},{"id":"147735","ans":2},{"id":"147717","ans":1},{"id":"147719","ans":2},{"id":"147757","ans":1},{"id":"147759","ans":2},{"id":"147747","ans":2},{"id":"147733","ans":1}]';
 var tipbox = document.createElement("div");
 tipbox.id = "tipbox"
 tipbox.className = "mybox";
@@ -146,6 +147,9 @@ aMatch.addEventListener("click", function(){
             break;
         case "影响学习的非认知因素":
             targetJson = xinli3Json;
+            break;
+        case "逻辑和批判性思维（六）"
+            targetJson = luoji1Json;
             break;
         default:
             alert("目前题库尚未有此作业数据");

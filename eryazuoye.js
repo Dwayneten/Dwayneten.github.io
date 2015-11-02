@@ -5,25 +5,41 @@ function Question(id, ans) {
 Question.prototype = {
     construtor: Question
 }
+// store question's id and its answer
 var questionList = [];
+// get the document from the inside iframe
 var frDoc = document.getElementById('_fr').contentDocument;
+// image list (question title)
 var imgList = frDoc.getElementsByTagName('img');
+// radio list 
 var ddList = frDoc.getElementsByTagName('dd');
+// a flag for judge is it an submited homework or not
 var judAns = 0;
+// a flag for judge is it an empty homework or not
 var judScan = 0;
+
+// fetching the question list
+// if judAns == 1 then fetch from the unsubmit homework
+// else if judScan == 1 then fetch from the empty homework
+// else fetch from the submited homework
 function getQuestionList() {
+	// init
     questionList = [];
     frDoc = document.getElementById('_fr').contentDocument;
     imgList = frDoc.getElementsByTagName('img');
     ddList = frDoc.getElementsByTagName('dd');
+
     // fetch from unsubmit homework
     if (judAns == 1) {
+		// fetch ans for the unmatch result
         ddList = [];
         ddList = frDoc.getElementsByClassName("noansdd");
         imgList = [];
         imgList = frDoc.getElementsByClassName("noansimg");
+
         for (i=0; i<ddList.length; i++) {
             if (ddList[i].children[0].nodeName == "UL") {
+				// selection type
                 for (j=0; j<4; j++) {
                     if (ddList[i].children[0].children[j].children[0].checked == true) {
                         questionList.push(new Question(imgList[i].src.split('=')[1], j + 1));
@@ -31,12 +47,14 @@ function getQuestionList() {
                     }
                 }
             } else if (ddList[i].children[0].nodeName == "LABEL") {
+				// judge type
                 if (ddList[i].children[0].children[0].checked == true) {
                     questionList.push(new Question(imgList[i].src.split('=')[1], 1));
                 } else {
                     questionList.push(new Question(imgList[i].src.split('=')[1], 2));
                 }
             } else {
+				// error
                 alert('ddList[' + i + '].children[0].nodeName do not match.')
                 break;
             }
@@ -46,8 +64,10 @@ function getQuestionList() {
     // fetch from empty homework
     if (judScan == 1) {
         for (i=0; i<ddList.length; i++) {
+			// mark the questions
             ddList[i].className += "noansdd";
             imgList[i].className += "noansimg";
+			// set the answer to 5 becouse of no answer here for an empty homework
             if (ddList[i].children[0].nodeName == "UL") {
                 questionList.push(new Question(imgList[i].src.split('=')[1], 5));
             } else if (ddList[i].children[0].nodeName == "LABEL") {
@@ -62,6 +82,8 @@ function getQuestionList() {
     // fetch from submited homework
     for (i=0; i<ddList.length; i++) {
         if (ddList[i].children[0].nodeName == "UL") {
+			// selection type
+			// if the answer incorret then fetch from the tips
             if (ddList[i].children.length > 1) {
                 var tmp = 0;
                 switch (ddList[i].children[1].innerText.split(' ')[1]) {
@@ -84,6 +106,7 @@ function getQuestionList() {
                 questionList.push(new Question(imgList[i].src.split('=')[1], tmp));
                 continue;
             }
+			// if the anser corret then fetch from the selected answer
             for (j=0; j<4; j++) {
                 if (ddList[i].children[0].children[j].className.split(' ')[1] == "correct") {
                     questionList.push(new Question(imgList[i].src.split('=')[1], j + 1));
@@ -91,25 +114,35 @@ function getQuestionList() {
                 }
             }
         } else if (ddList[i].children[0].nodeName == "LABEL") {
+			// radio type
             if (ddList[i].children[0].className == "checked") {
+				// if first button selected
                 if (ddList[i].children[2].className == "falseIcon") {
+					// if its wrong answer
                     questionList.push(new Question(imgList[i].src.split('=')[1], 2));
                 } else {
+					// if its correct answer
                     questionList.push(new Question(imgList[i].src.split('=')[1], 1));
                 }
             } else {
+				// if second button selected
                 if (ddList[i].children[2].className == "falseIcon") {
+					// if its wrong answer
                     questionList.push(new Question(imgList[i].src.split('=')[1], 1));
                 } else {
+					// if its correct answer
                     questionList.push(new Question(imgList[i].src.split('=')[1], 2));
                 }
             }
         } else {
+			// error
             alert('ddList[' + i + '].children[0].nodeName do not match.')
             break;
         }
     }
 }
+
+// function for loading CSS
 function loadStyleString(css) {
     var style = document.createElement("style");
     style.type = "text/css";
@@ -121,6 +154,9 @@ function loadStyleString(css) {
     var head = document.getElementsByTagName("head")[0];
     head.appendChild(style);
 }
+
+
+// question and answers database here
 var cssLayout = '.mybox{width: 240px;min-height: 70px;border: 1px solid #ccc;box-shadow: 0 0 8px 1px #999;position: fixed;z-index: 10;margin: 0;left: 10px;background-color: #fcfcfc;font-family: "Microsoft Jhenghei","Hiragino Sans GB","Helvetica Neue","Helvetica","WenQuanYi Micro Hei","Microsoft YaHei",Arial,sans-serif;font-size: 1.2em;}#tipbox{bottom: 10px;}#jsonbox{top: 10px;}#devbox{bottom: 120px;}.btn{margin: 20px 20px 10px 20px;background-color: #289fff;text-decoration: none;display: inline-block;width: 80px;line-height: 30px;text-align: center;color: #fff;}.btn:hover{text-decoration: none;color: #fff;text-shadow: #86ffff 0 0 5px;line-height: 30px;}.centerText{text-align: center;}';
 var xinli1Json = '[{"id":"192547","ans":2},{"id":"192559","ans":3},{"id":"192551","ans":4},{"id":"192545","ans":4},{"id":"192575","ans":3},{"id":"192543","ans":3},{"id":"192573","ans":2},{"id":"192553","ans":1},{"id":"192541","ans":1},{"id":"192549","ans":2},{"id":"192539","ans":1},{"id":"192557","ans":1},{"id":"192531","ans":1},{"id":"192535","ans":1},{"id":"192561","ans":1},{"id":"192565","ans":1},{"id":"192577","ans":1},{"id":"192563","ans":1},{"id":"192555","ans":1},{"id":"192569","ans":1},{"id":"192571","ans":3},{"id":"192567","ans":2},{"id":"192533","ans":1},{"id":"192537","ans":1}]';
 var xinli2Json = '[{"id":"192669","ans":4},{"id":"192667","ans":3},{"id":"192665","ans":3},{"id":"192701","ans":2},{"id":"192663","ans":2},{"id":"192673","ans":1},{"id":"192689","ans":1},{"id":"192697","ans":1},{"id":"192675","ans":2},{"id":"192687","ans":1},{"id":"192683","ans":1},{"id":"192671","ans":2},{"id":"192679","ans":1},{"id":"192699","ans":1},{"id":"192693","ans":2},{"id":"192677","ans":1},{"id":"192685","ans":2},{"id":"192691","ans":2},{"id":"192681","ans":1},{"id":"192695","ans":1}]';
@@ -129,9 +165,20 @@ var luoji1Json = '[{"id":"147739","ans":4},{"id":"147725","ans":1},{"id":"147729
 var chuangye1Json = '[{"id":"83224","ans":3},{"id":"83214","ans":3},{"id":"83219","ans":3},{"id":"83218","ans":1},{"id":"52257","ans":2},{"id":"52251","ans":3},{"id":"83235","ans":1},{"id":"83238","ans":2},{"id":"52256","ans":2},{"id":"83213","ans":4},{"id":"83223","ans":4},{"id":"83237","ans":4},{"id":"83226","ans":4},{"id":"83216","ans":1},{"id":"83240","ans":2},{"id":"83222","ans":2},{"id":"83227","ans":2},{"id":"83233","ans":2},{"id":"83239","ans":1},{"id":"83221","ans":1},{"id":"83228","ans":1},{"id":"83232","ans":2},{"id":"83234","ans":1},{"id":"83220","ans":3},{"id":"83236","ans":3},{"id":"83225","ans":2},{"id":"83231","ans":3}]';
 var chuangye2Json = '[{"id":"83290","ans":2},{"id":"83284","ans":3},{"id":"83278","ans":1},{"id":"83279","ans":3},{"id":"83283","ans":1},{"id":"83297","ans":4},{"id":"83280","ans":2},{"id":"83291","ans":4},{"id":"52311","ans":4},{"id":"83286","ans":1},{"id":"83298","ans":1},{"id":"83287","ans":2},{"id":"83302","ans":2},{"id":"83303","ans":1},{"id":"83294","ans":1},{"id":"83301","ans":1},{"id":"83293","ans":1},{"id":"83289","ans":2},{"id":"83292","ans":2},{"id":"83282","ans":2},{"id":"52305","ans":4},{"id":"83299","ans":4},{"id":"83285","ans":2},{"id":"83288","ans":1}]';
 var chuangye3Json = '[{"id":"83378","ans":3},{"id":"83377","ans":2},{"id":"83371","ans":4},{"id":"83375","ans":1},{"id":"83382","ans":2},{"id":"83386","ans":4},{"id":"83388","ans":3},{"id":"83368","ans":4},{"id":"83376","ans":3},{"id":"83383","ans":1},{"id":"83381","ans":1},{"id":"83374","ans":2},{"id":"83390","ans":2},{"id":"83370","ans":1},{"id":"83389","ans":2},{"id":"83369","ans":2},{"id":"83391","ans":1},{"id":"83380","ans":1},{"id":"83379","ans":2},{"id":"83372","ans":2},{"id":"83366","ans":3},{"id":"83367","ans":4},{"id":"83384","ans":4}]';
+
+
+// create user interface
+
+// tipbox contains two buttons
+// 1. aDev - developer tools
+// 2. aMatch - auto fill in the home work
 var tipbox = document.createElement("div");
 tipbox.id = "tipbox"
 tipbox.className = "mybox";
+// devbox contains three buttons
+// 1. aScan - fetch from unsubmited homework
+// 2. aFetch -  fetch from submited homework
+// 3. aClose -  close devbox  
 var devbox = document.createElement("div");
 devbox.id = "devbox"
 devbox.className = "mybox";

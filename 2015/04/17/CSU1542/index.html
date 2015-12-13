@@ -1,133 +1,337 @@
+<!doctype html>
 
- <!DOCTYPE HTML>
-<html >
-<head>
-  <script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?8155aa7c982b907431d0ad5f07d645d5";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-  </script>
-  <meta charset="UTF-8">
+
+
   
-    <title>CSU 1542 Flipping Parentheses | DwayneTen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="DwayneTen">
-    
-    <meta name="description" itemprop="description" content="CSU 1542 Flipping Parentheses， 线段树 + 构造解决。">
-    
-    
-    <meta name="description" content="CSU 1542 Flipping Parentheses， 线段树 + 构造解决。">
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSU,构造,线段树," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="凤凰院天真" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/logo_ico.ico?v=5.0.0" />
+
+
+
+
+
+
+<meta name="description" content="题目链接
+题意
+给出长度为 n 且匹配正确的括号序列和 m 个操作。每次操作将对应位置上的括号取反， 即(变为)， )变为(。然后要求输出每次操作后对哪个位置上的括号取反可以使整个括号序列再次符合匹配。若有多个满足要求的位置， 输出最靠左端的位置。
+
+样例输入
+123456 3( ( ( ) ) )431
+
+样例输出
+123221
+
+思路
+首先定义 a[i] 为 [1 - i] 里左括号减去右括号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSU 1542 Flipping Parentheses">
-<meta property="og:url" content="http://dwayneten.com/2015/04/17/CSU1542/">
-<meta property="og:site_name" content="DwayneTen">
-<meta property="og:description" content="CSU 1542 Flipping Parentheses， 线段树 + 构造解决。">
+<meta property="og:url" content="http://dwayneten.com/2015/04/17/CSU1542/index.html">
+<meta property="og:site_name" content="凤凰院天真">
+<meta property="og:description" content="题目链接
+题意
+给出长度为 n 且匹配正确的括号序列和 m 个操作。每次操作将对应位置上的括号取反， 即(变为)， )变为(。然后要求输出每次操作后对哪个位置上的括号取反可以使整个括号序列再次符合匹配。若有多个满足要求的位置， 输出最靠左端的位置。
+
+样例输入
+123456 3( ( ( ) ) )431
+
+样例输出
+123221
+
+思路
+首先定义 a[i] 为 [1 - i] 里左括号减去右括号">
+<meta property="og:updated_time" content="2015-12-13T20:06:08.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSU 1542 Flipping Parentheses">
-<meta name="twitter:description" content="CSU 1542 Flipping Parentheses， 线段树 + 构造解决。">
-<meta name="twitter:creator" content="@Dwayneten">
-<link rel="publisher" href="107614829517460254115">
+<meta name="twitter:description" content="题目链接
+题意
+给出长度为 n 且匹配正确的括号序列和 m 个操作。每次操作将对应位置上的括号取反， 即(变为)， )变为(。然后要求输出每次操作后对哪个位置上的括号取反可以使整个括号序列再次符合匹配。若有多个满足要求的位置， 输出最靠左端的位置。
+
+样例输入
+123456 3( ( ( ) ) )431
+
+样例输出
+123221
+
+思路
+首先定义 a[i] 为 [1 - i] 里左括号减去右括号">
 
 
-    
-    <link rel="alternative" href="/atom.xml" title="DwayneTen" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/logo_ico.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/logo_white.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/logo_white.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
 
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: '[object Object]',
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> CSU 1542 Flipping Parentheses | 凤凰院天真 </title>
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="DwayneTen">DwayneTen</a></h1>
-				<h2 class="blog-motto">凤凰院天真 - 重遇再散也够绝，但嫌路太短。</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/categories">Categories</a></li>
-					
-						<li><a href="/about">About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:dwayneten.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+
+
+
+
+
+
+  
+  
     
-      <a href="/2015/04/17/CSU1542/" title="CSU 1542 Flipping Parentheses" itemprop="url">CSU 1542 Flipping Parentheses</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-17T15:41:51.000Z" itemprop="datePublished"> Published Apr 17 2015</time>
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">凤凰院天真</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">DwayneTen's Notes</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-  </p>
-</header>
-	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输入"><span class="toc-number">1.2.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输出"><span class="toc-number">1.3.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.4.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.5.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol>
-		
-		</div>
-		
-		<h2 id="题目链接"><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1542" target="_blank" rel="external">题目链接</a></h2>
-<blockquote>
-<h3 id="题意">题意</h3>
-</blockquote>
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSU 1542 Flipping Parentheses
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-04-17T23:41:51+08:00" content="Apr 17 2015">
+              Apr 17 2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/04/17/CSU1542/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/17/CSU1542/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="u9898_u76EE_u94FE_u63A5"><a href="#u9898_u76EE_u94FE_u63A5" class="headerlink" title="题目链接"></a><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1542" target="_blank" rel="external">题目链接</a></h2><blockquote>
+<h3 id="u9898_u610F"><a href="#u9898_u610F" class="headerlink" title="题意"></a>题意</h3></blockquote>
 <p>给出长度为 <em>n</em> 且匹配正确的括号序列和 <em>m</em> 个操作。<br>每次操作将对应位置上的括号取反， 即<code>(</code>变为<code>)</code>， <code>)</code>变为<code>(</code>。<br>然后要求输出每次操作后对哪个位置上的括号取反可以使整个括号序列再次符合匹配。<br>若有多个满足要求的位置， 输出最靠左端的位置。</p>
 <blockquote>
-<h3 id="样例输入">样例输入</h3>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">6</span> <span class="number">3</span></div><div class="line"><span class="list">( <span class="list">( <span class="list">( )</span> )</span> )</span></div><div class="line"><span class="number">4</span></div><div class="line"><span class="number">3</span></div><div class="line"><span class="number">1</span></div></pre></td></tr></table></figure>
-
+<h3 id="u6837_u4F8B_u8F93_u5165"><a href="#u6837_u4F8B_u8F93_u5165" class="headerlink" title="样例输入"></a>样例输入</h3></blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span> <span class="number">3</span></span><br><span class="line">( ( ( ) ) )</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<h3 id="样例输出">样例输出</h3>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">2</div><div class="line">2</div><div class="line">1</div></pre></td></tr></table></figure>
-
+<h3 id="u6837_u4F8B_u8F93_u51FA"><a href="#u6837_u4F8B_u8F93_u51FA" class="headerlink" title="样例输出"></a>样例输出</h3></blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<h3 id="思路">思路</h3>
-</blockquote>
+<h3 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h3></blockquote>
 <p>首先定义 a[i] 为 [1 - i] 里左括号减去右括号的值， 可以发现一个匹配正确的括号系列总是满足:</p>
 <ul>
 <li>a 数组中没有负数</li>
@@ -327,448 +531,512 @@
 </table>
 <p>至此， 两种修改都有了对应的求解策略， 需要更新维护的是区间 a[i] 的最小值用来找出不满足 a[i] &gt;= 2 的位置和区间 d[i] 的最小值用来找出最靠左端的<code>)</code>。<br>还有修改括号后的 a 数组和 d 数组的区间修改。<br>这种操作当然用线段树实现啦。</p>
 <blockquote>
-<h3 id="代码实现">代码实现</h3>
-</blockquote>
-<figure class="highlight C++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> mydebugn</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> tn, n, m, tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">300024</span>;</div><div class="line"><span class="keyword">char</span> paren[maxn &lt;&lt; <span class="number">2</span>];</div><div class="line"><span class="keyword">int</span> num[maxn &lt;&lt; <span class="number">2</span>], lazy[maxn &lt;&lt; <span class="number">2</span>], d[maxn &lt;&lt; <span class="number">2</span>], q, cur, ans;</div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> lson l, mid, rt &lt;&lt; 1</span></div><div class="line"><span class="preprocessor">#<span class="keyword">define</span> rson mid + 1, r, rt &lt;&lt; 1 | 1</span></div><div class="line"></div><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; T min(T a, T b)</div><div class="line">{</div><div class="line">    <span class="keyword">return</span> a &lt; b ? a : b;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">void</span> pushup(<span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    num[rt] = min(num[rt &lt;&lt; <span class="number">1</span>], num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</div><div class="line">    d[rt] = min(d[rt &lt;&lt; <span class="number">1</span>], d[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> pushdown(<span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    lazy[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</div><div class="line">    lazy[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</div><div class="line">    d[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</div><div class="line">    d[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</div><div class="line">    num[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</div><div class="line">    num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</div><div class="line"></div><div class="line">    lazy[rt] = <span class="number">0</span>;</div><div class="line">}</div><div class="line"><span class="keyword">void</span> build(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">    {</div><div class="line">        cur += paren[l] == <span class="string">'('</span> ? <span class="number">1</span> : -<span class="number">1</span>;</div><div class="line">        num[rt] = cur;</div><div class="line">        d[rt] = num[rt] - l;</div><div class="line"><span class="preprocessor">#ifdef mydebug</span></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[rt]);</div><div class="line">        <span class="keyword">if</span> (r == n)</div><div class="line">            <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    build(lson);</div><div class="line">    build(rson);</div><div class="line">    pushup(rt);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> update(<span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> x, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (L &lt;= l && R &gt;= r)</div><div class="line">    {</div><div class="line">        lazy[rt] += x;</div><div class="line">        d[rt] += x;</div><div class="line">        num[rt] += x;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (L &lt;= mid)</div><div class="line">        update(L, R, x, lson);</div><div class="line">    update(L, R, x, rson);</div><div class="line">    pushup(rt);</div><div class="line">}</div><div class="line"><span class="keyword">int</span> query1(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">        <span class="keyword">return</span> l;</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (d[rt &lt;&lt; <span class="number">1</span>] &lt; <span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> query1(lson);</div><div class="line">    <span class="keyword">return</span> query1(rson);</div><div class="line">}</div><div class="line"><span class="keyword">int</span> query2(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">        <span class="keyword">return</span> l+<span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span> (num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] &lt; <span class="number">2</span>)</div><div class="line">        <span class="keyword">return</span> query2(rson);</div><div class="line">    <span class="keyword">return</span> query2(lson);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> showd(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">    {</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, d[rt]);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    showd(lson);</div><div class="line">    showd(rson);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> shownum(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</div><div class="line">{</div><div class="line">    <span class="keyword">if</span> (l == r)</div><div class="line">    {</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[rt]);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">if</span> (lazy[rt])</div><div class="line">        pushdown(rt);</div><div class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</div><div class="line">    shownum(lson);</div><div class="line">    shownum(rson);</div><div class="line">}</div><div class="line"><span class="keyword">void</span> change(<span class="keyword">int</span> in)</div><div class="line">{</div><div class="line">    paren[in] = paren[in] == <span class="string">'('</span> ? <span class="string">')'</span> : <span class="string">'('</span>;</div><div class="line">    update(in, n, paren[in] == <span class="string">')'</span> ? -<span class="number">2</span> : <span class="number">2</span>, <span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line"><span class="preprocessor">#ifdef mydebug</span></div><div class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line">    <span class="built_in">puts</span>(paren+<span class="number">1</span>);</div><div class="line">    <span class="built_in">puts</span>(<span class="string">"num:"</span>);</div><div class="line">    shownum(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">    <span class="built_in">puts</span>(<span class="string">"\nd:"</span>);</div><div class="line">    showd(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line">}</div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"><span class="preprocessor">#ifdef OFFLINE</span></div><div class="line">    freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, stdin);</div><div class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></div><div class="line"></div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %s"</span>, &n, &m, paren+<span class="number">1</span>);</div><div class="line">    build(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">    <span class="keyword">while</span>(m--)</div><div class="line">    {</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &q);</div><div class="line">        change(q);</div><div class="line">        <span class="keyword">if</span> (paren[q] == <span class="string">')'</span>)</div><div class="line">            ans = query1(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            ans = query2(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">        change(ans);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">    }</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+<h3 id="u4EE3_u7801_u5B9E_u73B0"><a href="#u4EE3_u7801_u5B9E_u73B0" class="headerlink" title="代码实现"></a>代码实现</h3></blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> mydebugn</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> tn, n, m, tcase = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">300024</span>;</span><br><span class="line"><span class="keyword">char</span> paren[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> num[maxn &lt;&lt; <span class="number">2</span>], lazy[maxn &lt;&lt; <span class="number">2</span>], d[maxn &lt;&lt; <span class="number">2</span>], q, cur, ans;</span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> lson l, mid, rt &lt;&lt; <span class="number">1</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rson mid + <span class="number">1</span>, r, rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="function">T <span class="title">min</span><span class="params">(T a, T b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &lt; b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    num[rt] = min(num[rt &lt;&lt; <span class="number">1</span>], num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">    d[rt] = min(d[rt &lt;&lt; <span class="number">1</span>], d[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    lazy[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</span><br><span class="line">    lazy[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</span><br><span class="line">    d[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</span><br><span class="line">    d[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</span><br><span class="line">    num[rt &lt;&lt; <span class="number">1</span>] += lazy[rt];</span><br><span class="line">    num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] += lazy[rt];</span><br><span class="line"></span><br><span class="line">    lazy[rt] = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        cur += paren[l] == <span class="string">'('</span> ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">        num[rt] = cur;</span><br><span class="line">        d[rt] = num[rt] - l;</span><br><span class="line"><span class="preprocessor">#<span class="keyword">ifdef</span> mydebug</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[rt]);</span><br><span class="line">        <span class="keyword">if</span> (r == n)</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    build(lson);</span><br><span class="line">    build(rson);</span><br><span class="line">    pushup(rt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> x, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (L &lt;= l &amp;&amp; R &gt;= r)</span><br><span class="line">    &#123;</span><br><span class="line">        lazy[rt] += x;</span><br><span class="line">        d[rt] += x;</span><br><span class="line">        num[rt] += x;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (lazy[rt])</span><br><span class="line">        pushdown(rt);</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (L &lt;= mid)</span><br><span class="line">        update(L, R, x, lson);</span><br><span class="line">    update(L, R, x, rson);</span><br><span class="line">    pushup(rt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query1</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">        <span class="keyword">return</span> l;</span><br><span class="line">    <span class="keyword">if</span> (lazy[rt])</span><br><span class="line">        pushdown(rt);</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (d[rt &lt;&lt; <span class="number">1</span>] &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> query1(lson);</span><br><span class="line">    <span class="keyword">return</span> query1(rson);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query2</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">        <span class="keyword">return</span> l+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (lazy[rt])</span><br><span class="line">        pushdown(rt);</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (num[rt &lt;&lt; <span class="number">1</span> | <span class="number">1</span>] &lt; <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> query2(rson);</span><br><span class="line">    <span class="keyword">return</span> query2(lson);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showd</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, d[rt]);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (lazy[rt])</span><br><span class="line">        pushdown(rt);</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    showd(lson);</span><br><span class="line">    showd(rson);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shownum</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> rt)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[rt]);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (lazy[rt])</span><br><span class="line">        pushdown(rt);</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    shownum(lson);</span><br><span class="line">    shownum(rson);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> in)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    paren[in] = paren[in] == <span class="string">'('</span> ? <span class="string">')'</span> : <span class="string">'('</span>;</span><br><span class="line">    update(in, n, paren[in] == <span class="string">')'</span> ? -<span class="number">2</span> : <span class="number">2</span>, <span class="number">1</span>, n, <span class="number">1</span>);</span><br><span class="line"><span class="preprocessor">#<span class="keyword">ifdef</span> mydebug</span></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">    <span class="built_in">puts</span>(paren+<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"num:"</span>);</span><br><span class="line">    shownum(<span class="number">1</span>, n, <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"\nd:"</span>);</span><br><span class="line">    showd(<span class="number">1</span>, n, <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"><span class="preprocessor">#<span class="keyword">ifdef</span> OFFLINE</span></span><br><span class="line">    freopen(<span class="string">"data.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %s"</span>, &amp;n, &amp;m, paren+<span class="number">1</span>);</span><br><span class="line">    build(<span class="number">1</span>, n, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;q);</span><br><span class="line">        change(q);</span><br><span class="line">        <span class="keyword">if</span> (paren[q] == <span class="string">')'</span>)</span><br><span class="line">            ans = query1(<span class="number">1</span>, n, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            ans = query2(<span class="number">1</span>, n, <span class="number">1</span>);</span><br><span class="line">        change(ans);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-  
-	</div>
-		<footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/线段树/">线段树</a><a href="/tags/构造/">构造</a><a href="/tags/CSU/">CSU</a>
-  </div>
-
-</div>
-
-
-
-	<div class="article-share" id="share">
-	
-	  <div data-url="http://dwayneten.com/2015/04/17/CSU1542/" data-title="CSU 1542 Flipping Parentheses | DwayneTen" data-tsina="207028555" class="share clearfix">
-	  </div>
-	
-	</div>
-
-
-</footer>
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2015/04/29/gccbuiltin/" title="五种 GCC 内置的位运算函数">
-  <strong>上一篇：</strong><br/>
-  <span>
-  五种 GCC 内置的位运算函数</span>
-</a>
-</div>
-
-
-<div class="next">
-<a href="/2015/04/17/CSU1554/"  title="CSU 1554 SG Value">
- <strong>下一篇：</strong><br/> 
- <span>CSU 1554 SG Value
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-<section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/04/17/CSU1542/" data-title="CSU 1542 Flipping Parentheses" data-url="http://dwayneten.com/2015/04/17/CSU1542/"></div>
-</section>
-
-
-<section id="comments" class="comment">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
- 
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目链接"><span class="toc-number">1.</span> <span class="toc-text">题目链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输入"><span class="toc-number">1.2.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输出"><span class="toc-number">1.3.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.4.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">1.5.</span> <span class="toc-text">代码实现</span></a></li></ol></li></ol>
- 
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
-<aside class="clearfix">
-
-  
-<div class="categorieslist">
-	<p class="asidetitle">Categories</p>
-		<ul>
-		
-			<li><a href="/categories/网站开发/" title="网站开发">网站开发<sup>2</sup></a></li>
-		
-			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>12</sup></a></li>
-		
-			<li><a href="/categories/设计/" title="设计">设计<sup>1</sup></a></li>
-		
-			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>2</sup></a></li>
-		
-			<li><a href="/categories/随笔/" title="随笔">随笔<sup>3</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  
-<div class="tagslist">
-	<p class="asidetitle">Tags</p>
-		<ul class="clearfix">
-		
-			<li><a href="/tags/Codeforces/" title="Codeforces">Codeforces<sup>4</sup></a></li>
-		
-			<li><a href="/tags/CSU/" title="CSU">CSU<sup>4</sup></a></li>
-		
-			<li><a href="/tags/构造/" title="构造">构造<sup>3</sup></a></li>
-		
-			<li><a href="/tags/位运算/" title="位运算">位运算<sup>3</sup></a></li>
-		
-			<li><a href="/tags/贪心/" title="贪心">贪心<sup>3</sup></a></li>
-		
-			<li><a href="/tags/线段树/" title="线段树">线段树<sup>2</sup></a></li>
-		
-			<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
-		
-			<li><a href="/tags/图论/" title="图论">图论<sup>2</sup></a></li>
-		
-			<li><a href="/tags/GCC/" title="GCC">GCC<sup>1</sup></a></li>
-		
-			<li><a href="/tags/通识课/" title="通识课">通识课<sup>1</sup></a></li>
-		
-			<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
-		
-			<li><a href="/tags/网站/" title="网站">网站<sup>1</sup></a></li>
-		
-			<li><a href="/tags/设计/" title="设计">设计<sup>1</sup></a></li>
-		
-			<li><a href="/tags/最小生成树/" title="最小生成树">最小生成树<sup>1</sup></a></li>
-		
-			<li><a href="/tags/LCA/" title="LCA">LCA<sup>1</sup></a></li>
-		
-			<li><a href="/tags/FOJ/" title="FOJ">FOJ<sup>1</sup></a></li>
-		
-			<li><a href="/tags/SOJ/" title="SOJ">SOJ<sup>1</sup></a></li>
-		
-			<li><a href="/tags/状态压缩/" title="状态压缩">状态压缩<sup>1</sup></a></li>
-		
-			<li><a href="/tags/日志/" title="日志">日志<sup>1</sup></a></li>
-		
-			<li><a href="/tags/递归/" title="递归">递归<sup>1</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello, I&#39;m DwayneTen. <br/>
-			This is my blog, believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/207028555" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		<a href="https://github.com/Dwayneten" target="_blank" class="icon-github" title="github"></a>
-		
-		
-		<a href="http://stackoverflow.com/users/4608823" target="_blank" class="icon-stack-overflow" title="stackoverflow"></a>
-		
-		
-		<a href="https://twitter.com/Dwayneten" target="_blank" class="icon-twitter" title="twitter"></a>
-		
-		
-		
-		
-		
-		<a href="https://www.zhihu.com/people/dwayneten" target="_blank" class="icon-zhihu" title="知乎"></a>
-		
-		
-		<a href="https://plus.google.com/107614829517460254115?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
-		
-		
-		<a href="mailto:dwayne@loliplus.com" target="_blank" class="icon-email" title="Email Me"></a>
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
-		
-		<a href="http://dwayneten.com/about" target="_blank" title="DwayneTen">DwayneTen</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
       
-      $('#toc.toc-aside').css('display', 'none');
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSU/" rel="tag">#CSU</a>
+          
+            <a href="/tags/构造/" rel="tag">#构造</a>
+          
+            <a href="/tags/线段树/" rel="tag">#线段树</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/04/17/CSU1554/" rel="next" title="CSU 1554 SG Value">
+                <i class="fa fa-chevron-left"></i> CSU 1554 SG Value
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/04/29/gccbuiltin/" rel="prev" title="五种 GCC 内置的位运算函数">
+                五种 GCC 内置的位运算函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/04/17/CSU1542/"
+           data-title="CSU 1542 Flipping Parentheses" data-url="http://dwayneten.com/2015/04/17/CSU1542/">
+      </div>
+    
+  </div>
+
+
+        </div>
         
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/logo_white.png"
+               alt="DwayneTen" />
+          <p class="site-author-name" itemprop="name">DwayneTen</p>
+          <p class="site-description motion-element" itemprop="description">重遇再散也够绝，但嫌路太短。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Dwayneten" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Dwayneten" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/207028555" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> 微博
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/DwayneTen" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> 知乎
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u9898_u76EE_u94FE_u63A5"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u9898_u610F"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6837_u4F8B_u8F93_u5165"><span class="nav-number">1.2.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6837_u4F8B_u8F93_u51FA"><span class="nav-number">1.3.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u601D_u8DEF"><span class="nav-number">1.4.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4EE3_u7801_u5B9E_u73B0"><span class="nav-number">1.5.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DwayneTen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
     }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
-</script>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
-</script>
-
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"dwayneten"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
-
-
-<script type="text/javascript">
-
-var disqus_shortname = 'dwaynetengithub';
-
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-</script>
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
     }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
   });
 </script>
 
-<script type="text/x-mathjax-config">
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dwayneten"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       }
     });
-</script>
+  </script>
 
-<script type="text/x-mathjax-config">
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
     });
-</script>
+  </script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
 
 
-<!-- MathJax End -->
+  
+  
 
-  </body>
+
+</body>
 </html>

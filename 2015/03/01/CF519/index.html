@@ -1,136 +1,308 @@
+<!doctype html>
 
- <!DOCTYPE HTML>
-<html >
-<head>
-  <script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?8155aa7c982b907431d0ad5f07d645d5";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-  </script>
-  <meta charset="UTF-8">
+
+
   
-    <title>Codeforces Round 294 (Div. 2) | DwayneTen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="DwayneTen">
-    
-    <meta name="description" itemprop="description" content="Codeforces Round">
-    
-    
-    <meta name="description" content="Codeforces Round">
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Codeforces," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="凤凰院天真" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/logo_ico.ico?v=5.0.0" />
+
+
+
+
+
+
+<meta name="description" content="感觉这套 div2 的题比往常简单。很久没打 CF 了，刚好这场开始时间比较早，就打了这场。赛时只出了 ABC, hack+1。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces Round 294 (Div. 2)">
-<meta property="og:url" content="http://dwayneten.com/2015/03/01/CF519/">
-<meta property="og:site_name" content="DwayneTen">
-<meta property="og:description" content="Codeforces Round">
+<meta property="og:url" content="http://dwayneten.com/2015/03/01/CF519/index.html">
+<meta property="og:site_name" content="凤凰院天真">
+<meta property="og:description" content="感觉这套 div2 的题比往常简单。很久没打 CF 了，刚好这场开始时间比较早，就打了这场。赛时只出了 ABC, hack+1。">
+<meta property="og:updated_time" content="2015-12-13T19:33:06.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces Round 294 (Div. 2)">
-<meta name="twitter:description" content="Codeforces Round">
-<meta name="twitter:creator" content="@Dwayneten">
-<link rel="publisher" href="107614829517460254115">
+<meta name="twitter:description" content="感觉这套 div2 的题比往常简单。很久没打 CF 了，刚好这场开始时间比较早，就打了这场。赛时只出了 ABC, hack+1。">
 
 
-    
-    <link rel="alternative" href="/atom.xml" title="DwayneTen" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/logo_ico.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/logo_white.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/logo_white.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
 
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: '[object Object]',
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Codeforces Round 294 (Div. 2) | 凤凰院天真 </title>
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="DwayneTen">DwayneTen</a></h1>
-				<h2 class="blog-motto">凤凰院天真 - 重遇再散也够绝，但嫌路太短。</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/categories">Categories</a></li>
-					
-						<li><a href="/about">About</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:dwayneten.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+
+
+
+
+
+
+  
+  
     
-      <a href="/2015/03/01/CF519/" title="Codeforces Round 294 (Div. 2)" itemprop="url">Codeforces Round 294 (Div. 2)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/107614829517460254115?rel=author" title="DwayneTen" target="_blank" itemprop="author">DwayneTen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-03-01T12:46:17.000Z" itemprop="datePublished"> Published Mar 1 2015</time>
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">凤凰院天真</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">DwayneTen's Notes</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-  </p>
-</header>
-	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
-		
-			
-		
-		</div>
-		
-		<p>感觉这套 div2 的题比往常简单。<br>很久没打 CF 了，刚好这场开始时间比较早，就打了这场。<br>赛时只出了 ABC, hack+1。<br><a id="more"></a><br><a href="http://codeforces.com/problemset/problem/519/A" target="_blank" rel="external">519A - A and B and Chess</a></p>
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Codeforces Round 294 (Div. 2)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-03-01T20:46:17+08:00" content="Mar 1 2015">
+              Mar 1 2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/03/01/CF519/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/01/CF519/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>感觉这套 div2 的题比往常简单。<br>很久没打 CF 了，刚好这场开始时间比较早，就打了这场。<br>赛时只出了 ABC, hack+1。<br><a id="more"></a><br><a href="http://codeforces.com/problemset/problem/519/A" target="_blank" rel="external">519A - A and B and Chess</a></p>
 <blockquote>
 <p>A 题很水，不同字母代表的分数不同，比较两个阵型的总分大小。</p>
 </blockquote>
-<p>有个小坑点是 Knight 的代表字母是 N/n 而不是 K/k，有不少人没细心看题。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/2/28 20:59:27</div><div class="line">    File Name     :CF519A.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;map&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cctype&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">    <span class="comment">//freopen("in.txt", "r", stdin);</span></div><div class="line">    <span class="comment">//freopen("out.txt", "w", stdout);</span></div><div class="line">    </div><div class="line">    <span class="keyword">char</span> s[<span class="number">16</span>][<span class="number">16</span>];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">8</span>; ++i)</div><div class="line">        gets(s[i]);</div><div class="line">    <span class="stl_container"><span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt;</span> mp;</div><div class="line">    mp[<span class="string">'Q'</span>] = mp[<span class="string">'q'</span>] = <span class="number">9</span>;</div><div class="line">    mp[<span class="string">'R'</span>] = mp[<span class="string">'r'</span>] = <span class="number">5</span>;</div><div class="line">    mp[<span class="string">'B'</span>] = mp[<span class="string">'b'</span>] = <span class="number">3</span>;</div><div class="line">    mp[<span class="string">'N'</span>] = mp[<span class="string">'n'</span>] = <span class="number">3</span>;</div><div class="line">    mp[<span class="string">'P'</span>] = mp[<span class="string">'p'</span>] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> cnta = <span class="number">0</span>, cntb = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">8</span>; ++i)</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;<span class="number">8</span>; ++j)</div><div class="line">            <span class="keyword">if</span> (<span class="built_in">isalpha</span>(s[i][j]))</div><div class="line">                <span class="keyword">if</span> (<span class="built_in">isupper</span>(s[i][j]))</div><div class="line">                    cnta += mp[s[i][j]];</div><div class="line">                <span class="keyword">else</span></div><div class="line">                    cntb += mp[s[i][j]];</div><div class="line">    <span class="keyword">if</span> (cnta == cntb)</div><div class="line">        <span class="built_in">puts</span>(<span class="string">"Draw"</span>);</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="built_in">puts</span>(cnta &gt; cntb ? <span class="string">"White"</span> : <span class="string">"Black"</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
+<p>有个小坑点是 Knight 的代表字母是 N/n 而不是 K/k，有不少人没细心看题。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*///////////////////////////////////////////////////////</span><br><span class="line">    Author        :Dwayne</span><br><span class="line">    Created Time  :2015/2/28 20:59:27</span><br><span class="line">    File Name     :CF519A.cpp</span><br><span class="line">//////////////////////////////////////////////////////<span class="comment">/*/</span><br><span class="line"></span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;cctype&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int n, m, k, tn, tcase = 0;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //freopen("in.txt", "r", stdin);</span><br><span class="line">    //freopen("out.txt", "w", stdout);</span><br><span class="line">    </span><br><span class="line">    char s[16][16];</span><br><span class="line">    for (int i=0; i&lt;8; ++i)</span><br><span class="line">        gets(s[i]);</span><br><span class="line">    map&lt;char, int&gt; mp;</span><br><span class="line">    mp['Q'] = mp['q'] = 9;</span><br><span class="line">    mp['R'] = mp['r'] = 5;</span><br><span class="line">    mp['B'] = mp['b'] = 3;</span><br><span class="line">    mp['N'] = mp['n'] = 3;</span><br><span class="line">    mp['P'] = mp['p'] = 1;</span><br><span class="line">    int cnta = 0, cntb = 0;</span><br><span class="line">    for (int i=0; i&lt;8; ++i)</span><br><span class="line">        for (int j=0; j&lt;8; ++j)</span><br><span class="line">            if (isalpha(s[i][j]))</span><br><span class="line">                if (isupper(s[i][j]))</span><br><span class="line">                    cnta += mp[s[i][j]];</span><br><span class="line">                else</span><br><span class="line">                    cntb += mp[s[i][j]];</span><br><span class="line">    if (cnta == cntb)</span><br><span class="line">        puts("Draw");</span><br><span class="line">    else</span><br><span class="line">        puts(cnta &gt; cntb ? "White" : "Black");</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure></p>
 <p><a href="http://codeforces.com/problemset/problem/519/B" target="_blank" rel="external">519B - A and B and Compilation Errors</a></p>
 <blockquote>
 <p>给出三行数，输出第一行中第二行没有的数和第二行中第三行没有的数。</p>
 </blockquote>
-<p>暴力，统计 sum，xor，map皆可。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/2/28 21:11:21</div><div class="line">    File Name     :CF519B.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;map&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;algorithm&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">    <span class="comment">//freopen("in.txt", "r", stdin);</span></div><div class="line">    <span class="comment">//freopen("out.txt", "w", stdout);</span></div><div class="line">    </div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &n);</div><div class="line">    <span class="keyword">int</span> d[<span class="number">100024</span>], e[<span class="number">100024</span>], f[<span class="number">100024</span>];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &d[i]);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n-<span class="number">1</span>; ++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &e[i]);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n-<span class="number">2</span>; ++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &f[i]);</div><div class="line">    sort(d, d+n);</div><div class="line">    sort(e, e+n-<span class="number">1</span>);</div><div class="line">    sort(f, f+n-<span class="number">2</span>);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; ++i)</div><div class="line">        <span class="keyword">if</span> (d[i] != e[i])</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, d[i]), i = n;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n-<span class="number">1</span>; ++i)</div><div class="line">        <span class="keyword">if</span> (e[i] != f[i])</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, e[i]), i = n;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
+<p>暴力，统计 sum，xor，map皆可。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*///////////////////////////////////////////////////////</span><br><span class="line">    Author        :Dwayne</span><br><span class="line">    Created Time  :2015/2/28 21:11:21</span><br><span class="line">    File Name     :CF519B.cpp</span><br><span class="line">//////////////////////////////////////////////////////<span class="comment">/*/</span><br><span class="line"></span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int n, m, k, tn, tcase = 0;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //freopen("in.txt", "r", stdin);</span><br><span class="line">    //freopen("out.txt", "w", stdout);</span><br><span class="line">    </span><br><span class="line">    scanf("%d", &amp;n);</span><br><span class="line">    int d[100024], e[100024], f[100024];</span><br><span class="line">    for (int i=0; i&lt;n; ++i)</span><br><span class="line">        scanf("%d", &amp;d[i]);</span><br><span class="line">    for (int i=0; i&lt;n-1; ++i)</span><br><span class="line">        scanf("%d", &amp;e[i]);</span><br><span class="line">    for (int i=0; i&lt;n-2; ++i)</span><br><span class="line">        scanf("%d", &amp;f[i]);</span><br><span class="line">    sort(d, d+n);</span><br><span class="line">    sort(e, e+n-1);</span><br><span class="line">    sort(f, f+n-2);</span><br><span class="line">    for (int i=0; i&lt;n; ++i)</span><br><span class="line">        if (d[i] != e[i])</span><br><span class="line">            printf("%d\n", d[i]), i = n;</span><br><span class="line">    for (int i=0; i&lt;n-1; ++i)</span><br><span class="line">        if (e[i] != f[i])</span><br><span class="line">            printf("%d\n", e[i]), i = n;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure></p>
 <p><a href="http://codeforces.com/problemset/problem/519/C" target="_blank" rel="external">519C - A and B and Team Training</a></p>
 <blockquote>
 <p>假设有两种人 A 和 B，且有两种组队方案<code>AAB</code>和<code>BBA</code>，给出 A 类人和 B 类人的数目 n 和 m，求最多可组几对。</p>
 </blockquote>
-<p>赛时用暴力过了，后来听说$$min(n, m, (n+m)/3)$$可以直接出答案。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/2/28 21:22:58</div><div class="line">    File Name     :CF519C.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">    <span class="comment">//freopen("in.txt", "r", stdin);</span></div><div class="line">    <span class="comment">//freopen("out.txt", "w", stdout);</span></div><div class="line">    </div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &n, &m);</div><div class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>, curn = n, curm = m, sum = n + m, typea = <span class="number">0</span>, typeb = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (sum &gt;= <span class="number">3</span> && curn && curm)</div><div class="line">    {</div><div class="line">        <span class="keyword">if</span> (curn &gt;= <span class="number">2</span> && curm &gt;= <span class="number">1</span>)</div><div class="line">            curn -= <span class="number">2</span>, curm -= <span class="number">1</span>, sum -= <span class="number">3</span>, ans++, typea++;</div><div class="line">        <span class="keyword">if</span> (curn &gt;= <span class="number">1</span> && curm &gt;= <span class="number">2</span>)</div><div class="line">            curn -= <span class="number">1</span>, curm -= <span class="number">2</span>, sum -= <span class="number">3</span>, ans++, typeb++;</div><div class="line">    }</div><div class="line">    <span class="keyword">while</span> (typea && curm &gt;= <span class="number">3</span>)</div><div class="line">    {</div><div class="line">        typeb += <span class="number">2</span>;</div><div class="line">        typea--;</div><div class="line">        ans++;</div><div class="line">        curm -= <span class="number">3</span>;</div><div class="line">    }</div><div class="line">    <span class="keyword">while</span> (typeb && curn &gt;= <span class="number">3</span>)</div><div class="line">    {</div><div class="line">        typea += <span class="number">2</span>;</div><div class="line">        typeb--;</div><div class="line">        ans++;</div><div class="line">        curn -= <span class="number">3</span>;</div><div class="line">    }</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
+<p>赛时用暴力过了，后来听说$$min(n, m, (n+m)/3)$$可以直接出答案。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*///////////////////////////////////////////////////////</span><br><span class="line">    Author        :Dwayne</span><br><span class="line">    Created Time  :2015/2/28 21:22:58</span><br><span class="line">    File Name     :CF519C.cpp</span><br><span class="line">//////////////////////////////////////////////////////<span class="comment">/*/</span><br><span class="line"></span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line"></span><br><span class="line">int n, m, k, tn, tcase = 0;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //freopen("in.txt", "r", stdin);</span><br><span class="line">    //freopen("out.txt", "w", stdout);</span><br><span class="line">    </span><br><span class="line">    scanf("%d %d", &amp;n, &amp;m);</span><br><span class="line">    int ans = 0, curn = n, curm = m, sum = n + m, typea = 0, typeb = 0;</span><br><span class="line">    while (sum &gt;= 3 &amp;&amp; curn &amp;&amp; curm)</span><br><span class="line">    &#123;</span><br><span class="line">        if (curn &gt;= 2 &amp;&amp; curm &gt;= 1)</span><br><span class="line">            curn -= 2, curm -= 1, sum -= 3, ans++, typea++;</span><br><span class="line">        if (curn &gt;= 1 &amp;&amp; curm &gt;= 2)</span><br><span class="line">            curn -= 1, curm -= 2, sum -= 3, ans++, typeb++;</span><br><span class="line">    &#125;</span><br><span class="line">    while (typea &amp;&amp; curm &gt;= 3)</span><br><span class="line">    &#123;</span><br><span class="line">        typeb += 2;</span><br><span class="line">        typea--;</span><br><span class="line">        ans++;</span><br><span class="line">        curm -= 3;</span><br><span class="line">    &#125;</span><br><span class="line">    while (typeb &amp;&amp; curn &gt;= 3)</span><br><span class="line">    &#123;</span><br><span class="line">        typea += 2;</span><br><span class="line">        typeb--;</span><br><span class="line">        ans++;</span><br><span class="line">        curn -= 3;</span><br><span class="line">    &#125;</span><br><span class="line">    printf("%d\n", ans);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure></p>
 <p><a href="http://codeforces.com/problemset/problem/519/D" target="_blank" rel="external">519D - A and B and Interesting Substrings</a></p>
 <blockquote>
 <p>给出26个字母对应的值和一个字符串，求这个字符串长度大于2的子串中有多少符合以下条件的:</p>
@@ -139,448 +311,508 @@
 <li>除去首字母和末字母之后，剩下的字母对应值之和为零</li>
 </ul>
 </blockquote>
-<p>赛后补的题，赛时以为是DP，没想出怎么解。<br>统计前缀和，若<code>sum[i] == sum[j-1]</code>(i &lt; j)那么字符串中从 i 到 j 这段对应值之和就为零。<br>然后只要扫一遍，利用<code>map</code>来标记和更新答案数即可。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*///////////////////////////////////////////////////////</span></div><div class="line">    Author        :Dwayne</div><div class="line">    Created Time  :2015/3/1 19:47:19</div><div class="line">    File Name     :CF519D.cpp</div><div class="line">///////////////////////////////////////////////////////*/</div><div class="line"></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;cstring&gt;</span></div><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;map&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, k, tn, tcase = <span class="number">0</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">    <span class="comment">//freopen("in.txt", "r", stdin);</span></div><div class="line">    <span class="comment">//freopen("out.txt", "w", stdout);</span></div><div class="line">    </div><div class="line">	<span class="keyword">int</span> value[<span class="number">32</span>];</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">26</span>; ++i)</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &value[i]);</div><div class="line">	<span class="keyword">char</span> s[<span class="number">100024</span>];</div><div class="line">	getchar();</div><div class="line">	gets(s);</div><div class="line">	</div><div class="line">	<span class="stl_container"><span class="built_in">map</span>&lt;LL, <span class="keyword">int</span>&gt;</span> cnt[<span class="number">32</span>];</div><div class="line">	LL sum[<span class="number">100024</span>], ans = <span class="number">0</span>;</div><div class="line">	sum[<span class="number">0</span>] = value[<span class="number">0</span>];</div><div class="line">	<span class="keyword">int</span> len = <span class="built_in">strlen</span>(s);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;len; ++i)</div><div class="line">		sum[i] = sum[i-<span class="number">1</span>] + value[s[i] - <span class="string">'a'</span>];</div><div class="line"></div><div class="line">	cnt[s[<span class="number">0</span>] - <span class="string">'a'</span>][sum[<span class="number">0</span>]]++;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;len; ++i)</div><div class="line">	{</div><div class="line">		ans += cnt[s[i] - <span class="string">'a'</span>][sum[i-<span class="number">1</span>]];</div><div class="line">		cnt[s[i] - <span class="string">'a'</span>][sum[i]]++;</div><div class="line">	}</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, ans);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
+<p>赛后补的题，赛时以为是DP，没想出怎么解。<br>统计前缀和，若<code>sum[i] == sum[j-1]</code>(i &lt; j)那么字符串中从 i 到 j 这段对应值之和就为零。<br>然后只要扫一遍，利用<code>map</code>来标记和更新答案数即可。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*///////////////////////////////////////////////////////</span><br><span class="line">    Author        :Dwayne</span><br><span class="line">    Created Time  :2015/3/1 19:47:19</span><br><span class="line">    File Name     :CF519D.cpp</span><br><span class="line">//////////////////////////////////////////////////////<span class="comment">/*/</span><br><span class="line"></span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int n, m, k, tn, tcase = 0;</span><br><span class="line">typedef long long LL;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    //freopen("in.txt", "r", stdin);</span><br><span class="line">    //freopen("out.txt", "w", stdout);</span><br><span class="line">    </span><br><span class="line">	int value[32];</span><br><span class="line">	for (int i=0; i&lt;26; ++i)</span><br><span class="line">		scanf("%d", &amp;value[i]);</span><br><span class="line">	char s[100024];</span><br><span class="line">	getchar();</span><br><span class="line">	gets(s);</span><br><span class="line">	</span><br><span class="line">	map&lt;LL, int&gt; cnt[32];</span><br><span class="line">	LL sum[100024], ans = 0;</span><br><span class="line">	sum[0] = value[0];</span><br><span class="line">	int len = strlen(s);</span><br><span class="line">	for (int i=1; i&lt;len; ++i)</span><br><span class="line">		sum[i] = sum[i-1] + value[s[i] - 'a'];</span><br><span class="line"></span><br><span class="line">	cnt[s[0] - 'a'][sum[0]]++;</span><br><span class="line">	for (int i=1; i&lt;len; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		ans += cnt[s[i] - 'a'][sum[i-1]];</span><br><span class="line">		cnt[s[i] - 'a'][sum[i]]++;</span><br><span class="line">	&#125;</span><br><span class="line">	printf("%I64d\n", ans);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure></p>
 <p><a href="http://codeforces.com/problemset/problem/519/E" target="_blank" rel="external">519E - A and B and Lecture Rooms</a><br>这题还没补。</p>
-  
-	</div>
-		<footer class="article-footer clearfix">
-<div class="article-catetags">
 
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/解题报告/">解题报告</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Codeforces/">Codeforces</a>
-  </div>
-
-</div>
-
-
-
-	<div class="article-share" id="share">
-	
-	  <div data-url="http://dwayneten.com/2015/03/01/CF519/" data-title="Codeforces Round 294 (Div. 2) | DwayneTen" data-tsina="207028555" class="share clearfix">
-	  </div>
-	
-	</div>
-
-
-</footer>
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2015/03/13/zscacm/" title="查询在各大 OJ 的 AC 数">
-  <strong>上一篇：</strong><br/>
-  <span>
-  查询在各大 OJ 的 AC 数</span>
-</a>
-</div>
-
-
-<div class="next">
-<a href="/2015/02/26/POJ-3040/"  title="POJ 3040 Allowance 题解">
- <strong>下一篇：</strong><br/> 
- <span>POJ 3040 Allowance 题解
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-<section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/03/01/CF519/" data-title="Codeforces Round 294 (Div. 2)" data-url="http://dwayneten.com/2015/03/01/CF519/"></div>
-</section>
-
-
-<section id="comments" class="comment">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
- 
- 
- 
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
-<aside class="clearfix">
-
-  
-<div class="categorieslist">
-	<p class="asidetitle">Categories</p>
-		<ul>
-		
-			<li><a href="/categories/网站开发/" title="网站开发">网站开发<sup>2</sup></a></li>
-		
-			<li><a href="/categories/解题报告/" title="解题报告">解题报告<sup>12</sup></a></li>
-		
-			<li><a href="/categories/设计/" title="设计">设计<sup>1</sup></a></li>
-		
-			<li><a href="/categories/软件开发/" title="软件开发">软件开发<sup>2</sup></a></li>
-		
-			<li><a href="/categories/随笔/" title="随笔">随笔<sup>3</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  
-<div class="tagslist">
-	<p class="asidetitle">Tags</p>
-		<ul class="clearfix">
-		
-			<li><a href="/tags/Codeforces/" title="Codeforces">Codeforces<sup>4</sup></a></li>
-		
-			<li><a href="/tags/CSU/" title="CSU">CSU<sup>4</sup></a></li>
-		
-			<li><a href="/tags/构造/" title="构造">构造<sup>3</sup></a></li>
-		
-			<li><a href="/tags/位运算/" title="位运算">位运算<sup>3</sup></a></li>
-		
-			<li><a href="/tags/贪心/" title="贪心">贪心<sup>3</sup></a></li>
-		
-			<li><a href="/tags/线段树/" title="线段树">线段树<sup>2</sup></a></li>
-		
-			<li><a href="/tags/Python/" title="Python">Python<sup>2</sup></a></li>
-		
-			<li><a href="/tags/图论/" title="图论">图论<sup>2</sup></a></li>
-		
-			<li><a href="/tags/GCC/" title="GCC">GCC<sup>1</sup></a></li>
-		
-			<li><a href="/tags/通识课/" title="通识课">通识课<sup>1</sup></a></li>
-		
-			<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>1</sup></a></li>
-		
-			<li><a href="/tags/网站/" title="网站">网站<sup>1</sup></a></li>
-		
-			<li><a href="/tags/设计/" title="设计">设计<sup>1</sup></a></li>
-		
-			<li><a href="/tags/最小生成树/" title="最小生成树">最小生成树<sup>1</sup></a></li>
-		
-			<li><a href="/tags/LCA/" title="LCA">LCA<sup>1</sup></a></li>
-		
-			<li><a href="/tags/FOJ/" title="FOJ">FOJ<sup>1</sup></a></li>
-		
-			<li><a href="/tags/SOJ/" title="SOJ">SOJ<sup>1</sup></a></li>
-		
-			<li><a href="/tags/状态压缩/" title="状态压缩">状态压缩<sup>1</sup></a></li>
-		
-			<li><a href="/tags/日志/" title="日志">日志<sup>1</sup></a></li>
-		
-			<li><a href="/tags/递归/" title="递归">递归<sup>1</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello, I&#39;m DwayneTen. <br/>
-			This is my blog, believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/207028555" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		<a href="https://github.com/Dwayneten" target="_blank" class="icon-github" title="github"></a>
-		
-		
-		<a href="http://stackoverflow.com/users/4608823" target="_blank" class="icon-stack-overflow" title="stackoverflow"></a>
-		
-		
-		<a href="https://twitter.com/Dwayneten" target="_blank" class="icon-twitter" title="twitter"></a>
-		
-		
-		
-		
-		
-		<a href="https://www.zhihu.com/people/dwayneten" target="_blank" class="icon-zhihu" title="知乎"></a>
-		
-		
-		<a href="https://plus.google.com/107614829517460254115?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
-		
-		
-		<a href="mailto:dwayne@loliplus.com" target="_blank" class="icon-email" title="Email Me"></a>
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
-		
-		<a href="http://dwayneten.com/about" target="_blank" title="DwayneTen">DwayneTen</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
       
-      $('#toc.toc-aside').css('display', 'none');
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Codeforces/" rel="tag">#Codeforces</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/02/26/POJ-3040/" rel="next" title="POJ 3040 Allowance 题解">
+                <i class="fa fa-chevron-left"></i> POJ 3040 Allowance 题解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/03/13/zscacm/" rel="prev" title="查询在各大 OJ 的 AC 数">
+                查询在各大 OJ 的 AC 数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/03/01/CF519/"
+           data-title="Codeforces Round 294 (Div. 2)" data-url="http://dwayneten.com/2015/03/01/CF519/">
+      </div>
+    
+  </div>
+
+
+        </div>
         
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/logo_white.png"
+               alt="DwayneTen" />
+          <p class="site-author-name" itemprop="name">DwayneTen</p>
+          <p class="site-description motion-element" itemprop="description">重遇再散也够绝，但嫌路太短。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Dwayneten" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Dwayneten" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/207028555" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> 微博
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/DwayneTen" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> 知乎
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DwayneTen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
     }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
-</script>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
-</script>
-
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"dwayneten"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
-
-
-<script type="text/javascript">
-
-var disqus_shortname = 'dwaynetengithub';
-
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-</script>
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
     }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
   });
 </script>
 
-<script type="text/x-mathjax-config">
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dwayneten"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
       }
     });
-</script>
+  </script>
 
-<script type="text/x-mathjax-config">
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
     });
-</script>
+  </script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
 
 
-<!-- MathJax End -->
+  
+  
 
-  </body>
+
+</body>
 </html>

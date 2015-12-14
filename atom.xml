@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-12-13T19:33:41.177Z</updated>
+  <updated>2015-12-14T18:29:08.353Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[ASP.NET 实训项目总结]]></title>
+    <link href="http://dwayneten.com/2015/12/15/aspnetots/"/>
+    <id>http://dwayneten.com/2015/12/15/aspnetots/</id>
+    <published>2015-12-14T16:55:07.000Z</published>
+    <updated>2015-12-14T18:29:08.353Z</updated>
+    <content type="html"><![CDATA[<p>学校开的 ASP.NET 课程， 课程实训分组自行选题进行。<br>于是我们宿舍顺理成章(并不)地组了一组。<br>选题是在线教学与考试系统。</p>
+<ul>
+<li>文章系统支持 Markdown</li>
+<li>考试系统支持 Excel 导入</li>
+<li>没了..</li>
+</ul>
+<p>基于 MVC 模式， 前端是 Boostrap + jQuery， 后端是 ASP.NET.<br>(虽然做完后像是 MVVM)</p>
+<p><a href="https://github.com/dwayneten/onlineteachingsystem" target="_blank" rel="external">GitHub</a></p>
+<blockquote>
+<h3 id="u67B6_u6784_u56FE"><a href="#u67B6_u6784_u56FE" class="headerlink" title="架构图"></a>架构图</h3></blockquote>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/onlineteachingsystem.jpg" alt="架构图"></p>
+<blockquote>
+<h3 id="u6548_u679C_u56FE"><a href="#u6548_u679C_u56FE" class="headerlink" title="效果图"></a>效果图</h3></blockquote>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/ots01.jpg" alt="效果图1"></p>
+<a id="more"></a>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/ots02.jpg" alt="效果图2"></p>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/ots04.jpg" alt="效果图4"></p>
+<p>针对移动端做了一定的适应。</p>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/ots03.jpg" alt="效果图3"></p>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/ots05.jpg" alt="效果图5"></p>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/ots06.jpg" alt="效果图6"></p>
+<p>待更新.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>学校开的 ASP.NET 课程， 课程实训分组自行选题进行。<br>于是我们宿舍顺理成章(并不)地组了一组。<br>选题是在线教学与考试系统。</p>
+<ul>
+<li>文章系统支持 Markdown</li>
+<li>考试系统支持 Excel 导入</li>
+<li>没了..</li>
+</ul>
+<p>基于 MVC 模式， 前端是 Boostrap + jQuery， 后端是 ASP.NET.<br>(虽然做完后像是 MVVM)</p>
+<p><a href="https://github.com/dwayneten/onlineteachingsystem">GitHub</a></p>
+<blockquote>
+<h3 id="u67B6_u6784_u56FE"><a href="#u67B6_u6784_u56FE" class="headerlink" title="架构图"></a>架构图</h3></blockquote>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/onlineteachingsystem.jpg" alt="架构图"></p>
+<blockquote>
+<h3 id="u6548_u679C_u56FE"><a href="#u6548_u679C_u56FE" class="headerlink" title="效果图"></a>效果图</h3></blockquote>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/ots01.jpg" alt="效果图1"></p>]]>
+    
+    </summary>
+    
+      <category term="ASP.NET" scheme="http://dwayneten.com/tags/ASP-NET/"/>
+    
+      <category term="C#" scheme="http://dwayneten.com/tags/C/"/>
+    
+      <category term="MVC" scheme="http://dwayneten.com/tags/MVC/"/>
+    
+      <category term="网站开发" scheme="http://dwayneten.com/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[FOJ 2207 以撒的结合]]></title>
@@ -1094,48 +1151,6 @@
       <category term="vim" scheme="http://dwayneten.com/tags/vim/"/>
     
       <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Python - 字体批量安装工具]]></title>
-    <link href="http://dwayneten.com/2014/06/14/FontInstaller/"/>
-    <id>http://dwayneten.com/2014/06/14/FontInstaller/</id>
-    <published>2014-06-14T04:30:28.000Z</published>
-    <updated>2015-12-13T19:32:38.531Z</updated>
-    <content type="html"><![CDATA[<p>做这个东西的想法是源于经理说过一个个解压装字体很麻烦<br>而且当时我也想装比较多的字体（笔记本上没什么字体）<br>于是就用 Python 边学边写了个 用时大概2-3天</p>
-<p>实现了几个功能：<br>从指定文件夹</p>
-<ol>
-<li>解压所有<code>zip</code>压缩包到目标文件夹</li>
-<li>提取所有<code>ttf</code> <code>otf</code>文件到目标文件夹</li>
-<li>安装所有字体</li>
-<li>删除所有非<code>ttf</code> <code>otf</code>和<code>zip</code>文件</li>
-</ol>
-<p>其实这些功能 bat 也能大致实现 只不过用起来没有那么友好和方便<br>这个就当尝试一下 Python 的 Tkinter 图形界面编程了</p>
-<p>GitHub:<a href="https://github.com/Dwayneten/FontInstaller" target="_blank" rel="external">https://github.com/Dwayneten/FontInstaller</a><br><a id="more"></a><br>如果将来有空改进的话大概会加上</p>
-<pre><code>* 支持rar压缩包
-* 支持选择操作的文件类型
-* …………
-</code></pre><figure class="highlight python"><figcaption><span>安装部分的代码</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">install</span><span class="params">(self)</span>:</span></span><br><span class="line">	<span class="string">"""Install fonts from fontPath"""</span></span><br><span class="line"></span><br><span class="line">	couterInstalled = <span class="number">0</span></span><br><span class="line">	couterDeleted = <span class="number">0</span></span><br><span class="line">	<span class="comment"># judge fontpath</span></span><br><span class="line">	fontPath = self.fontPath.get()</span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(fontPath):</span><br><span class="line">		self.errorFontpath()</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	<span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(fontPath):</span><br><span class="line">		<span class="keyword">for</span> fn <span class="keyword">in</span> files:</span><br><span class="line">     			<span class="comment"># get sufix</span></span><br><span class="line">			sufix = os.path.splitext(fn)[<span class="number">1</span>][<span class="number">1</span>:]</span><br><span class="line">			<span class="keyword">if</span> sufix == <span class="string">'ttf'</span> <span class="keyword">or</span> sufix == <span class="string">'TTF'</span> <span class="keyword">or</span> sufix == <span class="string">'otf'</span> <span class="keyword">or</span> sufix == <span class="string">'OTF'</span>:</span><br><span class="line">           	  	<span class="comment"># get path (change '/' to '\')</span></span><br><span class="line">				temp = <span class="string">''</span></span><br><span class="line">				<span class="keyword">for</span> c <span class="keyword">in</span> root:</span><br><span class="line">					<span class="keyword">if</span> c == <span class="string">'/'</span>:</span><br><span class="line">						temp += <span class="string">'\\'</span></span><br><span class="line">					<span class="keyword">else</span>:</span><br><span class="line">						temp += c</span><br><span class="line">         			<span class="comment"># calling vbs to install</span></span><br><span class="line">				os.system(<span class="string">'Installfont.vbs'</span>+<span class="string">' '</span>+temp+<span class="string">'\\'</span>+fn)</span><br><span class="line">				self.info.insert(END, <span class="string">'Installed: '</span>+root+<span class="string">'/'</span>+fn+<span class="string">'\n'</span>)</span><br><span class="line">				self.info.update()</span><br><span class="line">				self.info.yview(END)</span><br><span class="line">				couterInstalled += <span class="number">1</span></span><br><span class="line">			<span class="keyword">elif</span> sufix == <span class="string">'zip'</span> <span class="keyword">or</span> sufix == <span class="string">'ZIP'</span> <span class="keyword">or</span> sufix == <span class="string">'rar'</span> <span class="keyword">or</span> sufix == <span class="string">'RAR'</span>:</span><br><span class="line">				<span class="keyword">pass</span></span><br><span class="line">			<span class="keyword">elif</span> self.judDelete.get():</span><br><span class="line">				os.remove(root+<span class="string">'\\'</span>+fn)</span><br><span class="line">				self.info.insert(END, <span class="string">'Deleted: '</span>+root+<span class="string">'/'</span>+fn+<span class="string">'\n'</span>)</span><br><span class="line">				self.info.update()</span><br><span class="line">				self.info.yview(END)</span><br><span class="line">				couterDeleted += <span class="number">1</span></span><br><span class="line">	self.info.insert(END, <span class="string">'-'</span>*<span class="number">50</span>+<span class="string">'\n'</span>)</span><br><span class="line">	self.info.insert(END, <span class="string">'Installed'</span>+<span class="string">' '</span>+str(couterInstalled)+<span class="string">' Fonts.'</span>+<span class="string">'\n'</span>)</span><br><span class="line">	self.info.insert(END, <span class="string">'Deleted'</span>+<span class="string">' '</span>+str(couterDeleted)+<span class="string">' Files.'</span>+<span class="string">'\n'</span>)</span><br><span class="line">	self.info.update()</span><br><span class="line">	self.info.yview(END)</span><br></pre></td></tr></table></figure>
-<p><img src="http://user-image.logdown.io/user/7784/blog/7704/post/207048/vNw9llZpREqY2Rs2hCN4_psb.jpg" alt="解压中"><br><img src="http://user-image.logdown.io/user/7784/blog/7704/post/207048/TQIJSkKTf6ydHPc3ubtg_psb%20(1" alt="安装中">.jpg)<br><img src="http://user-image.logdown.io/user/7784/blog/7704/post/207048/fjOyjJshQHeDplz5Qx8q_psb%20(2" alt="安装整理后">.jpg)</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>做这个东西的想法是源于经理说过一个个解压装字体很麻烦<br>而且当时我也想装比较多的字体（笔记本上没什么字体）<br>于是就用 Python 边学边写了个 用时大概2-3天</p>
-<p>实现了几个功能：<br>从指定文件夹</p>
-<ol>
-<li>解压所有<code>zip</code>压缩包到目标文件夹</li>
-<li>提取所有<code>ttf</code> <code>otf</code>文件到目标文件夹</li>
-<li>安装所有字体</li>
-<li>删除所有非<code>ttf</code> <code>otf</code>和<code>zip</code>文件</li>
-</ol>
-<p>其实这些功能 bat 也能大致实现 只不过用起来没有那么友好和方便<br>这个就当尝试一下 Python 的 Tkinter 图形界面编程了</p>
-<p>GitHub:<a href="https://github.com/Dwayneten/FontInstaller">https://github.com/Dwayneten/FontInstaller</a><br>]]>
-    
-    </summary>
-    
-      <category term="Python" scheme="http://dwayneten.com/tags/Python/"/>
-    
-      <category term="软件开发" scheme="http://dwayneten.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   

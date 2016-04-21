@@ -265,6 +265,133 @@
             
               
                 
+                <a class="post-title-link" href="/2015/04/17/CSU1542/" itemprop="url">
+                  CSU 1542 Flipping Parentheses
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-04-17T23:41:51+08:00" content="Apr 17 2015">
+              Apr 17 2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/04/17/CSU1542/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/17/CSU1542/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="u9898_u76EE_u94FE_u63A5"><a href="#u9898_u76EE_u94FE_u63A5" class="headerlink" title="题目链接"></a><a href="http://acm.csu.edu.cn/OnlineJudge/problem.php?id=1542">题目链接</a></h2><blockquote>
+<h3 id="u9898_u610F"><a href="#u9898_u610F" class="headerlink" title="题意"></a>题意</h3></blockquote>
+<p>给出长度为 <em>n</em> 且匹配正确的括号序列和 <em>m</em> 个操作。<br>每次操作将对应位置上的括号取反， 即<code>(</code>变为<code>)</code>， <code>)</code>变为<code>(</code>。<br>然后要求输出每次操作后对哪个位置上的括号取反可以使整个括号序列再次符合匹配。<br>若有多个满足要求的位置， 输出最靠左端的位置。</p>
+<blockquote>
+<h3 id="u6837_u4F8B_u8F93_u5165"><a href="#u6837_u4F8B_u8F93_u5165" class="headerlink" title="样例输入"></a>样例输入</h3></blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span> <span class="number">3</span></span><br><span class="line">( ( ( ) ) )</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="u6837_u4F8B_u8F93_u51FA"><a href="#u6837_u4F8B_u8F93_u51FA" class="headerlink" title="样例输出"></a>样例输出</h3></blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h3></blockquote>
+<p>首先定义 a[i] 为 [1 - i] 里左括号减去右括号的值， 可以发现一个匹配正确的括号系列总是满足:</p>
+<ul>
+<li>a 数组中没有负数</li>
+<li>a 数组以 0 结束</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/04/17/CSU1542/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/04/17/CSU1554/" itemprop="url">
                   CSU 1554 SG Value
                 </a>
@@ -743,132 +870,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/03/30/CF501C/" itemprop="url">
-                  CF 501C Misha and Forest
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-03-30T23:26:31+08:00" content="Mar 30 2015">
-              Mar 30 2015
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/03/30/CF501C/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/30/CF501C/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="u9898_u76EE_u94FE_u63A5"><a href="#u9898_u76EE_u94FE_u63A5" class="headerlink" title="题目链接"></a><a href="http://codeforces.com/contest/501/problem/C">题目链接</a></h2><blockquote>
-<h3 id="u9898_u610F"><a href="#u9898_u610F" class="headerlink" title="题意"></a>题意</h3></blockquote>
-<p>给出节点的数目 <em>n</em> ， 接下来有 <em>n</em> 行， 第 <em>i</em> 行 代表第 <em>i</em> 个节点。<br>每行包括一个 <em>d<sub>i</sub></em> 和 <em>s<sub>i</sub></em> ， <em>d<sub>i</sub></em> 表示该节点与多少个节点相邻， <em>s<sub>i</sub></em> 代表所有与其相邻的节点编号相异或的值 。保证这些点组成森林。<br>要求的是这个森林里面有多少条边， 和每条边的 <em>u</em> 和 <em>v</em>， 以任意顺序输出。</p>
-<blockquote>
-<h3 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h3></blockquote>
-<p>一开始想的是建图， 根据异或的值来判断哪个节点和哪个节点之间有边， 但发现从这个角度无从下手去判断。<br>继而尝试从异或这个点下手。<br>我们知道异或有几个比较有用的性质：</p>
-<ul>
-<li>x ^ 0 = 0</li>
-<li>x ^ x = 0 (偶数个相同的数相异或都等于零)</li>
-<li>a ^ b = b ^ c<br>继而有</li>
-<li>a ^ b = (a ^ b ^ c) ^ c</li>
-</ul>
-<p>然后注意到 <em>s<sub>i</sub></em> 其实“储存”了所有与第 <em>i</em> 个节点相邻的节点的编号。<br>但是怎么把它们提取出来呢？<br>回想题目， 既然给出的数据组成的是森林， 那么就一定有叶子节点。 叶子节点相比其他节点的特点就是只有一个节点与其相邻， 也就是 <em>d<sub>i</sub></em> = 1 。<br>显然， 既然相邻的节点只有一个， 我们马上就可以求出其相邻节点的编号 —— 就是 <em>s<sub>i</sub></em> 。<br>现在我们已经可以求出所有叶子节点和它父亲节点的编号， 但是这还不够， 题目要求的是整个森林的所有边。<br>我们要下一步操作是把森林中的所有的叶子和对应的边去掉来得到一个新的森林， 并且这个森林也一定存在着叶子。<br>为了实现这个操作， 利用到了上面提及的异或的性质。 我们在找到叶子节点 <em>i</em> 的父亲节点 <em>j</em> 之后， 使 <em>d<sub>j</sub></em> -= 1 并且 <em>s<sub>j</sub></em> ^= i 来将叶子节点 <em>i</em> 从森林中除去。当然， 在期间要记录一下它们之间的边作为答案。<br>可以用一个队列来存目前森林的叶子节点集合， 不断更新森林直到该队列为空时也就把所有边求出来了。</p>
-<blockquote>
-<h3 id="u4EE3_u7801_u5B9E_u73B0"><a href="#u4EE3_u7801_u5B9E_u73B0" class="headerlink" title="代码实现"></a>代码实现</h3></blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/03/30/CF501C/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -915,7 +916,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -929,7 +930,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">33</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -1006,8 +1007,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2015</span>
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

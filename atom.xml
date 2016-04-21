@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2015-12-16T10:25:45.269Z</updated>
+  <updated>2016-04-21T16:58:46.110Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[百度 IFE 春季班第一阶段任务总结]]></title>
+    <link href="http://dwayneten.com/2016/04/22/ife-stage1/"/>
+    <id>http://dwayneten.com/2016/04/22/ife-stage1/</id>
+    <published>2016-04-21T16:12:28.000Z</published>
+    <updated>2016-04-21T16:58:46.110Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">IFE 春季班首页</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4MjUyNjY3Nw==&amp;mid=401956006&amp;idx=1&amp;sn=bbf72ea5c17894c3a5423d8b3bdb7d9a#rd" target="_blank" rel="external">第一阶段任务说明</a></p>
+<p>个人选择的第一阶段任务的学习路径为：3-4-6/7-8-9</p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u4E09_uFF1AHTML_u3001CSS_u5E03_u5C40_u5165_u95E8_uFF0C_u4E09_u680F_u5F0F_u5E03_u5C40_u7684_u5B9E_u8DF5"><a href="#u4EFB_u52A1_u4E09_uFF1AHTML_u3001CSS_u5E03_u5C40_u5165_u95E8_uFF0C_u4E09_u680F_u5F0F_u5E03_u5C40_u7684_u5B9E_u8DF5" class="headerlink" title="任务三：HTML、CSS布局入门，三栏式布局的实践"></a><a href="http://ife.baidu.com/task/detail?taskId=3" target="_blank" rel="external">任务三：HTML、CSS布局入门，三栏式布局的实践</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0"><a href="#u4EFB_u52A1_u63CF_u8FF0" class="headerlink" title="任务描述"></a>任务描述</h4><p>使用 HTML 与 CSS 按照 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_3_1.png" target="_blank" rel="external">示例图（点击查看）</a> 实现三栏式布局。</p>
+<p>左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。</p>
+<p><a href="">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_3" target="_blank" rel="external">Source</a></p>
+<h3 id="u4EFB_u52A1_u603B_u7ED3"><a href="#u4EFB_u52A1_u603B_u7ED3" class="headerlink" title="任务总结"></a>任务总结</h3><p>左边栏向左浮动， 右边栏向右浮动，外层容器清除浮动确保其高度由子元素中最高的高度决定。</p>
+<p>中间栏置于左边栏和右边栏元素之后， 通过设置 <code>margin-left</code> 和 <code>margin-right</code> 使其在中间显示。</p>
+<p>外层容器和中间栏通过设置 <code>min-width</code> 确保窗口大小过小时不会将元素挤压或堆叠在一起。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">IFE 春季班首页</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4]]>
+    </summary>
+    
+      <category term="HTML/CSS" scheme="http://dwayneten.com/tags/HTML-CSS/"/>
+    
+      <category term="IFE" scheme="http://dwayneten.com/tags/IFE/"/>
+    
+      <category term="前端" scheme="http://dwayneten.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="网站开发" scheme="http://dwayneten.com/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[ASP.NET 实训项目总结]]></title>
@@ -1133,25 +1166,6 @@
     </summary>
     
       <category term="日志" scheme="http://dwayneten.com/tags/%E6%97%A5%E5%BF%97/"/>
-    
-      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Windows 下 gvim 的配置]]></title>
-    <link href="http://dwayneten.com/2015/02/23/vim-windows/"/>
-    <id>http://dwayneten.com/2015/02/23/vim-windows/</id>
-    <published>2015-02-23T12:45:16.000Z</published>
-    <updated>2015-12-13T20:12:10.724Z</updated>
-    <content type="html"><![CDATA[<p>之前都是在 ubuntu 下用 vim，<br>前段时间笔记本不幸便当了，<br>家里台式机只有 win7，于是准备搞个 gvim 凑合。<br>装好 gvim 后发现 vimrc 文件在 gvim 的上一层目录。<br>编译环境的话装个带 MinGW 的 devc++，设置好环境变量就可以了。<br>备份一下配置。<br><a id="more"></a><br><figure class="highlight"><figcaption><span>Last update 2015-12-14 04:11:18</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">syntax on</span><br><span class="line">colorscheme desert</span><br><span class="line">set nu</span><br><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">set mouse=a</span><br><span class="line">set cindent</span><br><span class="line"></span><br><span class="line">set termencoding=utf-8</span><br><span class="line">set fileencoding=utf-8</span><br><span class="line">set fileencodings=ucs-bom,utf-8,chinese,cp936</span><br><span class="line"></span><br><span class="line">map &lt;F6&gt; :call CR()&lt;CR&gt;</span><br><span class="line">func! CR()</span><br><span class="line">    exec "w"</span><br><span class="line">    exec "cd %:h"</span><br><span class="line">    exec "!g++ -O2 -g % -o %:r"</span><br><span class="line">    exec "!%:r.exe"</span><br><span class="line">endfunc</span><br><span class="line">    </span><br><span class="line">map &lt;C-A&gt; ggVG"+y</span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">"inoremap ( ()&lt;LEFT&gt;</span><br><span class="line">"inoremap [ []&lt;LEFT&gt;</span><br><span class="line">"inoremap &#123; &#123;&#125;&lt;LEFT&gt;</span><br><span class="line">"inoremap " ""&lt;LEFT&gt;</span><br><span class="line">"inoremap ' ''&lt;LEFT&gt;</span><br><span class="line">      </span><br><span class="line">     </span><br><span class="line">map   &lt;F2&gt; :call SetTitle()&lt;CR&gt;</span><br><span class="line">func SetTitle()</span><br><span class="line">    let l = 0</span><br><span class="line">    let l = l + 1 | call setline(l,'/*///////////////////////////////////////////////////////')</span><br><span class="line">    let l = l + 1 | call setline(l,'    Author        :Dwayne')</span><br><span class="line">    let l = l + 1 | call setline(l,'    Created Time  :'.strftime('%c'))</span><br><span class="line">    let l = l + 1 | call setline(l,'    File Name     :'.expand('%:t'))</span><br><span class="line">    let l = l + 1 | call setline(l,'///////////////////////////////////////////////////////*/')</span><br><span class="line">    let l = l + 1 | call setline(l,'')</span><br><span class="line">    let l = l + 1 | call setline(l,'#include &lt;bits/stdc++.h&gt;')</span><br><span class="line">    let l = l + 1 | call setline(l,'using namespace std;')</span><br><span class="line">    let l = l + 1 | call setline(l,'')</span><br><span class="line">    let l = l + 1 | call setline(l,'int n, m, k, tn, tcase = 0;')</span><br><span class="line">    let l = l + 1 | call setline(l,'')</span><br><span class="line">    let l = l + 1 | call setline(l,'int main()')</span><br><span class="line">    let l = l + 1 | call setline(l,'&#123;')</span><br><span class="line">    let l = l + 1 | call setline(l,'    freopen("in.txt", "r", stdin);')</span><br><span class="line">    let l = l + 1 | call setline(l,'    //freopen("out.txt", "w", stdout);')</span><br><span class="line">    let l = l + 1 | call setline(l,'    ')</span><br><span class="line">    let l = l + 1 | call setline(l,'    scanf("%d", &amp;n);')</span><br><span class="line">    let l = l + 1 | call setline(l,'    ')</span><br><span class="line">    let l = l + 1 | call setline(l,'    return 0;')</span><br><span class="line">    let l = l + 1 | call setline(l,'&#125;')</span><br><span class="line">endfunc</span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>之前都是在 ubuntu 下用 vim，<br>前段时间笔记本不幸便当了，<br>家里台式机只有 win7，于是准备搞个 gvim 凑合。<br>装好 gvim 后发现 vimrc 文件在 gvim 的上一层目录。<br>编译环境的话装个带 MinGW 的 devc++，设置好环境变量就可以了。<br>备份一下配置。<br>]]>
-    
-    </summary>
-    
-      <category term="vim" scheme="http://dwayneten.com/tags/vim/"/>
     
       <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
     

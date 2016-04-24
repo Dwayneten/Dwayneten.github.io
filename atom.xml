@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2016-04-21T16:58:46.110Z</updated>
+  <updated>2016-04-24T15:23:56.703Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://dwayneten.com/2016/04/22/ife-stage1/"/>
     <id>http://dwayneten.com/2016/04/22/ife-stage1/</id>
     <published>2016-04-21T16:12:28.000Z</published>
-    <updated>2016-04-21T16:58:46.110Z</updated>
+    <updated>2016-04-24T15:23:56.703Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">IFE 春季班首页</a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzA4MjUyNjY3Nw==&amp;mid=401956006&amp;idx=1&amp;sn=bbf72ea5c17894c3a5423d8b3bdb7d9a#rd" target="_blank" rel="external">第一阶段任务说明</a></p>
 <p>个人选择的第一阶段任务的学习路径为：3-4-6/7-8-9</p>
@@ -27,8 +27,8 @@
 <h3 id="u4EFB_u52A1_u4E09_uFF1AHTML_u3001CSS_u5E03_u5C40_u5165_u95E8_uFF0C_u4E09_u680F_u5F0F_u5E03_u5C40_u7684_u5B9E_u8DF5"><a href="#u4EFB_u52A1_u4E09_uFF1AHTML_u3001CSS_u5E03_u5C40_u5165_u95E8_uFF0C_u4E09_u680F_u5F0F_u5E03_u5C40_u7684_u5B9E_u8DF5" class="headerlink" title="任务三：HTML、CSS布局入门，三栏式布局的实践"></a><a href="http://ife.baidu.com/task/detail?taskId=3" target="_blank" rel="external">任务三：HTML、CSS布局入门，三栏式布局的实践</a></h3></blockquote>
 <h4 id="u4EFB_u52A1_u63CF_u8FF0"><a href="#u4EFB_u52A1_u63CF_u8FF0" class="headerlink" title="任务描述"></a>任务描述</h4><p>使用 HTML 与 CSS 按照 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_3_1.png" target="_blank" rel="external">示例图（点击查看）</a> 实现三栏式布局。</p>
 <p>左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。</p>
-<p><a href="">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_3" target="_blank" rel="external">Source</a></p>
-<h3 id="u4EFB_u52A1_u603B_u7ED3"><a href="#u4EFB_u52A1_u603B_u7ED3" class="headerlink" title="任务总结"></a>任务总结</h3><p>左边栏向左浮动， 右边栏向右浮动，外层容器清除浮动确保其高度由子元素中最高的高度决定。</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_1\Task_3\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_3" target="_blank" rel="external">Source</a></p>
+<h4 id="u4EFB_u52A1_u603B_u7ED3"><a href="#u4EFB_u52A1_u603B_u7ED3" class="headerlink" title="任务总结"></a>任务总结</h4><p>左边栏向左浮动， 右边栏向右浮动，外层容器清除浮动确保其高度由子元素中最高的高度决定。</p>
 <p>中间栏置于左边栏和右边栏元素之后， 通过设置 <code>margin-left</code> 和 <code>margin-right</code> 使其在中间显示。</p>
 <p>外层容器和中间栏通过设置 <code>min-width</code> 确保窗口大小过小时不会将元素挤压或堆叠在一起。</p>
 ]]></content>

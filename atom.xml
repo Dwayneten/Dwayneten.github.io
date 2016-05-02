@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2016-04-27T04:52:13.379Z</updated>
+  <updated>2016-05-02T07:54:14.238Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://dwayneten.com/2016/04/22/ife-stage1/"/>
     <id>http://dwayneten.com/2016/04/22/ife-stage1/</id>
     <published>2016-04-21T16:12:28.000Z</published>
-    <updated>2016-04-27T04:52:13.379Z</updated>
+    <updated>2016-05-02T07:54:14.238Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">IFE 春季班首页</a></p>
 <blockquote>
 <p>百度Web前端技术学院（Baidu Institute of Front-End Technology 简称 IFE）是一个由百度人力资源部校园招聘组、 百度EFE团队联合出品的、 面向在校大学生以及对前端技术有兴趣的前端在线学习平台， 我们希望能够借助百度大量优秀的前端工程师以及丰富的前端知识积累， 帮助人们更加有趣、 高效、 系统地学习 Web 前端技术。</p>
@@ -42,6 +42,13 @@
 <p><a href="\Baidu_IFE_2016Spring\Stage_1\Task_4\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_4" target="_blank" rel="external">Source</a></p>
 <h4 id="u4EFB_u52A1_u603B_u7ED3-1"><a href="#u4EFB_u52A1_u603B_u7ED3-1" class="headerlink" title="任务总结"></a>任务总结</h4><p>使元素居中的方法在参考资料中讲得很详细， 这里用的是父级元素 <code>position: relative;</code> , 容器 <code>position: absolute;</code> 然后设置 <code>top</code> <code>left</code> 和 <code>transform</code> 的方法。</p>
 <p>扇形的实现有两种方式， 一是设置 <code>border</code> 和 <code>border-radius</code> 同时必须在父元素设置 <code>overflow: hidden;</code>， 不然会溢出容器； 第二种方式是设置 <code>background-color</code> 和元素大小并通过设置 <code>border-top-left-radius</code> 或 <code>border-bottom-right-radius</code> 的方式来实现， 这种方式不需要对父元素进行设置， 有一定的灵活性。 两种方式的定位均通过设置 <code>position: absolute;</code> 和 <code>top</code> <code>left</code> 属性来解决。</p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u516D_uFF1A_u901A_u8FC7HTML_u53CACSS_u6A21_u62DF_u62A5_u7EB8_u6392_u7248"><a href="#u4EFB_u52A1_u516D_uFF1A_u901A_u8FC7HTML_u53CACSS_u6A21_u62DF_u62A5_u7EB8_u6392_u7248" class="headerlink" title="任务六：通过HTML及CSS模拟报纸排版"></a><a href="http://ife.baidu.com/task/detail?taskId=6" target="_blank" rel="external">任务六：通过HTML及CSS模拟报纸排版</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0-2"><a href="#u4EFB_u52A1_u63CF_u8FF0-2" class="headerlink" title="任务描述"></a>任务描述</h4><p>参考 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_6_1.psd" target="_blank" rel="external">PSD设计稿（点击下载）</a>，实现页面开发，要求实现效果与 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_6_2.jpg" target="_blank" rel="external">样例（点击查看）</a> 基本一致</p>
+<p>页面中的各字体大小，内外边距等可参看 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_6_3.jpg" target="_blank" rel="external">标注图（点击查看）</a></p>
+<p>页面宽度固定（定宽）</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_1\Task_6\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_6" target="_blank" rel="external">Source</a></p>
+<h4 id="u4EFB_u52A1_u603B_u7ED3-2"><a href="#u4EFB_u52A1_u603B_u7ED3-2" class="headerlink" title="任务总结"></a>任务总结</h4><p>待补</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><a href="http://ife.baidu.com/task/all">IFE 春季班首页</a></p>

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2016-05-02T07:54:14.238Z</updated>
+  <updated>2016-05-04T08:39:23.795Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://dwayneten.com/2016/04/22/ife-stage1/"/>
     <id>http://dwayneten.com/2016/04/22/ife-stage1/</id>
     <published>2016-04-21T16:12:28.000Z</published>
-    <updated>2016-05-02T07:54:14.238Z</updated>
+    <updated>2016-05-04T08:39:23.795Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">IFE 春季班首页</a></p>
 <blockquote>
 <p>百度Web前端技术学院（Baidu Institute of Front-End Technology 简称 IFE）是一个由百度人力资源部校园招聘组、 百度EFE团队联合出品的、 面向在校大学生以及对前端技术有兴趣的前端在线学习平台， 我们希望能够借助百度大量优秀的前端工程师以及丰富的前端知识积累， 帮助人们更加有趣、 高效、 系统地学习 Web 前端技术。</p>
@@ -48,7 +48,13 @@
 <p>页面中的各字体大小，内外边距等可参看 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_6_3.jpg" target="_blank" rel="external">标注图（点击查看）</a></p>
 <p>页面宽度固定（定宽）</p>
 <p><a href="\Baidu_IFE_2016Spring\Stage_1\Task_6\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_6" target="_blank" rel="external">Source</a></p>
-<h4 id="u4EFB_u52A1_u603B_u7ED3-2"><a href="#u4EFB_u52A1_u603B_u7ED3-2" class="headerlink" title="任务总结"></a>任务总结</h4><p>待补</p>
+<h4 id="u4EFB_u52A1_u603B_u7ED3-2"><a href="#u4EFB_u52A1_u603B_u7ED3-2" class="headerlink" title="任务总结"></a>任务总结</h4><p>做页眉的红色色块和日期时， 用 <code>display:inline-block</code> 会导致元素下方与分割线之间有一点间隔， 水平方向的 <code>inline-block</code> 之间也会有一定间隔， 改用 <code>float</code> 的方式实现。</p>
+<p>色块遮罩通过 <code>display:absolute</code> 定位和设置 <code>rgba</code> 中不透明度实现。</p>
+<p>右上下划线英文效果分别通过设置 <code>text-decoration: underline</code> 显示下划线， <code>font-variant: small-caps</code> 转换成小型大写字母， <code>text-transform: capitalize</code> 首字母大写。</p>
+<p>左下区块使首个文字和图片浮动以实现文字环绕的效果， 将 <code>img</code> 元素放到 <code>p</code> 元素中间使其在垂直方向上大致居中。</p>
+<p>通过 <code>border</code> 用 <code>CSS</code> 实现倒三角形的方法:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.triangle</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-left</span>:<span class="value"> <span class="number">5px</span> solid transparent</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-right</span>:<span class="value"> <span class="number">5px</span> solid transparent</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> <span class="number">9px</span> solid <span class="hexcolor">#10456b</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-right</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>在浮动的元素下面的首个元素即使设置了 <code>clear: both</code>， 其 <code>margin-top</code> 属性也会失效， 这是因为在计算 <code>margin</code> 时， 浮动的元素还不存在与那个位置。<br>有两个简单的方法可以 fix 这个情况， 一是用一个容器包住浮动的元素并设置 <code>overflow: hidden</code>， 二是在浮动的元素下面先放一个空的元素并设置 <code>clear: both</code>。<br><a href="http://stackoverflow.com/questions/4198269/margin-top-not-working-with-clear-both" target="_blank" rel="external">stackoverflow 上的相关问题</a></p>
+<p>这里的页脚分割线出现了这种情况， 用的是第二种方法解决。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><a href="http://ife.baidu.com/task/all">IFE 春季班首页</a></p>

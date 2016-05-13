@@ -7,6 +7,11 @@
     width: 100%;
     min-width: 1280px;
 }
+section:before, section:after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 /* 顶部导航条 */
 header {
@@ -155,11 +160,6 @@ header li > .login-text {
 }
 
 /* 问句栏 */
-.question:before, .question:after {
-    content: "";
-    clear: both;
-    display: table;
-}
 .question {
     width: 100%;
     height: 350px;
@@ -181,11 +181,6 @@ header li > .login-text {
 }
 
 /* 查找城市活动信息栏 */
-.search:before, .search:after {
-    content: "";
-    clear: both;
-    display: table;
-}
 .search {
     width: 100%;
     height: 350px;
@@ -215,4 +210,449 @@ header li > .login-text {
     line-height: 24px;
     text-align: center;
     margin-top: 10px;
+}
+
+/* 活动展示栏 */
+.activity {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(247, 247, 247);
+}
+.activity .wrapper {
+    width: calc(900px + 8vw);
+    height: 410px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.activity .content {
+    display: inline-block;
+    width: 210px;
+    height: 400px;
+    margin: 0 1vw;
+}
+.activity img {
+    width: 203px;
+    height: 312px;
+    border: solid #fff;
+    border-width: 10px 5px;
+    box-shadow: 0 0 1px #5d5d5d;
+}
+.activity .title {
+    font-size: 22px;
+    color: #646464;
+    font-family: "微软雅黑", sans-serif;
+}
+.activity p {
+    font-size: 18px;
+    color: #9f9f9f;
+    font-family: "微软雅黑", sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+.activity .top-title {
+    font-size: 28px;
+    color: #646464;
+    font-family: "微软雅黑", sans-serif;
+    letter-spacing: 20px;
+    text-indent: 0.5em;
+}
+.activity .top-text {
+    font-size: 18px;
+    color: #9f9f9f;
+    font-family: "微软雅黑", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 图文介绍栏 */
+.info {
+    width: 100%;
+    height: 500px;
+}
+.info .left-block {
+    float: left;
+    width: 60%;
+    height: 100%;
+    position: relative;
+    background-image: url("../img/section6-bg.jpg");
+    background-size: 100% auto;
+}
+.info .right-block {
+    float: right;
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+.info .left-block .content {
+    display: block;
+    width: 500px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+    color: #fff;
+    font-family: "微软雅黑", sans-serif;
+}
+.info .left-block .cn-title {
+    font-size: 50px;
+
+}
+.info .left-block .title {
+    font-size: 160px;
+}
+.info .left-block p {
+    font-size: 24px;
+}
+.info .left-block .triangle {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 30px solid #fff;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info .right-block .content {
+    display: block;
+    width: 400px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+    font-family: "微软雅黑", sans-serif;
+}
+.info .right-block .title {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.info .right-block .line {
+    font-style: oblique;
+    margin: 0 8px 0 3px;
+}
+.info .right-block .num {
+    color: #f33;
+
+}
+.info .right-block .content-text {
+    font-size:  16px;
+    line-height: 26px;
+    font-family: "Adobe 宋体 Std L", "宋体", sans-serif;
+    color: #aaa;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.info .right-block .btn {
+    border: solid 1px #f33;
+    color: #f33;
+    font-family: "微软雅黑", sans-serif;
+    width: 120px;
+    height: 35px;
+    line-height: 32px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.info .right-block .circle {
+    font-size: 28px;
+    letter-spacing: 20px;
+    text-indent: 20px;
+    color: #aaa;
+}
+
+/* 查看更多栏 */
+.more {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.more .left-block1, .more .left-block2 {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+.more .left-block1 {
+    background-color: #e7504d;
+}
+.more .left-block2 {
+    background-color: #fff;
+}
+.more .content {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 200px auto 0 auto;
+    text-align: center;
+    font-family: "微软雅黑", sans-serif;
+}
+.more .left-block1 p {
+    font-size: 24px;
+    color: #fff;
+    line-height: 32px;
+}
+.more .left-block2 p {
+    font-size: 24px;
+    color: #000;
+    line-height: 32px;
+}
+.more .left-block1 .line {
+    width: 40px;
+    height: 2px;
+    display: block;
+    margin: 20px auto;
+    background-color: #fff;
+}
+.more .left-block2 .line {
+    width: 40px;
+    height: 2px;
+    display: block;
+    margin: 20px auto;
+    background-color: #000;
+}
+.more a {
+    font-size: 24px;
+    font-family: "微软雅黑", sans-serif;
+    width: 200px;
+    height: 42px;
+    line-height: 40px;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.more .left-block1 a {
+    border: solid 1px #fff;
+    color: #fff;
+}
+.more .left-block2 a {
+    border: solid 1px #e7504d;
+    color: #e7504d;
+}
+.more .right-block {
+    float: right;
+    width: 40%;
+    height: 100%;
+    background-image: url("../img/section7-bg.jpg");
+    background-size: 100% auto;
+    position: relative;
+}
+.more .right-block .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.more .right-block .triangle {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 30px solid #fff;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 加入表单栏 */
+.form {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+.form .title-block {
+    width: 450px;
+    height: 100px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+}
+.form .title-block .title {
+    font-size: 21px;
+    color: #333;
+    font-family: "Adobe 黑体 Std R", "黑体", sans-serif;
+}
+.form .title-block .line {
+    width: 40px;
+    height: 2px;
+    display: block;
+    background-color: #e74f4d;
+    margin: 10px auto 15px auto;
+}
+.form .title-block p {
+    font-size: 12px;
+    color: #aaa;
+    font-family: "微软雅黑", sans-serif;
+    line-height: 22px;
+}
+.form .wrapper {
+    width: 70%;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.form .left-block {
+    float: left;
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.form .right-block {
+    float: right;
+    width: 70%;
+    height: 100%;
+    padding-left: 100px;
+}
+.form .left-block .title {
+    font-size: 14px;
+    color: #231815;
+    font-family: "Adobe 黑体 Std R", "黑体", sans-serif;
+    margin: 15px 0;
+}
+.form .left-block p, .form .left-block a {
+    font-size: 12px;
+    color: rgba(35, 24, 21, 0.6);
+    font-family: "Adobe 宋体 Std L", "宋体", sans-serif;
+    line-height: 21px;
+}
+.form .left-block a {
+    position: relative;
+    left: calc(100% - 45px);
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.form .left-block a img {
+    margin-right: 5px;
+}
+.form input, .form textarea {
+    background-color: #ededed;
+    border: #ededed;
+    border-radius: 2px;
+    width: calc(50% - 20px);
+    height: 36px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    font-family: "微软雅黑", sans-serif;
+    padding-left: 15px;
+}
+.form textarea {
+    width: calc(100% - 20px);
+    resize: none;
+    height: 130px;
+    padding-top: 10px;
+}
+.form button {
+    background-color: #ededed;
+    border: #ededed;
+    border-radius: 2px;
+    width: calc(100% - 20px);
+    height: 42px;
+    font-size: 16px;
+    color: #333;
+    font-family: "微软雅黑", sans-serif;
+}
+
+/* 联系栏 */
+.contact {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    background-color: #32363e;
+}
+.contact p {
+    font-size: 21px;
+    color: #fff;
+    font-family: "Adobe 黑体 Std R", "黑体", sans-serif;
+    margin-top: 100px;
+    line-height: 42px;
+}
+.contact p+p {
+    font-size: 12px;
+    color: #fff;
+    font-family: "Adobe 宋体 Std L", "宋体", sans-serif;
+    margin: 0;
+    line-height: 20px;
+}
+.contact .input-wrapper {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 600px;
+    height: 80px;
+}
+.contact .input-wrapper:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.contact input {
+    width: 450px;
+    height: 40px;
+    background-color: #fff;
+    padding-left: 10px;
+    margin-left: 30px;
+    border: none;
+    display: block;
+    float: left;
+}
+.contact button {
+    width: 90px;
+    height: 40px;
+    margin: 0;
+    background-color: #6f7178;
+    font-size: 16px;
+    color: #fff;
+    font-family: "微软雅黑", sans-serif;
+    border: none;
+    display: block;
+    float: left;
+}
+.contact .contact-icon {
+    height: 25px;
+    background-image: url("../img/contact-logo.png");
+    display: inline-block;
+    margin: 0 15px;
+}
+.contact .contact-icon1 {
+    background-position: 0 0;
+    width: 24px;
+}
+.contact .contact-icon2 {
+    background-position: -52px 0;
+    width: 29px;
+}
+.contact .contact-icon3 {
+    background-position: -108px 0;
+    width: 29px;
+}
+.contact .contact-icon4 {
+    background-position: -157px 0;
+    width: 24px;
+}
+
+/* 页脚 */
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #2f2f38;
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    font-family: "Adobe 宋体 Std L", "宋体", sans-serif;
+}
+footer p {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+footer a {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #fff;
 }

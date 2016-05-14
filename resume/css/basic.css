@@ -50,3 +50,8 @@ address a, address a:visited {
     color: #fff;
     font-family: Arial, sans-serif;
 }
+address i {
+    margin-left: 5px;
+    width: 22px;
+    height: 22px;
+}

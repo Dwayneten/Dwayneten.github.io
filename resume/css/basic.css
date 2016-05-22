@@ -166,3 +166,7 @@ h4 .hl {
 .experience li {
     line-height: 28px;
 }
+.experience .project-title {
+    font: inherit;
+    font-weight: bold;
+}

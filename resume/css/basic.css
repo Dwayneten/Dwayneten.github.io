@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
     margin: 0;
     padding: 0;
@@ -91,6 +92,54 @@ li {
     padding-left: 2em;
     font-size: 18px;
     font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
+}
+#show, #hide {
+    display: none;
+}
+.radio-wrapper {
+    position: relative;
+}
+.radio-wrapper label {
+    color: #3355aa;
+    font-size: 18px;
+    font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+}
+#more-honor-list {
+    display: none;
+}
+#show:checked ~ #label-show:before {
+    content: "";
+}
+#show:checked ~ #label-hide:before {
+    content: "\f0aa收起";
+    font: normal normal normal 14px/1 FontAwesome, "Microsoft JhengHei", "微软雅黑", sans-serif;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#show:checked ~ ul#more-honor-list {
+    display: block !important;
+}
+#show:checked ~ #label-hide > .fa:before {
+    content: "";
+}
+#hide:checked ~ #label-show:before {
+    content: "\f0ab更多";
+    font: normal normal normal 14px/1 FontAwesome, "Microsoft JhengHei", "微软雅黑", sans-serif;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#hide:checked ~ #label-hide:before {
+    content: "";
+}
+#hide:checked ~ #label-show > .fa:before {
+    content: "";
 }
 .fa-tags, .fa-cogs {
     width: 26px;

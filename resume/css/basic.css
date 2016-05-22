@@ -156,3 +156,13 @@ i {
 h4 .hl {
     font-size: 18px;
 }
+.experience a {
+    text-decoration: none;
+    color: #3355aa;
+    font-size: 18px;
+    font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
+    font-weight: bold;
+}
+.experience li {
+    line-height: 28px;
+}

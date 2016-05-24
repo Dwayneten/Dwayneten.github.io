@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2016-05-19T14:44:36.085Z</updated>
+  <updated>2016-05-24T02:00:47.632Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://dwayneten.com/2016/04/22/ife-stage1/"/>
     <id>http://dwayneten.com/2016/04/22/ife-stage1/</id>
     <published>2016-04-21T16:12:28.000Z</published>
-    <updated>2016-05-19T14:44:36.085Z</updated>
+    <updated>2016-05-24T02:00:47.632Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">IFE 春季班首页</a></p>
 <blockquote>
 <p>百度Web前端技术学院（Baidu Institute of Front-End Technology 简称 IFE）是一个由百度人力资源部校园招聘组、 百度EFE团队联合出品的、 面向在校大学生以及对前端技术有兴趣的前端在线学习平台， 我们希望能够借助百度大量优秀的前端工程师以及丰富的前端知识积累， 帮助人们更加有趣、 高效、 系统地学习 Web 前端技术。</p>
@@ -67,7 +67,7 @@
 <p>通过<code>background-size</code>使背景图适应容器宽高度。</p>
 <p>对于小图标，可以将它们放进一张大图里，再通过设置<code>background-position</code>来显示各个小图标。</p>
 <blockquote>
-<h3 id="u4EFB_u52A1_u4E03_uFF1A_u5B9E_u73B0_u5E38_u89C1_u7684_u6280_u672F_u4EA7_u54C1_u5B98_u7F51_u7684_u9875_u9762_u67B6_u6784_u53CA_u6837_u5F0F_u5E03_u5C40-1"><a href="#u4EFB_u52A1_u4E03_uFF1A_u5B9E_u73B0_u5E38_u89C1_u7684_u6280_u672F_u4EA7_u54C1_u5B98_u7F51_u7684_u9875_u9762_u67B6_u6784_u53CA_u6837_u5F0F_u5E03_u5C40-1" class="headerlink" title="任务七：实现常见的技术产品官网的页面架构及样式布局"></a><a href="http://ife.baidu.com/task/detail?taskId=8" target="_blank" rel="external">任务七：实现常见的技术产品官网的页面架构及样式布局</a></h3></blockquote>
+<h3 id="u4EFB_u52A1_u516B_uFF1A_u54CD_u5E94_u5F0F_u7F51_u683C_uFF08_u6805_u683C_u5316_uFF09_u5E03_u5C40"><a href="#u4EFB_u52A1_u516B_uFF1A_u54CD_u5E94_u5F0F_u7F51_u683C_uFF08_u6805_u683C_u5316_uFF09_u5E03_u5C40" class="headerlink" title="任务八：响应式网格（栅格化）布局"></a><a href="http://ife.baidu.com/task/detail?taskId=8" target="_blank" rel="external">任务八：响应式网格（栅格化）布局</a></h3></blockquote>
 <h4 id="u4EFB_u52A1_u63CF_u8FF0-4"><a href="#u4EFB_u52A1_u63CF_u8FF0-4" class="headerlink" title="任务描述"></a>任务描述</h4><p>使用 HTML 与 CSS 实现类似 <a href="http://v4-alpha.getbootstrap.com/layout/grid/" target="_blank" rel="external">BootStrap 的响应式 12 栏网格布局</a>，根据屏幕宽度，元素占的栏数不同。</p>
 <p>需要实现如 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_8_1.png" target="_blank" rel="external">效果图</a> 所示，调整浏览器宽度查看响应式效果，效果图中的红色的文字是说明，不需要写在 HTML 中。</p>
 <p><a href="\Baidu_IFE_2016Spring\Stage_1\Task_8\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_8" target="_blank" rel="external">Source</a></p>
@@ -75,6 +75,15 @@
 <p>对所有栏设置<code>min-height: 1px;</code>使其不被堆叠， 设置<code>padding</code>实现列之间的 gutter.</p>
 <p>由于重复的属性很多，使用<code>less</code>编写能大幅减少所需代码量，而且可以利用循环方便地实现对前缀相同的不同类设置不同属性值。</p>
 <p>使用 <code>gulp</code> 编译 <code>less</code> 并压缩 <code>css</code> 实现自动化的项目构建。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>);</span><br><span class="line"><span class="keyword">var</span> watch = <span class="built_in">require</span>(<span class="string">'gulp-watch'</span>);</span><br><span class="line"><span class="keyword">var</span> rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>);</span><br><span class="line"><span class="keyword">var</span> cssmin = <span class="built_in">require</span>(<span class="string">'gulp-cssmin'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lessDist = <span class="string">'./less/**/*.less'</span>;</span><br><span class="line"><span class="keyword">var</span> cssDist = <span class="string">'./css'</span>;</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'less'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> gulp.src(lessDist)</span><br><span class="line">       .pipe(less())</span><br><span class="line">       .pipe(gulp.dest(cssDist))</span><br><span class="line">       .pipe(cssmin())</span><br><span class="line">       .pipe(rename(&#123; suffix: <span class="string">'.min'</span> &#125;))</span><br><span class="line">       .pipe(gulp.dest(cssDist))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u4E5D_uFF1A_u4F7F_u7528HTML/CSS_u5B9E_u73B0_u4E00_u4E2A_u590D_u6742_u9875_u9762"><a href="#u4EFB_u52A1_u4E5D_uFF1A_u4F7F_u7528HTML/CSS_u5B9E_u73B0_u4E00_u4E2A_u590D_u6742_u9875_u9762" class="headerlink" title="任务九：使用HTML/CSS实现一个复杂页面"></a><a href="http://ife.baidu.com/task/detail?taskId=9" target="_blank" rel="external">任务九：使用HTML/CSS实现一个复杂页面</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0-5"><a href="#u4EFB_u52A1_u63CF_u8FF0-5" class="headerlink" title="任务描述"></a>任务描述</h4><p>通过HTML及CSS实现设计稿 设计稿<a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_9_1.psd" target="_blank" rel="external">PSD文件（点击下载）</a>，效果如 <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_9_2.jpg" target="_blank" rel="external">效果图（点击打开）</a></p>
+<p>整个页面内容宽度固定，但头部的蓝色导航和浏览器宽度保持一致</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_1\Task_9\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_1/Task_9" target="_blank" rel="external">Source</a></p>
+<h4 id="u4EFB_u52A1_u603B_u7ED3-5"><a href="#u4EFB_u52A1_u603B_u7ED3-5" class="headerlink" title="任务总结"></a>任务总结</h4><p>通过<code>:focus</code>纯 css 实现点击搜索框时改变长度的动画效果，设置<code>transition-property</code>来限制动画效果的作用范围</p>
+<p>设置<code>z-index</code>来解决<code>position: relative;</code>的元素会在<code>position: fixed;</code>的元素上面的问题</p>
+<p>在<code>box-sizing: border-box;</code>的情况下, 边框会影响内容的位置， 通过设置与背景色一样的边框使元素内容在元素被<code>hover</code>时不上下跳动</p>
+<p>使用<code>::after</code>伪元素来实现装饰效果的色块</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><a href="http://ife.baidu.com/task/all">IFE 春季班首页</a></p>

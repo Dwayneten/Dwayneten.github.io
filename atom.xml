@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2016-05-31T12:57:58.131Z</updated>
+  <updated>2016-05-31T13:08:05.469Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -19,10 +19,9 @@
     <link href="http://dwayneten.com/2016/05/31/vultr-terraria/"/>
     <id>http://dwayneten.com/2016/05/31/vultr-terraria/</id>
     <published>2016-05-31T12:12:11.000Z</published>
-    <updated>2016-05-31T12:57:58.131Z</updated>
-    <content type="html"><![CDATA[<p>在 <a href="https://www.vultr.com/" target="_blank" rel="external">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途。</p>
-<p>顺便尝试了一下在上面部署 Terraria 服务器。</p>
-<p><a href="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png" target="_blank" rel="external">!Terraria</a></p>
+    <updated>2016-05-31T13:08:05.469Z</updated>
+    <content type="html"><![CDATA[<p>在 <a href="https://www.vultr.com/" target="_blank" rel="external">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途，顺便尝试了一下在上面部署 Terraria 服务器</p>
+<p><img src="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png" alt="Terraria"></p>
 <a id="more"></a>
 <p>这次买的服务器是 Vultr 上东京节点 $10/M 规格的</p>
 <blockquote>
@@ -33,20 +32,20 @@
 </blockquote>
 <p>付款用的 PayPal, PayPal 现在支持银联。</p>
 <p>配置好等安装完毕后可以用 Vultr 提供的控制台链接服务器，也可以用 PuTTY 或者 Xshell，我用的是 Xshell</p>
-<h4 id="u521B_u5EFA_u7528_u6237"><a href="#u521B_u5EFA_u7528_u6237" class="headerlink" title="创建用户"></a>创建用户</h4><p>为 Terraria 服务器创建一个用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser terraria</span><br></pre></td></tr></table></figure>
-<h4 id="u5B89_u88C5_u4F9D_u8D56"><a href="#u5B89_u88C5_u4F9D_u8D56" class="headerlink" title="安装依赖"></a>安装依赖</h4><p>安装 Terraria 依赖的包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get -y install wget unzip screen \&#10;    libmono-corlib4.5-cil libmono-sqlite4.0-cil libmono-system-core4.0-cil libmono-system-net4.0-cil \&#10;    libmono-system-runtime4.0-cil mono-runtime mono-runtime-sgen libmono-data-tds4.0-cil \&#10;    libmysql6.4-cil libmono-system-runtime-serialization4.0-cil \&#10;    libmono-system-runtime-serialization-formatters-soap4.0-cil libmono-system-data-linq4.0-cil \&#10;    libmono-system-xml-linq4.0-cil libmono-system-xml-serialization4.0-cil libmono-system-xml4.0-cil</span><br></pre></td></tr></table></figure>
-<h4 id="u5B89_u88C5_TShock"><a href="#u5B89_u88C5_TShock" class="headerlink" title="安装 TShock"></a>安装 TShock</h4><p>登陆到 terraria 用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su terraria</span><br></pre></td></tr></table></figure>
+<h3 id="u521B_u5EFA_u7528_u6237"><a href="#u521B_u5EFA_u7528_u6237" class="headerlink" title="创建用户"></a>创建用户</h3><p>为 Terraria 服务器创建一个用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser terraria</span><br></pre></td></tr></table></figure>
+<h3 id="u5B89_u88C5_u4F9D_u8D56"><a href="#u5B89_u88C5_u4F9D_u8D56" class="headerlink" title="安装依赖"></a>安装依赖</h3><p>安装 Terraria 依赖的包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">apt-get -y install wget unzip screen \</span><br><span class="line">    libmono-corlib4.<span class="number">5</span>-cil libmono-sqlite4.<span class="number">0</span>-cil libmono-system-core4.<span class="number">0</span>-cil libmono-system-net4.<span class="number">0</span>-cil \</span><br><span class="line">    libmono-system-runtime4.<span class="number">0</span>-cil mono-runtime mono-runtime-sgen libmono-data-tds4.<span class="number">0</span>-cil \</span><br><span class="line">    libmysql6.<span class="number">4</span>-cil libmono-system-runtime-serialization4.<span class="number">0</span>-cil \</span><br><span class="line">    libmono-system-runtime-serialization-formatters-soap4.<span class="number">0</span>-cil libmono-system-data-linq4.<span class="number">0</span>-cil \</span><br><span class="line">    libmono-system-xml-linq4.<span class="number">0</span>-cil libmono-system-xml-serialization4.<span class="number">0</span>-cil libmono-system-xml4.<span class="number">0</span>-cil</span><br></pre></td></tr></table></figure>
+<h3 id="u5B89_u88C5_TShock"><a href="#u5B89_u88C5_TShock" class="headerlink" title="安装 TShock"></a>安装 TShock</h3><p>登陆到 terraria 用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su terraria</span><br></pre></td></tr></table></figure>
 <p>下载并解压 TShock, TShock 今天刚更新了对 Terraria v1.3.1.0 的支持(2016-5-31)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O tshock.zip `https://github.com/NyxStudios/TShock/releases/download/v4.3.15/tshock_4.3.15.zip`&#10;unzip tshock.zip -d ~/tshock</span><br></pre></td></tr></table></figure>
-<h4 id="u542F_u52A8_TShock"><a href="#u542F_u52A8_TShock" class="headerlink" title="启动 TShock"></a>启动 TShock</h4><p>进入 tshock 目录并启动 TerrariaServer.exe</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/tshock&#10;mono TerrariaServer.exe</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -O tshock.zip `https://github.com/NyxStudios/TShock/releases/download/v4.<span class="number">3.15</span>/tshock_4.<span class="number">3.15</span>.zip`</span><br><span class="line">unzip tshock.zip <span class="operator">-d</span> ~/tshock</span><br></pre></td></tr></table></figure>
+<h3 id="u542F_u52A8_TShock"><a href="#u542F_u52A8_TShock" class="headerlink" title="启动 TShock"></a>启动 TShock</h3><p>进入 tshock 目录并启动 TerrariaServer.exe</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tshock</span><br><span class="line">mono TerrariaServer.exe</span><br></pre></td></tr></table></figure>
 <p>启动成功后会显示包括 TShock 版本和所支持的 Terraria 版本信息在内的欢迎信息</p>
 <p>如果是第一次启动则没有任何存在的世界，则需要根据提示创建一个新世界</p>
 <p>由于服务器内存较小只有 1G, 所以开了个上限为 5 人的小型世界</p>
-<h4 id="u7BA1_u7406_u5458_u8BA4_u8BC1"><a href="#u7BA1_u7406_u5458_u8BA4_u8BC1" class="headerlink" title="管理员认证"></a>管理员认证</h4><p>创建成功后会提示你进行超级管理员的认证</p>
+<h3 id="u7BA1_u7406_u5458_u8BA4_u8BC1"><a href="#u7BA1_u7406_u5458_u8BA4_u8BC1" class="headerlink" title="管理员认证"></a>管理员认证</h3><p>创建成功后会提示你进行超级管理员的认证</p>
 <blockquote>
 <p>TShock Notice: To become SuperAdmin, join the game and type /auth xxxxxxx</p>
 <p>This token will display until disabled by verification. (/auth-verify)</p>
@@ -54,14 +53,13 @@
 <p>开启 Terraria 并连接上服务器</p>
 <p>输入上面所给出的指令 <code>/auth xxxxx</code></p>
 <p>然后按照提示操作直至完成超级管理员认证</p>
-<h4 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h4><p>在控制台输入 off 来关闭服务器</p>
+<h3 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h3><p>在控制台输入 off 来关闭服务器</p>
 <p><a href="https://tshock.atlassian.net/wiki/pages/viewpage.action?pageId=3047433" target="_blank" rel="external">TShock 用户权限列表</a></p>
 <p>例：给<code>default</code>用户组添加传送权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/group addperm default tshock.tp.self</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/group addperm default tshock.tp.self</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
-    <![CDATA[<p>在 <a href="https://www.vultr.com/">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途。</p>
-<p>顺便尝试了一下在上面部署 Terraria 服务器。</p>
-<p><a href="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png">!Terraria</a></p>]]>
+    <![CDATA[<p>在 <a href="https://www.vultr.com/">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途，顺便尝试了一下在上面部署 Terraria 服务器</p>
+<p><img src="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png" alt="Terraria"></p>]]>
     
     </summary>
     

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2016-05-24T02:00:47.632Z</updated>
+  <updated>2016-05-31T12:57:58.131Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -13,6 +13,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Deploy Terraria server on Vultr]]></title>
+    <link href="http://dwayneten.com/2016/05/31/vultr-terraria/"/>
+    <id>http://dwayneten.com/2016/05/31/vultr-terraria/</id>
+    <published>2016-05-31T12:12:11.000Z</published>
+    <updated>2016-05-31T12:57:58.131Z</updated>
+    <content type="html"><![CDATA[<p>在 <a href="https://www.vultr.com/" target="_blank" rel="external">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途。</p>
+<p>顺便尝试了一下在上面部署 Terraria 服务器。</p>
+<p><a href="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png" target="_blank" rel="external">!Terraria</a></p>
+<a id="more"></a>
+<p>这次买的服务器是 Vultr 上东京节点 $10/M 规格的</p>
+<blockquote>
+<p>CPU:    1 vCore</p>
+<p>Ram:    1024 MB</p>
+<p>Storage:    20 GB SSD</p>
+<p>Bandwidth:    2000 GB</p>
+</blockquote>
+<p>付款用的 PayPal, PayPal 现在支持银联。</p>
+<p>配置好等安装完毕后可以用 Vultr 提供的控制台链接服务器，也可以用 PuTTY 或者 Xshell，我用的是 Xshell</p>
+<h4 id="u521B_u5EFA_u7528_u6237"><a href="#u521B_u5EFA_u7528_u6237" class="headerlink" title="创建用户"></a>创建用户</h4><p>为 Terraria 服务器创建一个用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser terraria</span><br></pre></td></tr></table></figure>
+<h4 id="u5B89_u88C5_u4F9D_u8D56"><a href="#u5B89_u88C5_u4F9D_u8D56" class="headerlink" title="安装依赖"></a>安装依赖</h4><p>安装 Terraria 依赖的包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get -y install wget unzip screen \&#10;    libmono-corlib4.5-cil libmono-sqlite4.0-cil libmono-system-core4.0-cil libmono-system-net4.0-cil \&#10;    libmono-system-runtime4.0-cil mono-runtime mono-runtime-sgen libmono-data-tds4.0-cil \&#10;    libmysql6.4-cil libmono-system-runtime-serialization4.0-cil \&#10;    libmono-system-runtime-serialization-formatters-soap4.0-cil libmono-system-data-linq4.0-cil \&#10;    libmono-system-xml-linq4.0-cil libmono-system-xml-serialization4.0-cil libmono-system-xml4.0-cil</span><br></pre></td></tr></table></figure>
+<h4 id="u5B89_u88C5_TShock"><a href="#u5B89_u88C5_TShock" class="headerlink" title="安装 TShock"></a>安装 TShock</h4><p>登陆到 terraria 用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su terraria</span><br></pre></td></tr></table></figure>
+<p>下载并解压 TShock, TShock 今天刚更新了对 Terraria v1.3.1.0 的支持(2016-5-31)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O tshock.zip `https://github.com/NyxStudios/TShock/releases/download/v4.3.15/tshock_4.3.15.zip`&#10;unzip tshock.zip -d ~/tshock</span><br></pre></td></tr></table></figure>
+<h4 id="u542F_u52A8_TShock"><a href="#u542F_u52A8_TShock" class="headerlink" title="启动 TShock"></a>启动 TShock</h4><p>进入 tshock 目录并启动 TerrariaServer.exe</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/tshock&#10;mono TerrariaServer.exe</span><br></pre></td></tr></table></figure>
+<p>启动成功后会显示包括 TShock 版本和所支持的 Terraria 版本信息在内的欢迎信息</p>
+<p>如果是第一次启动则没有任何存在的世界，则需要根据提示创建一个新世界</p>
+<p>由于服务器内存较小只有 1G, 所以开了个上限为 5 人的小型世界</p>
+<h4 id="u7BA1_u7406_u5458_u8BA4_u8BC1"><a href="#u7BA1_u7406_u5458_u8BA4_u8BC1" class="headerlink" title="管理员认证"></a>管理员认证</h4><p>创建成功后会提示你进行超级管理员的认证</p>
+<blockquote>
+<p>TShock Notice: To become SuperAdmin, join the game and type /auth xxxxxxx</p>
+<p>This token will display until disabled by verification. (/auth-verify)</p>
+</blockquote>
+<p>开启 Terraria 并连接上服务器</p>
+<p>输入上面所给出的指令 <code>/auth xxxxx</code></p>
+<p>然后按照提示操作直至完成超级管理员认证</p>
+<h4 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h4><p>在控制台输入 off 来关闭服务器</p>
+<p><a href="https://tshock.atlassian.net/wiki/pages/viewpage.action?pageId=3047433" target="_blank" rel="external">TShock 用户权限列表</a></p>
+<p>例：给<code>default</code>用户组添加传送权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/group addperm default tshock.tp.self</span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p>在 <a href="https://www.vultr.com/">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途。</p>
+<p>顺便尝试了一下在上面部署 Terraria 服务器。</p>
+<p><a href="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png">!Terraria</a></p>]]>
+    
+    </summary>
+    
+      <category term="Terraria" scheme="http://dwayneten.com/tags/Terraria/"/>
+    
+      <category term="Vultr" scheme="http://dwayneten.com/tags/Vultr/"/>
+    
+      <category term="服务器" scheme="http://dwayneten.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="网站开发" scheme="http://dwayneten.com/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[百度 IFE 春季班第一阶段任务总结]]></title>
@@ -1148,84 +1209,6 @@
       <category term="贪心" scheme="http://dwayneten.com/tags/%E8%B4%AA%E5%BF%83/"/>
     
       <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello Blog]]></title>
-    <link href="http://dwayneten.com/2015/02/26/New-Blog/"/>
-    <id>http://dwayneten.com/2015/02/26/New-Blog/</id>
-    <published>2015-02-26T07:28:17.000Z</published>
-    <updated>2015-12-13T19:32:18.335Z</updated>
-    <content type="html"><![CDATA[<p>先后换过不少博客平台，后来受不了想自己搭建一个。</p>
-<h3 id="u539F_u56E0"><a href="#u539F_u56E0" class="headerlink" title="原因"></a>原因</h3><blockquote>
-<ul>
-<li>打开速度慢</li>
-<li>不支持代码块/代码高亮</li>
-<li>可自定义程度太低</li>
-<li>不支持 markdown</li>
-</ul>
-</blockquote>
-<p>这里记录一下吧。</p>
-<p>首先这个博客是托管在 GitHub 上由 Hexo 驱动的，主题是 Jacman，稍微地自定义了一下。<br>在 godaddy 注册了域名，用 DNSPOD 做 DNS 解析。<br>目前打算用于 post 一些解题报告，学习笔记之类的，或许有空时写点无关紧要的东西。</p>
-<p>下面是一些 markdown 的语法测试</p>
-<a id="more"></a>
-<h2 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a>测试</h2><h3 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h3><p>写 LaTex 数学公式需要在文章开头的<code>front-matter</code>中，加上一行<code>mathjax: true</code>。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$E=mc^2$$</span><br></pre></td></tr></table></figure></p>
-<p>$$E=mc^2$$</p>
-<h3 id="u4EE3_u7801_u9AD8_u4EAE"><a href="#u4EE3_u7801_u9AD8_u4EAE" class="headerlink" title="代码高亮"></a>代码高亮</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="u8868_u683C"><a href="#u8868_u683C" class="headerlink" title="表格"></a>表格</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 项目      | 价格   |  数量  |</span><br><span class="line">| ------    | -----: | :----: |</span><br><span class="line">| 计算机    | $1600  |   5    |</span><br><span class="line">| 手机      |   $12  |   12   |</span><br><span class="line">| 管线      |    $1  |  234   |</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th style="text-align:right">价格</th>
-<th style="text-align:center">数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>计算机</td>
-<td style="text-align:right">$1600</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td>手机</td>
-<td style="text-align:right">$12</td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td>管线</td>
-<td style="text-align:right">$1</td>
-<td style="text-align:center">234</td>
-</tr>
-</tbody>
-</table>
-<h3 id="u5185_u94FE_u56FE_u7247"><a href="#u5185_u94FE_u56FE_u7247" class="headerlink" title="内链图片"></a>内链图片</h3><p>插入带有备注描述的图片<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="link_label">LOGO</span>](<span class="link_url">/img/logo.png</span>)</span><br></pre></td></tr></table></figure></p>
-<p><img src="/img/logo.png" alt="LOGO"></p>
-<h3 id="u5916_u94FE_u56FE_u7247"><a href="#u5916_u94FE_u56FE_u7247" class="headerlink" title="外链图片"></a>外链图片</h3><p>用html语法插入带阴影的图片<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span> = "<span class="attribute">http:</span>//<span class="attribute">7vzsbj.com1.z0.glb.clouddn.com</span>/<span class="attribute">11.jpg</span>" <span class="attribute">class</span> = "<span class="attribute">img-shadow</span>" /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/11.jpg" class="img-shadow"></p>
-<h3 id="u5176_u4ED6_B7_u53E6_u89C1"><a href="#u5176_u4ED6_B7_u53E6_u89C1" class="headerlink" title="其他·另见"></a>其他·另见</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">一行包含<span class="strong">**加粗**</span>的文字，</span><br><span class="line">突出显示某些<span class="code">``内容 content`</span>`。</span><br><span class="line">[<span class="link_label">Markdown 语法说明</span>][<span class="link_reference">1</span>]</span><br><span class="line">[<span class="link_label">MathJax LaTeX使用方法</span>][<span class="link_reference">2</span>]</span><br><span class="line">[<span class="link_reference">1</span>]:<span class="link_url"> http://wowubuntu.com/markdown/</span></span><br><span class="line">[<span class="link_reference">2</span>]:<span class="link_url"> http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference</span></span><br></pre></td></tr></table></figure>
-<p>一行包含<strong>加粗</strong>的文字，<br>突出显示某些<code>内容 content</code>。<br><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown 语法说明</a><br><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax LaTeX使用方法</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>先后换过不少博客平台，后来受不了想自己搭建一个。</p>
-<h3 id="u539F_u56E0"><a href="#u539F_u56E0" class="headerlink" title="原因"></a>原因</h3><blockquote>
-<ul>
-<li>打开速度慢</li>
-<li>不支持代码块/代码高亮</li>
-<li>可自定义程度太低</li>
-<li>不支持 markdown</li>
-</ul>
-</blockquote>
-<p>这里记录一下吧。</p>
-<p>首先这个博客是托管在 GitHub 上由 Hexo 驱动的，主题是 Jacman，稍微地自定义了一下。<br>在 godaddy 注册了域名，用 DNSPOD 做 DNS 解析。<br>目前打算用于 post 一些解题报告，学习笔记之类的，或许有空时写点无关紧要的东西。</p>
-<p>下面是一些 markdown 的语法测试</p>]]>
-    
-    </summary>
-    
-      <category term="日志" scheme="http://dwayneten.com/tags/%E6%97%A5%E5%BF%97/"/>
-    
-      <category term="随笔" scheme="http://dwayneten.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

@@ -285,6 +285,137 @@
             
               
                 
+                <a class="post-title-link" href="/2015/04/29/gccbuiltin/" itemprop="url">
+                  五种 GCC 内置的位运算函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-04-29T09:40:15+08:00" content="Apr 29 2015">
+              Apr 29 2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/软件开发/" itemprop="url" rel="index">
+                    <span itemprop="name">软件开发</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/04/29/gccbuiltin/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/29/gccbuiltin/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<h3 id="u539F_u578B"><a href="#u539F_u578B" class="headerlink" title="原型"></a>原型</h3></blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __builtin_ffs (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</span><br></pre></td></tr></table></figure>
+<p>返回 x 二进制表示中最后一位 1 是从后向前第几位， 比如 120 (01111000) 返回 4。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __builtin_clz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</span><br></pre></td></tr></table></figure></p>
+<p>返回 x 二进制表示中前导 0 的个数， 比如 120 (01111000) 返回 25。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __builtin_ctz (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</span><br></pre></td></tr></table></figure></p>
+<p>返回 x 二进制表示中后导 0 的个数， 比如 120 (01111000) 返回 3。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __builtin_popcount (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</span><br></pre></td></tr></table></figure></p>
+<p>返回 x 二进制表示中 1 的个数， 比如 120 (01111000) 返回 4。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __builtin_parity (<span class="keyword">unsigned</span> <span class="keyword">int</span> x)</span><br></pre></td></tr></table></figure></p>
+<p>返回 x 的奇偶校验位 (x 二进制表示中 1 的个数模 2)， 比如 120 (01111000) 返回 0。</p>
+<p>若需使用对应的 usigned long 和 usigned long long 版本， 则要在函数名后加 l 或者 ll.<br>如 __builtin_ffsll()</p>
+<blockquote>
+<h3 id="u6837_u4F8B"><a href="#u6837_u4F8B" class="headerlink" title="样例"></a>样例</h3></blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> tmp = <span class="number">1</span> &lt;&lt; <span class="number">4</span>;</span><br><span class="line"><span class="comment">// 00010000</span></span><br><span class="line">--tmp;</span><br><span class="line"><span class="comment">// 00001111</span></span><br><span class="line">tmp &lt;&lt;= <span class="number">3</span>;</span><br><span class="line"><span class="comment">// 01111000</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ffs(tmp));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_clz(tmp));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_ctz(tmp));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_popcount(tmp));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, __builtin_parity(tmp));</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><figcaption><span>Output</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">25</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/04/17/CSU1542/" itemprop="url">
                   CSU 1542 Flipping Parentheses
                 </a>
@@ -803,143 +934,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/03/30/hiho1074/" itemprop="url">
-                  hihocoder 1074 字体设计
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-03-30T23:41:15+08:00" content="Mar 30 2015">
-              Mar 30 2015
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/03/30/hiho1074/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/30/hiho1074/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="u9898_u76EE_u94FE_u63A5"><a href="#u9898_u76EE_u94FE_u63A5" class="headerlink" title="题目链接"></a><a href="http://hihocoder.com/problemset/problem/1074">题目链接</a></h2><blockquote>
-<h3 id="u9898_u610F"><a href="#u9898_u610F" class="headerlink" title="题意"></a>题意</h3></blockquote>
-<p>给出 <em>n</em> 个数 <em>a<sub>1</sub></em> ~ <em>a<sub>n</sub></em> ， 若存在某一连续的数列 <em>a<sub>i</sub></em> ~ <em>a<sub>j</sub></em> ( i &lt; j ) :</p>
-<ul>
-<li>对于任何 <em>k</em> ∈  ( <em>i</em> , <em>j</em> ) 都满足 <em>a<sub>i</sub></em> &lt; <em>a<sub>k</sub></em> &lt; <em>a<sub>j</sub></em><br> 或</li>
-<li>对于任何 <em>k</em> ∈  ( <em>i</em> , <em>j</em> ) 都满足 <em>a<sub>i</sub></em> &gt; <em>a<sub>k</sub></em> &gt; <em>a<sub>j</sub></em> </li>
-</ul>
-<p>则可以只保留 <em>a<sub>i</sub></em> 和 <em>a<sub>j</sub></em> ， 去掉 <em>a<sub>i</sub></em> 和 <em>a<sub>j</sub></em> 之间其它数。<br>求最少保留多少数和保留的数在原数列的下标(从 1 开始)。</p>
-<blockquote>
-<h3 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h3></blockquote>
-<p>在贪心策略下， 去掉区间 [ i, j ) 中最大数和最小数之间的数是必然最优的选择。<br>因此保留区间 [ i, j ) 中的 <em>a<sub>max</sub></em> 和 <em>a<sub>min</sub></em> ， 且可以把区间 [ i, j ) 分割成 [ i, <em>a<sub>max</sub></em> ) + [ <em>a<sub>max</sub></em> , j ) 或者 [ i, <em>a<sub>min</sub></em> ) + [ <em>a<sub>min</sub></em> , j ).<br>对分割后的区间也可以继续执行贪心策略。<br>注意到原数列首尾元素必须保留， 分割后的区间首尾元素必有其一被保留。<br>求解大区间和小区间的操作一致， 可以写成递归的形式。</p>
-<blockquote>
-<h3 id="u9898_u5916_u8BDD"><a href="#u9898_u5916_u8BDD" class="headerlink" title="题外话"></a>题外话</h3></blockquote>
-<p><code>min_element</code> 和 <code>max_element</code> 的 <code>Comp</code> 函数调用方式有有别于 <code>sort</code> 的 <code>Comp</code> 函数调用方式的地方。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// min_element</span></span><br><span class="line"><span class="keyword">if</span> (comp(*first,*smallest))</span><br><span class="line">      smallest=first;</span><br><span class="line">      </span><br><span class="line"><span class="comment">// max_element</span></span><br><span class="line"><span class="keyword">if</span> (comp(*largest,*first))</span><br><span class="line">      largest=first;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<h3 id="u4EE3_u7801_u5B9E_u73B0"><a href="#u4EE3_u7801_u5B9E_u73B0" class="headerlink" title="代码实现"></a>代码实现</h3></blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/03/30/hiho1074/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -985,7 +979,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1002,7 +996,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

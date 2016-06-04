@@ -4,7 +4,7 @@
   <subtitle><![CDATA[DwayneTen's Notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dwayneten.com/"/>
-  <updated>2016-05-31T13:08:05.469Z</updated>
+  <updated>2016-06-04T15:51:44.349Z</updated>
   <id>http://dwayneten.com/</id>
   
   <author>
@@ -15,11 +15,107 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[百度 IFE 春季班第二阶段任务总结]]></title>
+    <link href="http://dwayneten.com/2016/06/04/ife-stage2/"/>
+    <id>http://dwayneten.com/2016/06/04/ife-stage2/</id>
+    <published>2016-06-04T00:31:16.000Z</published>
+    <updated>2016-06-04T15:51:44.349Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://ife.baidu.com/task/all" target="_blank" rel="external">IFE 春季班首页</a></p>
+<blockquote>
+<p>百度Web前端技术学院（Baidu Institute of Front-End Technology 简称 IFE）是一个由百度人力资源部校园招聘组、 百度EFE团队联合出品的、 面向在校大学生以及对前端技术有兴趣的前端在线学习平台， 我们希望能够借助百度大量优秀的前端工程师以及丰富的前端知识积累， 帮助人们更加有趣、 高效、 系统地学习 Web 前端技术。</p>
+</blockquote>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4MjUyNjY3Nw==&amp;mid=402057593&amp;idx=1&amp;sn=ef20d1808470688bee1c8e242349b47c#rd" target="_blank" rel="external">第二阶段任务说明</a></p>
+<blockquote>
+<p>同第一阶段一样，这二十四个任务并非所有人都要去完成，而是需要大家按照自己当前的能力水平来合理评估和选择。</p>
+<p>从任务的难易程度排序，简单到困难，依次是：任务 13-17，18-21，22-25 | 29-32，26-28，33-36</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="u96F6_u57FA_u7840JavaScript_u7F16_u7801"><a href="#u96F6_u57FA_u7840JavaScript_u7F16_u7801" class="headerlink" title="零基础JavaScript编码"></a>零基础JavaScript编码</h2><blockquote>
+<h3 id="u4EFB_u52A1_u5341_u4E09_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E00_uFF09"><a href="#u4EFB_u52A1_u5341_u4E09_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E00_uFF09" class="headerlink" title="任务十三：零基础JavaScript编码（一）"></a><a href="http://ife.baidu.com/task/detail?taskId=13" target="_blank" rel="external">任务十三：零基础JavaScript编码（一）</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0"><a href="#u4EFB_u52A1_u63CF_u8FF0" class="headerlink" title="任务描述"></a>任务描述</h4><p>参考示例代码，补充其中的JavaScript功能，完成一个JavaScript代码的编写</p>
+<p>本任务完成的功能为：用户可以在输入框中输入任何内容，点击“确认填写”按钮后，用户输入的内容会显示在“您输入的值是”文字的右边</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_2\Task_13\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_2/Task_13" target="_blank" rel="external">Source</a></p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u5341_u56DB_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E8C_uFF09"><a href="#u4EFB_u52A1_u5341_u56DB_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E8C_uFF09" class="headerlink" title="任务十四：零基础JavaScript编码（二）"></a><a href="http://ife.baidu.com/task/detail?taskId=14" target="_blank" rel="external">任务十四：零基础JavaScript编码（二）</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0-1"><a href="#u4EFB_u52A1_u63CF_u8FF0-1" class="headerlink" title="任务描述"></a>任务描述</h4><p>参考示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按照一定的格式要求显示在网页上</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_2\Task_14\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_2/Task_14" target="_blank" rel="external">Source</a></p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u5341_u4E94_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E09_uFF09"><a href="#u4EFB_u52A1_u5341_u4E94_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E09_uFF09" class="headerlink" title="任务十五：零基础JavaScript编码（三）"></a><a href="http://ife.baidu.com/task/detail?taskId=15" target="_blank" rel="external">任务十五：零基础JavaScript编码（三）</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0-2"><a href="#u4EFB_u52A1_u63CF_u8FF0-2" class="headerlink" title="任务描述"></a>任务描述</h4><p>参考示例代码，读取页面上已有的source列表，从中提取出城市以及对应的空气质量</p>
+<p>将数据按照某种顺序排序后，在resort列表中按照顺序显示出来</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_2\Task_15\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_2/Task_15" target="_blank" rel="external">Source</a></p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u5341_u516D_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u56DB_uFF09"><a href="#u4EFB_u52A1_u5341_u516D_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u56DB_uFF09" class="headerlink" title="任务十六：零基础JavaScript编码（四）"></a><a href="http://ife.baidu.com/task/detail?taskId=16" target="_blank" rel="external">任务十六：零基础JavaScript编码（四）</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0-3"><a href="#u4EFB_u52A1_u63CF_u8FF0-3" class="headerlink" title="任务描述"></a>任务描述</h4><p>参考示例代码，用户输入城市名称和空气质量指数后，点击“确认添加”按钮后，就会将用户的输入在进行验证后，添加到下面的表格中，新增一行进行显示</p>
+<p>用户输入的城市名必须为中英文字符，空气质量指数必须为整数</p>
+<p>用户输入的城市名字和空气质量指数需要进行前后去空格及空字符处理（trim）</p>
+<p>用户输入不合规格时，需要给出提示（允许用alert，也可以自行定义提示方式）</p>
+<p>用户可以点击表格列中的“删除”按钮，删掉那一行的数据</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_2\Task_16\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_2/Task_16" target="_blank" rel="external">Source</a></p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u5341_u4E03_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E94_uFF09"><a href="#u4EFB_u52A1_u5341_u4E03_uFF1A_u96F6_u57FA_u7840JavaScript_u7F16_u7801_uFF08_u4E94_uFF09" class="headerlink" title="任务十七：零基础JavaScript编码（五）"></a><a href="http://ife.baidu.com/task/detail?taskId=17" target="_blank" rel="external">任务十七：零基础JavaScript编码（五）</a></h3></blockquote>
+<h4 id="u4EFB_u52A1_u63CF_u8FF0-4"><a href="#u4EFB_u52A1_u63CF_u8FF0-4" class="headerlink" title="任务描述"></a>任务描述</h4><p>参考以下示例代码，原始数据包含几个城市的空气质量指数数据</p>
+<p>用户可以选择查看不同的时间粒度，以选择要查看的空气质量指数是以天为粒度还是以周或月为粒度</p>
+<ul>
+<li><p>天：显示每天的空气质量指数</p>
+</li>
+<li><p>周：以自然周（周一到周日）为粒度，统计一周7天的平均数为这一周的空气质量数值，如果数据中缺少一个自然周的几天，则按剩余天进行计算</p>
+</li>
+<li><p>月：以自然月为粒度，统一一个月所有天的平均数为这一个月的空气质量数值</p>
+</li>
+</ul>
+<p>用户可以通过select切换城市</p>
+<p>通过在<code>aqi-chart-wrap</code>里添加DOM，来模拟一个柱状图图表，横轴是时间，纵轴是空气质量指数，<a href="http://7xrp04.com1.z0.glb.clouddn.com/task_2_17_1.jpg" target="_blank" rel="external">参考图（点击打开）</a>。天、周、月的数据只根据用户的选择显示一种。</p>
+<ul>
+<li><p>天：每天的数据是一个很细的矩形</p>
+</li>
+<li><p>周：每周的数据是一个矩形</p>
+</li>
+<li><p>月：每周的数据是一个很粗的矩形</p>
+</li>
+</ul>
+<p>鼠标移动到柱状图的某个柱子时，用title属性提示这个柱子的具体日期和数据</p>
+<p><a href="\Baidu_IFE_2016Spring\Stage_2\Task_17\index.html">Demo</a> | <a href="https://github.com/Dwayneten/Baidu_IFE_2016Spring/tree/master/Stage_2/Task_17" target="_blank" rel="external">Source</a></p>
+<blockquote>
+<h3 id="u4EFB_u52A1_u603B_u7ED3"><a href="#u4EFB_u52A1_u603B_u7ED3" class="headerlink" title="任务总结"></a>任务总结</h3></blockquote>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><p>实现<code>id</code>选择器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $ = <span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>通过<code>event.target</code>获取事件目标<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">citySelect.onchange = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    citySelectChange(event.target.value);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>遍历<code>Object</code>的<code>key</code>及将<code>Object</code>的<code>key</code>提取到数组 (<code>ECMAScript 6</code>)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> city <span class="keyword">in</span> aqiSourceData) &#123; ...; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cityKeyData = <span class="built_in">Object</span>.keys(aqiSourceData[city]);</span><br></pre></td></tr></table></figure></p>
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><p>实现柱形图出现时高度增长的<code>keyframes</code>动画</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">keyframes</span> grow </span>&#123;</span><br><span class="line">    0% <span class="rules">&#123;</span><br><span class="line">        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">500px</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class">.chart-item</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">1px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">animation</span>:<span class="value"> grow <span class="number">0.5s</span> ease-in-out</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> </span><br><span class="line">  <span class="attribute">class</span>=<span class="value">"chart-item chart-item-week chart-item-color-3"</span> </span><br><span class="line">  <span class="attribute">title</span>=<span class="value">"2016-01-01~2016-01-03 AQI: 277.33"</span> </span><br><span class="line">  <span class="attribute">style</span>=<span class="value">"height: 277.33px; margin-top: calc(500px - 277.33px)"</span></span><br><span class="line">&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://ife.baidu.com/task/all">IFE 春季班首页</a></p>
+<blockquote>
+<p>百度Web前端技术学院（Baidu Institute of Front-End Technology 简称 IFE）是一个由百度人力资源部校园招聘组、 百度EFE团队联合出品的、 面向在校大学生以及对前端技术有兴趣的前端在线学习平台， 我们希望能够借助百度大量优秀的前端工程师以及丰富的前端知识积累， 帮助人们更加有趣、 高效、 系统地学习 Web 前端技术。</p>
+</blockquote>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzA4MjUyNjY3Nw==&amp;mid=402057593&amp;idx=1&amp;sn=ef20d1808470688bee1c8e242349b47c#rd">第二阶段任务说明</a></p>
+<blockquote>
+<p>同第一阶段一样，这二十四个任务并非所有人都要去完成，而是需要大家按照自己当前的能力水平来合理评估和选择。</p>
+<p>从任务的难易程度排序，简单到困难，依次是：任务 13-17，18-21，22-25 | 29-32，26-28，33-36</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="HTML/CSS" scheme="http://dwayneten.com/tags/HTML-CSS/"/>
+    
+      <category term="IFE" scheme="http://dwayneten.com/tags/IFE/"/>
+    
+      <category term="JavaScript" scheme="http://dwayneten.com/tags/JavaScript/"/>
+    
+      <category term="前端" scheme="http://dwayneten.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="网站开发" scheme="http://dwayneten.com/categories/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Deploy Terraria server on Vultr]]></title>
     <link href="http://dwayneten.com/2016/05/31/vultr-terraria/"/>
     <id>http://dwayneten.com/2016/05/31/vultr-terraria/</id>
     <published>2016-05-31T12:12:11.000Z</published>
-    <updated>2016-05-31T13:08:05.469Z</updated>
+    <updated>2016-06-02T14:50:30.670Z</updated>
     <content type="html"><![CDATA[<p>在 <a href="https://www.vultr.com/" target="_blank" rel="external">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途，顺便尝试了一下在上面部署 Terraria 服务器</p>
 <p><img src="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png" alt="Terraria"></p>
 <a id="more"></a>
@@ -56,7 +152,12 @@
 <h3 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h3><p>在控制台输入 off 来关闭服务器</p>
 <p><a href="https://tshock.atlassian.net/wiki/pages/viewpage.action?pageId=3047433" target="_blank" rel="external">TShock 用户权限列表</a></p>
 <p>例：给<code>default</code>用户组添加传送权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/group addperm default tshock.tp.self</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/group addperm default tshock.tp.self</span><br></pre></td></tr></table></figure>
+<p>使用<code>screen</code>实现关闭 SSH 会话后仍保持服务器开启</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">screen</span><br><span class="line">su terraria</span><br><span class="line"><span class="built_in">cd</span> tshock</span><br><span class="line">mono TerrariaServer.exe</span><br></pre></td></tr></table></figure>
+<p>依次按下<code>Ctrl + A</code> <code>D</code>返回</p>
+<p>再次进入 screen</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -r</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[<p>在 <a href="https://www.vultr.com/">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途，顺便尝试了一下在上面部署 Terraria 服务器</p>
 <p><img src="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png" alt="Terraria"></p>]]>
@@ -1164,47 +1265,6 @@
     </summary>
     
       <category term="Codeforces" scheme="http://dwayneten.com/tags/Codeforces/"/>
-    
-      <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[POJ 3040 Allowance 题解]]></title>
-    <link href="http://dwayneten.com/2015/02/26/POJ-3040/"/>
-    <id>http://dwayneten.com/2015/02/26/POJ-3040/</id>
-    <published>2015-02-26T12:21:25.000Z</published>
-    <updated>2015-12-13T19:33:10.270Z</updated>
-    <content type="html"><![CDATA[<p>《挑战程序设计竞赛》练习题</p>
-<blockquote>
-<p>2.2 一直往前！贪心法</p>
-</blockquote>
-<ul>
-<li>贪心</li>
-</ul>
-<p><a href="http://poj.org/problem?id=3040" target="_blank" rel="external">POJ 3040 Allowance</a><br>有N种硬币，需要支付的工资为M，每次支付工资至少要给M元。然后给出N种硬币的面值和数量，问最多能支付多少次工资。</p>
-<hr>
-<p>比较容易想到贪心策略：<br>1.先由面值从大到小地选取硬币来凑成一次工资但不能超过要支付的工资（即选出的硬币面值总和≤M）。<br>2.若经过步骤1选完后仍不够M，则再从小到大地选硬币直至选出的硬币面值总和不小于M。<br>3.重复步骤12直至剩下的硬币不够支付一次工资。<br>当然如果有硬币面值本来就比M大的可以直接发掉。<br><a id="more"></a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*///////////////////////////////////////////////////////</span><br><span class="line">    Author        :Dwayne</span><br><span class="line">    Created Time  :2015/2/23 19:30:03</span><br><span class="line">    File Name     :POJ3040.cpp</span><br><span class="line">//////////////////////////////////////////////////////<span class="comment">/*/</span><br><span class="line"></span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int n, m, k, tn, tcase = 0;</span><br><span class="line">struct coin</span><br><span class="line">&#123;</span><br><span class="line">	int v, num;</span><br><span class="line">	bool operator &lt; (const coin&amp; b) const</span><br><span class="line">	&#123;</span><br><span class="line">		return (this-&gt;v &lt; b.v || (!(b.v &lt; this-&gt;v) &amp;&amp; (this-&gt;num &lt; b.num)));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    freopen("in.txt", "r", stdin);</span><br><span class="line">    //freopen("out.txt", "w", stdout);</span><br><span class="line">    scanf("%d %d", &amp;n, &amp;m);</span><br><span class="line">	coin c[24];</span><br><span class="line">    for (int i=0; i&lt;n; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		scanf("%d %d", &amp;c[i].v, &amp;c[i].num);	</span><br><span class="line">	&#125;</span><br><span class="line">	sort(c, c+n);</span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	for (int i=0; i&lt;n; ++i)</span><br><span class="line">		printf("%d %d\n", c[i].v, c[i].num);</span><br><span class="line">	*/</span></span><br><span class="line">	int ans = 0;</span><br><span class="line">	for (int i=n-1; i+1; --i)</span><br><span class="line">		if (c[i].v &gt;= m)</span><br><span class="line">			ans += c[i].num, c[i].num = 0;</span><br><span class="line">		else</span><br><span class="line">			break;</span><br><span class="line">	int cur = 0;</span><br><span class="line">	while (true)</span><br><span class="line">	&#123;</span><br><span class="line">		cur = 0;</span><br><span class="line">		for (int i=n-1; i+1; --i)</span><br><span class="line">		&#123;</span><br><span class="line">			while (c[i].num &amp;&amp; cur + c[i].v &lt;= m)</span><br><span class="line">				c[i].num--, cur += c[i].v;</span><br><span class="line">		&#125;</span><br><span class="line">		for (int i=0; i&lt;n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			while (c[i].num &amp;&amp; cur &lt; m)</span><br><span class="line">				c[i].num--, cur += c[i].v;</span><br><span class="line">		&#125;</span><br><span class="line">		if (cur &gt;= m)</span><br><span class="line">			ans++;</span><br><span class="line">		else</span><br><span class="line">			break;</span><br><span class="line">	&#125;</span><br><span class="line">	printf("%d\n", ans);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>《挑战程序设计竞赛》练习题</p>
-<blockquote>
-<p>2.2 一直往前！贪心法</p>
-</blockquote>
-<ul>
-<li>贪心</li>
-</ul>
-<p><a href="http://poj.org/problem?id=3040">POJ 3040 Allowance</a><br>有N种硬币，需要支付的工资为M，每次支付工资至少要给M元。然后给出N种硬币的面值和数量，问最多能支付多少次工资。</p>
-<hr>
-<p>比较容易想到贪心策略：<br>1.先由面值从大到小地选取硬币来凑成一次工资但不能超过要支付的工资（即选出的硬币面值总和≤M）。<br>2.若经过步骤1选完后仍不够M，则再从小到大地选硬币直至选出的硬币面值总和不小于M。<br>3.重复步骤12直至剩下的硬币不够支付一次工资。<br>当然如果有硬币面值本来就比M大的可以直接发掉。<br>]]>
-    
-    </summary>
-    
-      <category term="POJ" scheme="http://dwayneten.com/tags/POJ/"/>
-    
-      <category term="《挑战程序设计竞赛》" scheme="http://dwayneten.com/tags/%E3%80%8A%E6%8C%91%E6%88%98%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B%E3%80%8B/"/>
-    
-      <category term="贪心" scheme="http://dwayneten.com/tags/%E8%B4%AA%E5%BF%83/"/>
     
       <category term="解题报告" scheme="http://dwayneten.com/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     

@@ -17,9 +17,6 @@ body {
   -moz-box-shadow: 0 0 15px #aaa;
   box-shadow: 0 0 15px #aaa;
 }
-hgroup {
-  float: left;
-}
 header {
   width: 100%;
   height: 200px;
@@ -31,6 +28,10 @@ header {
 header h1 {
   font-size: 62px;
   line-height: 91px;
+  float: left;
+}
+header h2 {
+  float: left;
 }
 address {
   float: right;

@@ -5,9 +5,11 @@
   box-sizing: border-box;
   font-family: "宋体", Consolas, sans-serif;
 }
+
 body {
   background-color: #e0e0e0;
 }
+
 .content {
   width: 1024px;
   min-height: 1024px;
@@ -17,9 +19,11 @@ body {
   -moz-box-shadow: 0 0 15px #aaa;
   box-shadow: 0 0 15px #aaa;
 }
+
 hgroup {
   float: left;
 }
+
 header {
   width: 100%;
   height: 200px;
@@ -27,96 +31,107 @@ header {
   color: #fff;
   background-color: #333;
   font-family: "宋体", Consolas, sans-serif;
+  h1{
+    font-size: 62px;
+    line-height: 91px;
+  }
 }
-header h1 {
-  font-size: 62px;
-  line-height: 91px;
-}
+
 address {
   float: right;
+  li {
+    font-size: 22px;
+    line-height: 30px;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    display: list-item;
+    list-style-type: none;
+    text-align: right;
+  }
+  a, a:visited {
+    font-size: 22px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  i {
+    margin-left: 5px;
+    width: 22px;
+    height: 22px;
+  }
 }
-address li {
-  font-size: 22px;
-  line-height: 30px;
-  font-family: Arial, sans-serif;
-  font-style: normal;
-  display: list-item;
-  list-style-type: none;
-  text-align: right;
-}
-address a,
-address a:visited {
-  font-size: 22px;
-  line-height: 30px;
-  text-decoration: none;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-address i {
-  margin-left: 5px;
-  width: 22px;
-  height: 22px;
-}
+
 article {
   width: 100%;
   height: 100%;
   padding: 40px 60px;
 }
+
 section {
   margin-bottom: 30px;
 }
+
 h3 {
   font-size: 28px;
   line-height: 48px;
 }
-.h3-ch,
-.h4-ch {
+
+.h3-ch, .h4-ch {
   font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
   margin-right: 5px;
 }
-.h3-en,
-.h4-en {
+
+.h3-en, .h4-en {
   color: #3355aa;
   font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
   font-variant: small-caps;
   text-transform: capitalize;
 }
+
 h4 {
   font-size: 22px;
   line-height: 36px;
 }
+
 .second-level {
   padding-left: 2em;
 }
+
 ul {
   list-style: none;
 }
+
 li {
   padding-left: 2em;
   font-size: 18px;
   font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
 }
-#show,
-#hide {
+
+#show, #hide {
   display: none;
 }
+
 .radio-wrapper {
   position: relative;
+  label {
+    color: #3355aa;
+    font-size: 18px;
+    font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+  }
 }
-.radio-wrapper label {
-  color: #3355aa;
-  font-size: 18px;
-  font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
-  position: absolute;
-  right: 0;
-  margin-top: 10px;
-}
+
 #more-honor-list {
   display: none;
 }
+
 #show:checked ~ #label-show:before {
   content: "";
 }
+
 #show:checked ~ #label-hide:before {
   content: "\f0aa收起";
   font: normal normal normal 14px/1 FontAwesome, "Microsoft JhengHei", "微软雅黑", sans-serif;
@@ -125,12 +140,15 @@ li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 #show:checked ~ ul#more-honor-list {
   display: block !important;
 }
+
 #show:checked ~ #label-hide > .fa:before {
   content: "";
 }
+
 #hide:checked ~ #label-show:before {
   content: "\f0ab更多";
   font: normal normal normal 14px/1 FontAwesome, "Microsoft JhengHei", "微软雅黑", sans-serif;
@@ -139,28 +157,34 @@ li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 #hide:checked ~ #label-hide:before {
   content: "";
 }
+
 #hide:checked ~ #label-show > .fa:before {
   content: "";
 }
-.fa-tags,
-.fa-cogs {
+
+.fa-tags, .fa-cogs {
   width: 26px;
 }
+
 i {
   margin-right: 8px;
 }
+
 .hl {
   color: #3355aa;
   font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
   font-weight: bold;
   padding: 0 2px;
 }
+
 h4 .hl {
   font-size: 18px;
 }
+
 .experience a {
   text-decoration: none;
   color: #3355aa;
@@ -168,9 +192,11 @@ h4 .hl {
   font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
   font-weight: bold;
 }
+
 .experience li {
   line-height: 28px;
 }
+
 .experience .project-title {
   font: inherit;
   font-weight: bold;

@@ -95,11 +95,13 @@ article h4 {
 section {
   margin-bottom: 30px;
 }
+/* 中文标题 */
 .h3-ch,
 .h4-ch {
   font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
   margin-right: 5px;
 }
+/* 英文标题 */
 .h3-en,
 .h4-en {
   color: #3355aa;
@@ -107,9 +109,11 @@ section {
   font-variant: small-caps;
   text-transform: capitalize;
 }
+/* 二级列表缩进 */
 .second-level {
   padding-left: 2em;
 }
+/* 更多/收起 的控制 */
 #show,
 #hide {
   display: none;
@@ -160,6 +164,7 @@ section {
 #hide:checked ~ #label-show > .fa:before {
   content: "";
 }
+/* 图标与高亮 */
 .fa-tags,
 .fa-cogs {
   width: 26px;
@@ -176,6 +181,7 @@ i {
 h4 .hl {
   font-size: 18px;
 }
+/* 项目经验栏 */
 .experience a {
   text-decoration: none;
   color: #3355aa;

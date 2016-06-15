@@ -57,17 +57,17 @@ address i {
 }
 address i:hover,
 address a:hover i {
-  animation: shake 0.3s ease-in-out;
+  animation: shake 0.4s ease-in-out;
 }
 @keyframes shake {
   25% {
     transform: rotate(10deg);
   }
   50% {
-    transform: rotate(0deg);
+    transform: rotate(-10deg);
   }
   75% {
-    transform: rotate(-10deg);
+    transform: rotate(10deg);
   }
 }
 /* 内容 */

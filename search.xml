@@ -149,7 +149,7 @@
       <title><![CDATA[Deploy Terraria server on Vultr]]></title>
       <url>http://dwayneten.com/2016/05/31/vultr-terraria/</url>
       <content type="html"><![CDATA[<p>在 <a href="https://www.vultr.com/" target="_blank" rel="external">Vultr</a> 上买了个日本节点的服务器， 准备用作学习和你懂的用途，顺便尝试了一下在上面部署 Terraria 服务器</p>
-<p><img src="https://terraria.org/assets/logo-203e9bcd9af6ac8193d8b185aa64b8c8.png" alt="Terraria"></p>
+<p><img src="http://7vzsbj.com1.z0.glb.clouddn.com/terraria-logo.png" alt="Terraria"></p>
 <a id="more"></a>
 <p>这次买的服务器是 Vultr 上东京节点 $10/M 规格的</p>
 <blockquote>
@@ -189,7 +189,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">screen</span><br><span class="line">su terraria</span><br><span class="line"><span class="built_in">cd</span> tshock</span><br><span class="line">mono TerrariaServer.exe</span><br></pre></td></tr></table></figure>
 <p>依次按下<code>Ctrl + A</code> <code>D</code>返回</p>
 <p>再次进入 screen</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -r</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -r</span><br></pre></td></tr></table></figure>
+]]></content>
     </entry>
     
     <entry>

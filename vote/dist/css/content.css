@@ -116,7 +116,7 @@ a {
 .content-wrapper {
   padding: 0 0.5rem;
   margin-top: 1rem;
-  font-size: 0.525rem; }
+  font-size: 0.55rem; }
   .content-wrapper p {
     font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
     color: #4d3a21;
@@ -136,6 +136,7 @@ a {
   border-top: 0.125rem solid #af936e;
   background-image: url("../img/title_tab.png");
   background-repeat: no-repeat;
+  background-position: 0 -0.05rem;
   background-size: 8em 100%; }
 
 .content-image {

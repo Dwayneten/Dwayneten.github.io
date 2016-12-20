@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none; }
+
+html {
+  height: 100%;
+  font-size: 40px; }
+
+body {
+  height: 100%;
+  width: 16rem;
+  background-color: #fcf5ec; }
+
+a {
+  text-decoration: none; }
+
+.top-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; }
+
+.main-container {
+  width: 100%;
+  padding-top: 3.75rem; }
+
+.info-box {
+  background: linear-gradient(to bottom, #cea978, #b19065);
+  width: 14.5rem;
+  height: 7rem;
+  margin: 0 auto 2rem;
+  border-radius: 0.75rem;
+  position: relative;
+  padding-top: 1.5rem; }
+
+.info-box-logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 1.375rem;
+  transform: translate(-50%, -1.375rem); }
+
+.info-box-line {
+  display: block;
+  width: 12rem;
+  height: 0.175rem;
+  margin: 0.45rem auto 0.15rem; }
+
+.info-box-title {
+  font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 0.125rem 0;
+  font-size: 1.2rem; }
+
+.info-box-subtitle {
+  font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 0.125rem 0;
+  font-size: 0.9rem; }
+
+.info-box-data {
+  font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 0.125rem 0;
+  font-size: 0.7rem;
+  color: #fde7ca; }
+
+.blank {
+  width: 1em;
+  display: inline-block; }
+
+.button-vote {
+  width: 12rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to bottom, #cea977, #b19065);
+  text-align: center;
+  font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+  font-size: 0.95rem;
+  color: #fff;
+  margin: 0 auto;
+  border: 0;
+  outline: none;
+  display: block; }
+
+.link-rank {
+  font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+  color: #b49267;
+  text-align: center;
+  font-size: 0.7rem;
+  display: block;
+  margin: 0.75rem auto 0; }
+
+.jiaofu-data-group {
+  width: 100%;
+  margin-top: 2.25rem;
+  padding-left: 1.25rem; }
+  .jiaofu-data-group p {
+    font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+    color: #4d3a21;
+    line-height: 2em;
+    font-size: 0.75rem; }
+    .jiaofu-data-group p span {
+      color: #4d3a21;
+      font-weight: bold; }
+
+.content-wrapper {
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.55rem; }
+  .content-wrapper p {
+    font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+    color: #4d3a21;
+    line-height: 1.5em; }
+  .content-wrapper .content-title {
+    font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+    color: #fff;
+    line-height: 1.15rem;
+    padding-left: 0.6rem; }
+  .content-wrapper + .content-wrapper {
+    margin: 0; }
+
+.title-wrapper {
+  width: 100%;
+  height: 1.25rem;
+  margin-bottom: 1rem;
+  border-top: 0.125rem solid #af936e;
+  background-image: url("../img/title_tab.png");
+  background-repeat: no-repeat;
+  background-size: 8em 100%; }
+
+.content-image {
+  width: 100%;
+  margin: 1rem 0; }
+
+/*# sourceMappingURL=content.css.map */

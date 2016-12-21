@@ -36,7 +36,8 @@ body {
   margin: 0 auto 2rem;
   border-radius: 0.75rem;
   position: relative;
-  padding-top: 1.5rem; }
+  padding-top: 1.5rem;
+  box-shadow: 0 0.125rem 0.75rem rgba(206, 169, 120, 0.7); }
 
 .info-box-logo {
   display: block;
@@ -46,7 +47,8 @@ body {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 1.375rem;
-  transform: translate(-50%, -1.375rem); }
+  transform: translate(-50%, -1.375rem);
+  box-shadow: 0 0 0.5rem rgba(206, 169, 120, 0.4); }
 
 .info-box-line {
   display: block;
@@ -135,17 +137,18 @@ body {
     padding: 0 0.25rem 0 0.6rem;
     margin: 0 0 1rem;
     position: relative;
-    min-width: 1px;
     background-color: #af936e; }
     .content-wrapper .content-title:after {
       width: 1.75rem;
-      height: 1.15rem;
+      height: 100%;
       position: absolute;
+      top: 0;
       right: -1.7rem;
       content: '';
       background-image: url("../img/title_tab_right.png");
       background-repeat: no-repeat;
-      background-size: 100%; }
+      background-size: 100%;
+      overflow: hidden; }
 
 .content-title-border {
   width: 100%;

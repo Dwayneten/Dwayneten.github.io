@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none; }
+
+html {
+  height: 100%;
+  font-size: 40px; }
+
+body {
+  height: 100%;
+  width: 16rem; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #000; }
+
+.top-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; }
+
+.company-wrapper {
+  margin: 8.75rem auto 1rem;
+  width: 11.5rem;
+  height: 1rem;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC","Microsoft YaHei","\9ED1\4F53",Helvetica,Arial,sans-serif;
+  font-size: 0.55rem; }
+
+.company-left {
+  position: absolute;
+  left: 0; }
+
+.company-logo {
+  position: absolute;
+  left: 3.5rem; }
+
+.company-right {
+  position: absolute;
+  padding-top: 0.125rem;
+  left: 7.5rem; }
+
+.company-yanjiuyuan-img {
+  max-height: 100%; }
+
+/*
+.company-right-cn {
+  font-size: 22px/$ppr;
+}
+.company-right-en {
+  font-size: 6px/$ppr;
+}*/
+.timeline-wrapper {
+  width: 100%;
+  padding: 0 0.25rem;
+  position: relative; }
+
+.timeline-img {
+  width: 100%;
+  display: block; }
+
+.timeline-point-group {
+  position: absolute;
+  top: 0.5rem; }
+  .timeline-point-group:before {
+    background-image: url("../img/timeline_point.png");
+    background-size: 100%;
+    position: absolute;
+    top: -0.8rem;
+    left: 40%;
+    content: '';
+    width: 0.625rem;
+    height: 0.625rem; }
+
+.timeline-point-group-1 {
+  left: 5%; }
+
+.timeline-point-group-2 {
+  left: 30%; }
+
+.timeline-point-group-3 {
+  left: 55%; }
+
+.timeline-point-group-4 {
+  left: 80%; }
+
+/*# sourceMappingURL=index.css.map */

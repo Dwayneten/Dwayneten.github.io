@@ -28,6 +28,7 @@ header {
   h1 {
     font-size: 56px;
     line-height: 82px;
+    margin-top: 20px;
   }
 }
 .hgroup {
@@ -117,7 +118,7 @@ section {
   padding-left: 2em;
 }
 
-/* 更多/收起 的控制 */
+/* 展开/收起 的控制 */
 #show, #hide {
   display: none;
 }
@@ -154,7 +155,7 @@ section {
   content: "";
 }
 #hide:checked ~ #label-show:before {
-  content: "\f0ab更多";
+  content: "\f0ab展开";
   font: normal normal normal 14px/1 FontAwesome, "Microsoft JhengHei", "微软雅黑", sans-serif;
   font-size: inherit;
   text-rendering: auto;
@@ -200,4 +201,11 @@ h4 .hl {
 .experience .project-title {
   font: inherit;
   font-weight: bold;
+}
+.experience .more-info {
+  margin-top: 20px;
+  display: block;
+  font-family: "Microsoft JhengHei", "微软雅黑", "宋体", Consolas, sans-serif;
+  font-weight: bold;
+  padding: 0 2px;
 }
